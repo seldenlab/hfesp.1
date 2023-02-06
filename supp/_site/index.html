@@ -268,7 +268,7 @@ div.csl-indent {
 <h1>Analysis overview</h1>
 <section id="color" class="level2">
 <h2 class="anchored" data-anchor-id="color">Color</h2>
-<p>Each of the 30 vessels was scanned (3D) with a Creaform GoSCAN20 to capture color and geometry. Following data collection, scans were processed, and each was exported as an .obj file, which includes a bitmap image of the color for the entirety of the vessel. Images were subsequently transferred to a transparent background in Photoshop, and edited to remove elements associated with reconstruction and refits (i.e., plaster, labels, and lines where pieces were joined) in preparation for analysis using the <code>colordistance</code> package in R <span class="citation" data-cites="R RN11200">(<a href="#ref-R" role="doc-biblioref">R Core Development Team, 2023</a>; <a href="#ref-RN11200" role="doc-biblioref">Weller and Westneat 2019</a>)</span>. All images were converted from RGB to CIE Lab color space using the D65 (indirect sunlight) reference white as the default for color conversion, and the upper and lower limits of the color range were determined based on colors present in the sample. Ten thousand randomly selected pixels were plotted from each image, and a histogram binning method was used to group similar colors for each specimen.</p>
+<p>Each of the 30 vessels was scanned (3D) with a Creaform GoSCAN20 to capture color and geometry. Following data collection, scans were processed, and each was exported as an .obj file, which includes a bitmap image of the color for the entire surface of each vessel. Images were subsequently transferred to a transparent background in Photoshop, and edited to remove elements associated with reconstruction and refits (i.e., plaster, labels, and lines where pieces were joined) in preparation for analysis using the <code>colordistance</code> package in R <span class="citation" data-cites="R RN11200">(<a href="#ref-R" role="doc-biblioref">R Core Development Team, 2023</a>; <a href="#ref-RN11200" role="doc-biblioref">Weller and Westneat 2019</a>)</span>. All images were converted from RGB to CIE Lab color space using the D65 (indirect sunlight) reference white as the default for color conversion, and the upper and lower limits of the color range were determined based on colors present in the sample. Ten thousand randomly selected pixels were plotted from each image, and a histogram binning method was used to group similar colors for each specimen.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">'./img/fig2.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -340,7 +340,7 @@ div.csl-indent {
 </section>
 <section id="colophon" class="level1 unnumbered">
 <h1 class="unnumbered">Colophon</h1>
-<p>This version of the analysis was generated on 2023-02-06 06:10:09 using the following computational environment and dependencies:</p>
+<p>This version of the analysis was generated on 2023-02-06 06:14:36 using the following computational environment and dependencies:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># what R packages and versions were used?</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="st">"devtools"</span> <span class="sc">%in%</span> <span class="fu">installed.packages</span>()) devtools<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -421,7 +421,7 @@ div.csl-indent {
 <div class="cell-output cell-output-stdout">
 <pre><code>Local:    main D:/github/hfesp.1
 Remote:   main @ origin (https://github.com/seldenlab/hfesp.1)
-Head:     [4c86112] 2023-02-06: &lt;edit index&gt;</code></pre>
+Head:     [de2f78a] 2023-02-06: &lt;edit index&gt;</code></pre>
 </div>
 </div>
 
