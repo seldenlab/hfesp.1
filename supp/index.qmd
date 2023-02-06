@@ -1,0 +1,89 @@
+---
+title: "Was Caddo bottle morphology conditioned by firing intent?"
+author:
+  - name: Robert Z. Selden, Jr.
+    affiliations:
+      - Heritage Research Center, Stephen F. Austin State University; Department of Biology, Stephen F. Austin State University; Texas Archeological Research Laboratory, The University of Texas at Austin; Cultural Heritage Department, Jean Monnet University
+    email: zselden@sfasu.edu
+    orcid: 0000-0002-1789-8449
+bibliography: [book.bib]
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+link-citations: yes
+github-repo: seldenlab/hfesp.1
+description: Supplementary Materials
+license: "CC BY-NC"
+---
+
+>This process of comparison, of recognising in one form a definite permutation or _deformation_ of another, apart altogether from a precise and adequate understanding of the original "type" or standard of comparison, lies within the immediate province of mathematics, and finds its solution in the elementary use of a certain method of the mathematician [@RN7522].
+
+# Basis of inquiry 
+
+## Keywords
+
+_Caddo; ceramics; computational archaeology; museum studies; digital humanities; non-Western art history_
+
+# Analysis overview
+
+## Color
+
+The 76 Perdiz arrow points were scanned at 600 dpi using an HP ScanJet G4050. Images were subsequently transferred to a transparent background in Photoshop in preparation for analysis using the colordistance package in R [@R;@RN11200]. All images were converted from RGB to CIE Lab color space using the D65 (indirect sunlight) reference white as the default for color conversion, and the upper and lower limits of the color range were determined based on colors present in the sample. Ten thousand randomly selected pixels were plotted from each image, and a histogram binning method was used to group similar colors for each specimen. Pairwise distances between histograms were computed using earth mover’s distance [@RN11201].
+
+```{r fig2, fig.cap="Color binning process for a single object; adapted from Weller and Westneat (2019:Figure 2). In a, image of a Smithport Plain bottle with a transparent background; b, 3D scatterplot of 10,000 non-background pixels in CIE Lab color space; c, clusters from the histogram in b displayed in CIE Lab color space; and d, histogram showing the proportion of non-background pixels assigned to each of eight bins."}
+
+#knitr::include_graphics('./img/fig2.jpg')
+```
+
+```{r fig3, fig.cap="Color distance matrix (top) and NMDS (bottom) summarizing color variation in Perdiz arrow points, where the northern behavioral region is depicted in gray, and the southern behavioral region is depicted in orange with each point plotted in color space to visualize color variation."}
+
+#knitr::include_graphics('./img/fig3.jpg')
+```
+
+## Morphology
+
+Landmark data were aligned to a global coordinate system [@RN8477;@RN7502;@RN11622;@RN11623;@RN11563], achieved through generalized Procrustes superimposition [@RN11138;@RN478;@RN1646] in R using the `geomorph` and `RRPP` packages [@RN1655;@RN11775;@RN11530;@RN1774;@RN9565]. Procrustes superimposition translates and rotates the coordinate data to allow for comparisons among objects, while also scaling each biface using unit-centroid size---the square root of the sum of squared distances from each landmark to the specimen’s centroid [@RN11139;@RN11140;@RN11564;@RN478]. The `geomorph` package uses a partial Procrustes superimposition that projects the aligned specimens into tangent space subsequent to alignment in preparation for the use of multivariate methods that assume linear space [@RN11141;@RN11142;@RN1646;@RN11563].
+
+Principal components analysis [@RN1746] was used to visualize shape variation among the elliptical bifaces, and the scatterplot represents the dispersion of shapes in tangent space [@RN8633;@RN5616;@RN11143;@RN7550]. Shape ranges described by each principal axis are commonly visualized using thin-plate spline warping of a reference image [@RN1731;@RN479].
+
+```{r fig4, fig.cap="Principal components analysis plot (PC1/PC2) for Hickory Fine Engraved and Smithport Plain bottles by firing category, where gray indicates bottles fired in a reduced environment, and orange from an oxidized environment, plotted with warp grids for the first two principal components."}
+
+#knitr::include_graphics('./img/fig4.jpg')
+```
+
+To assess whether `shape` and `size` differs by `ColorGroup`, Procrustes ANOVAs [@RN1749] were run that enlist effect-sizes (zscores) computed as standard deviates of the generated sampling distributions [@RN1756]. A residual randomization permutation procedure (RRPP; n = 10,000 permutations) was used for all Procrustes ANOVAs [@RN1655;@RN11775], which has higher statistical power and a greater ability to identify patterns in the data should they be present [@RN1719].
+
+```{r figmshape, out.width = "100%", dpi = 300, echo=FALSE, warning=FALSE, fig.cap="Mean shapes summarizing variation in Gahagan bifaces from ColorGroup A and ColorGroup B. In the comparison, black spheres articulate with ColorGroupA, and gray spheres with ColorGroup B."}
+
+#knitr::include_graphics('img/fig5.jpg')
+```
+
+# Summary of Findings
+
+# Acknowledgments
+
+My thanks to the Caddo Nation of Oklahoma, the Caddo Nation Tribal Council, Tribal Chairman, and Tribal Historic Preservation Office for permission and access to NAGPRA and previously repatriated collections. I also extend my gratitude to the Williamson Museum, Louisiana State Exhibit Museum, Texas Archeological Research Laboratory, and the University of Arkansas Museum for their assistance with access to Caddo bottles in their collection. Thanks also to John E. Dockall, David H. Dye, Harry J. Shafer, Hiram F. (Pete) Gregory, Timothy K. Perttula, Christian S. Hoggard, Mary Beth Trubitt, and David K. Thulman for their comments and constructive criticisms on the ongoing analyses of Caddo material culture, to David L. Carlson for guidance regarding the seriation, and to Emma Sherratt, Kersten Bergstrom, Dean C. Adams, and Michael L. Collyer for their constructive criticisms, general comments, and suggestions throughout the development of this research program.
+
+# Funding
+
+Components of this analytical work flow were developed and funded by a Preservation Technology and Training grant (P14AP00138) to the author from the National Center for Preservation Technology and Training (NCPTT), and additional grants from the Caddo Nation of Oklahoma, National Forests and Grasslands in Texas (15-PA-11081300-033) and the United States Forest Service (20-PA-11081300-074). Funding and logistical support to analyze the Caddo bottles for this project was provided by the Heritage Research Center at Stephen F. Austin State University, as well as a grant and residency from the Spatial Archaeometry Research Collaboration at the Center for Advanced Spatial Technology at the University of Arkansas.
+
+# Data management
+
+Reproducibility---the ability to recompute results---and replicability---the chances other experimenters will achieve a consistent result---are two foundational characteristics of successful scientific research [@RN20918]. The analysis code associated with this project can be accessed through this document, is available in the GitHub repository ([https://github.com/seldenlab/hfesp.1](https://github.com/seldenlab/hfesp.1)), and digitally curated on the Open Science Framework ([DOI: 10.17605/OSF.IO/2CHFE](https://osf.io/2chfe/)). The reproducible nature of this enterprise provides a means for others to critically assess and evaluate the various analytical components [@RN20915;@RN20916;@RN20917], which is a necessary requirement for the production of reliable knowledge.
+
+Reproducibility projects in [psychology](https://osf.io/ezcuj/) and [cancer biology](https://www.cos.io/rpcb) are impacting current research practices across all domains. Examples of reproducible research are becoming more abundant in archaeology [@RN20804;@RN21009;@RN11783;@RN21001;@RN9364;@RN11264], and the next generation of archaeologists are learning those tools and methods needed to reproduce and/or replicate research results [@RN21007]. Reproducible and replicable research work flows are often employed at the highest levels of humanities-based inquiries to mitigate concern or doubt regarding proper execution, and is of particular import should the results have---explicitly or implicitly---a major impact on scientific progress [@RN21008].
+
+# Colophon {-}
+
+This version of the analysis was generated on `r Sys.time()` using the following computational environment and dependencies:
+
+```{r colophon, cache = FALSE}
+# what R packages and versions were used?
+if ("devtools" %in% installed.packages()) devtools::session_info()
+```
+
+Current Git commit details are:
+
+```{r}
+# where can I find this commit? 
+if ("git2r" %in% installed.packages() & git2r::in_repository(path = ".")) git2r::repository(here::here())  
+```

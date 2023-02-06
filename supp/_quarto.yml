@@ -1,0 +1,26 @@
+project:
+  type: website
+  render:
+    - index.qmd
+    - c01-color.qmd
+    - c02-morphology.qmd
+
+website:
+  margin-header: |
+    ![](/img/slab.png)
+  navbar:
+    logo: "sfasu.png"
+    right:
+      - href: index.qmd
+        text: Home
+      - c01-color.qmd
+      - c02-morphology.qmd
+
+format:
+  html:
+    theme: spacelab
+    css: styles.css
+    toc: true
+
+
+
