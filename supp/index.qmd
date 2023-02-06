@@ -1,5 +1,5 @@
 ---
-title: "Distinct bottle morphologies and firing practices conditioned Caddo ceramic production"
+title: "Distinct morphologies and firing practices conditioned Early Caddo bottle production"
 author:
   - name: Robert Z. Selden, Jr.
     affiliations:
@@ -29,7 +29,7 @@ _Caddo; NAGPRA; ceramic; pottery; 3D; computational archaeology; museum studies;
 knitr::include_graphics('./img/fig1.png')
 ```
 
-## Color
+## Firing
 
 Each of the 30 vessels was scanned (3D) with a Creaform GoSCAN20 to capture color and geometry. Following data collection, scans were processed, and each was exported as an .obj file, which includes a bitmap image of the color for the entire surface of each vessel. Images were subsequently transferred to a transparent background in Photoshop, and edited to remove elements associated with reconstruction and refits (i.e., plaster, labels, and lines where separate pieces of a broken vessel were joined) in preparation for analysis using the `colordistance` package in R [@R;@RN11200]. All images were converted from RGB to CIE Lab color space using the D65 (indirect sunlight) reference white as the default for color conversion, and the upper and lower limits of the color range were determined based on colors present in the sample. Ten thousand randomly selected pixels were plotted from each image, and a histogram binning method was used to group similar colors for each specimen. 
 

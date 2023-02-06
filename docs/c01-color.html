@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Color</title>
+<title>Firing</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -148,7 +148,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./c01-color.html" aria-current="page">
- <span class="menu-text">Color</span></a>
+ <span class="menu-text">Firing</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./c02-morphology.html">
@@ -181,7 +181,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Color</h1>
+<h1 class="title">Firing</h1>
 </div>
 
 
@@ -301,38 +301,38 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>nmds_scores <span class="ot">&lt;-</span> <span class="fu">scores</span>(<span class="fu">metaMDS</span>(<span class="at">comm =</span> <span class="fu">as.dist</span>(cdm)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Run 0 stress 0.03042979 
-Run 1 stress 0.04083873 
-Run 2 stress 0.03363204 
-Run 3 stress 0.03672921 
-Run 4 stress 0.03453721 
-Run 5 stress 0.04236945 
-Run 6 stress 0.03454967 
-Run 7 stress 0.03043005 
-... Procrustes: rmse 0.0001037299  max resid 0.0004058215 
+Run 1 stress 0.03363218 
+Run 2 stress 0.03063242 
+... Procrustes: rmse 0.00571378  max resid 0.02603589 
+Run 3 stress 0.03855615 
+Run 4 stress 0.03766722 
+Run 5 stress 0.03657124 
+Run 6 stress 0.03815453 
+Run 7 stress 0.03452985 
+Run 8 stress 0.03065569 
+... Procrustes: rmse 0.00576236  max resid 0.02482388 
+Run 9 stress 0.03406161 
+Run 10 stress 0.03042985 
+... Procrustes: rmse 1.790531e-05  max resid 6.797219e-05 
 ... Similar to previous best
-Run 8 stress 0.04187245 
-Run 9 stress 0.03647404 
-Run 10 stress 0.03042994 
-... Procrustes: rmse 0.0006994304  max resid 0.002911468 
-... Similar to previous best
-Run 11 stress 0.03765567 
-Run 12 stress 0.03363317 
-Run 13 stress 0.03042967 
+Run 11 stress 0.03453011 
+Run 12 stress 0.03678935 
+Run 13 stress 0.03042955 
 ... New best solution
-... Procrustes: rmse 8.839544e-05  max resid 0.0003013816 
+... Procrustes: rmse 0.0001191626  max resid 0.000529474 
 ... Similar to previous best
-Run 14 stress 0.03363265 
-Run 15 stress 0.03042989 
-... Procrustes: rmse 0.0001143047  max resid 0.0003815834 
+Run 14 stress 0.03803819 
+Run 15 stress 0.03406151 
+Run 16 stress 0.03043233 
+... Procrustes: rmse 0.001082465  max resid 0.004350748 
 ... Similar to previous best
-Run 16 stress 0.03043463 
-... Procrustes: rmse 0.001362839  max resid 0.005678573 
+Run 17 stress 0.03042979 
+... Procrustes: rmse 0.0001183206  max resid 0.0005268041 
 ... Similar to previous best
-Run 17 stress 0.04035288 
-Run 18 stress 0.03050715 
-... Procrustes: rmse 0.004592996  max resid 0.01819083 
-Run 19 stress 0.0428072 
-Run 20 stress 0.03805259 
+Run 18 stress 0.0418602 
+Run 19 stress 0.03123827 
+Run 20 stress 0.03062839 
+... Procrustes: rmse 0.005569499  max resid 0.02557814 
 *** Best solution repeated 3 times</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>plot <span class="ot">&lt;-</span> <span class="fu">scores</span>(nmds_scores) <span class="sc">%&gt;%</span> </span>
