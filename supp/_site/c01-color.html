@@ -301,33 +301,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>nmds_scores <span class="ot">&lt;-</span> <span class="fu">scores</span>(<span class="fu">metaMDS</span>(<span class="at">comm =</span> <span class="fu">as.dist</span>(cdm)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Run 0 stress 0.03055757 
-Run 1 stress 0.03990492 
-Run 2 stress 0.03054108 
+Run 1 stress 0.03054082 
 ... New best solution
-... Procrustes: rmse 0.005807772  max resid 0.02617998 
-Run 3 stress 0.03383668 
-Run 4 stress 0.03767102 
-Run 5 stress 0.03935978 
-Run 6 stress 0.03474895 
-Run 7 stress 0.03419881 
-Run 8 stress 0.04097606 
-Run 9 stress 0.03058789 
-... Procrustes: rmse 0.006606777  max resid 0.02865268 
-Run 10 stress 0.0337631 
-Run 11 stress 0.0391833 
-Run 12 stress 0.03610204 
-Run 13 stress 0.04146063 
-Run 14 stress 0.03739785 
-Run 15 stress 0.03965809 
-Run 16 stress 0.03713199 
-Run 17 stress 0.03420352 
-Run 18 stress 0.03420574 
-Run 19 stress 0.03055755 
-... Procrustes: rmse 0.005803127  max resid 0.02616969 
-Run 20 stress 0.04111447 
+... Procrustes: rmse 0.005812862  max resid 0.02626052 
+Run 2 stress 0.03725666 
+Run 3 stress 0.04214093 
+Run 4 stress 0.03817891 
+Run 5 stress 0.03059301 
+... Procrustes: rmse 0.006783254  max resid 0.02898219 
+Run 6 stress 0.03058271 
+... Procrustes: rmse 0.006509488  max resid 0.02844272 
+Run 7 stress 0.03382293 
+Run 8 stress 0.033832 
+Run 9 stress 0.03392045 
+Run 10 stress 0.03704332 
+Run 11 stress 0.0371812 
+Run 12 stress 0.03595629 
+Run 13 stress 0.03118309 
+Run 14 stress 0.03376344 
+Run 15 stress 0.03868151 
+Run 16 stress 0.03704366 
+Run 17 stress 0.0383101 
+Run 18 stress 0.03376752 
+Run 19 stress 0.03895537 
+Run 20 stress 0.03382156 
 *** Best solution was not repeated -- monoMDS stopping criteria:
-    13: no. of iterations &gt;= maxit
-     7: stress ratio &gt; sratmax</code></pre>
+    10: no. of iterations &gt;= maxit
+    10: stress ratio &gt; sratmax</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>plot <span class="ot">&lt;-</span> <span class="fu">scores</span>(nmds_scores) <span class="sc">%&gt;%</span> </span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>(<span class="at">rownames =</span> <span class="st">'X'</span>) <span class="sc">%&gt;%</span></span>
