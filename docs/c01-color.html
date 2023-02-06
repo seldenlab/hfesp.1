@@ -301,42 +301,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>nmds_scores <span class="ot">&lt;-</span> <span class="fu">scores</span>(<span class="fu">metaMDS</span>(<span class="at">comm =</span> <span class="fu">as.dist</span>(cdm)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Run 0 stress 0.03042979 
-Run 1 stress 0.03987189 
-Run 2 stress 0.03042974 
+Run 1 stress 0.04083873 
+Run 2 stress 0.03363204 
+Run 3 stress 0.03672921 
+Run 4 stress 0.03453721 
+Run 5 stress 0.04236945 
+Run 6 stress 0.03454967 
+Run 7 stress 0.03043005 
+... Procrustes: rmse 0.0001037299  max resid 0.0004058215 
+... Similar to previous best
+Run 8 stress 0.04187245 
+Run 9 stress 0.03647404 
+Run 10 stress 0.03042994 
+... Procrustes: rmse 0.0006994304  max resid 0.002911468 
+... Similar to previous best
+Run 11 stress 0.03765567 
+Run 12 stress 0.03363317 
+Run 13 stress 0.03042967 
 ... New best solution
-... Procrustes: rmse 0.0006413439  max resid 0.002683014 
+... Procrustes: rmse 8.839544e-05  max resid 0.0003013816 
 ... Similar to previous best
-Run 3 stress 0.03856675 
-Run 4 stress 0.03432092 
-Run 5 stress 0.03428381 
-Run 6 stress 0.03043263 
-... Procrustes: rmse 0.0005874064  max resid 0.002362981 
+Run 14 stress 0.03363265 
+Run 15 stress 0.03042989 
+... Procrustes: rmse 0.0001143047  max resid 0.0003815834 
 ... Similar to previous best
-Run 7 stress 0.03649343 
-Run 8 stress 0.03484335 
-Run 9 stress 0.03424609 
-Run 10 stress 0.03407518 
-Run 11 stress 0.03043139 
-... Procrustes: rmse 0.0008980408  max resid 0.004199928 
+Run 16 stress 0.03043463 
+... Procrustes: rmse 0.001362839  max resid 0.005678573 
 ... Similar to previous best
-Run 12 stress 0.03768474 
-Run 13 stress 0.03042954 
-... New best solution
-... Procrustes: rmse 0.0005346761  max resid 0.002163973 
-... Similar to previous best
-Run 14 stress 0.03424754 
-Run 15 stress 0.03042936 
-... New best solution
-... Procrustes: rmse 0.0002061409  max resid 0.0008895147 
-... Similar to previous best
-Run 16 stress 0.2810362 
-Run 17 stress 0.04274773 
-Run 18 stress 0.04075425 
-Run 19 stress 0.03391203 
-Run 20 stress 0.03042994 
-... Procrustes: rmse 0.0003611419  max resid 0.001682941 
-... Similar to previous best
-*** Best solution repeated 2 times</code></pre>
+Run 17 stress 0.04035288 
+Run 18 stress 0.03050715 
+... Procrustes: rmse 0.004592996  max resid 0.01819083 
+Run 19 stress 0.0428072 
+Run 20 stress 0.03805259 
+*** Best solution repeated 3 times</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>plot <span class="ot">&lt;-</span> <span class="fu">scores</span>(nmds_scores) <span class="sc">%&gt;%</span> </span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>(<span class="at">rownames =</span> <span class="st">'X'</span>) <span class="sc">%&gt;%</span></span>
