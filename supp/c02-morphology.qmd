@@ -121,7 +121,7 @@ fit.sh <- procD.lm(shape ~ ColorGroup,
                    print.progress = FALSE,
                    iter = 9999)
 
-# shape as a function of ColorGroup/raw material?
+# shape as a function of firing practice?
 anova(fit.sh)
 
 # size
@@ -130,7 +130,7 @@ fit.sz <- procD.lm(size ~ ColorGroup,
                    print.progress = FALSE,
                    iter = 9999)
 
-# size as a function of ColorGroup/raw material?
+# size as a function of firing practice?
 anova(fit.sz)
 ```
 
@@ -148,10 +148,10 @@ plot(mean$A)
 plot(mean$B)
 
 # comparison plots
-plotRefToTarget(mean$A,
-                mean$B, 
+plotRefToTarget(mean$B,
+                mean$A, 
                 method = "points",
                 mag = 1)
 
-#knitr::include_graphics('img/fig5.jpg')
+knitr::include_graphics('img/fig5.png')
 ```

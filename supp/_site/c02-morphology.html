@@ -299,34 +299,42 @@ div.csl-indent {
 Ordination type: Principal Component Analysis 
 Centering by OLS mean
 Orthogonal projection of OLS residuals
-Number of observations: 25 
-Number of vectors 24 
+Number of observations: 30 
+Number of vectors 29 
 
 Importance of Components:
-                             Comp1      Comp2        Comp3        Comp4
-Eigenvalues            0.008692318 0.00367751 0.0009941785 0.0006335139
-Proportion of Variance 0.598173607 0.25307283 0.0684157358 0.0435961133
-Cumulative Proportion  0.598173607 0.85124644 0.9196621728 0.9632582861
+                             Comp1       Comp2        Comp3        Comp4
+Eigenvalues            0.008667521 0.003274512 0.0008528696 0.0005560839
+Proportion of Variance 0.623710770 0.235632396 0.0613720998 0.0400155396
+Cumulative Proportion  0.623710770 0.859343167 0.9207152664 0.9607308060
                               Comp5        Comp6        Comp7        Comp8
-Eigenvalues            0.0001821203 9.131552e-05 7.841277e-05 7.224262e-05
-Proportion of Variance 0.0125328534 6.284001e-03 5.396080e-03 4.971474e-03
-Cumulative Proportion  0.9757911395 9.820751e-01 9.874712e-01 9.924427e-01
+Eigenvalues            0.0001808081 8.839522e-05 7.891835e-05 6.675011e-05
+Proportion of Variance 0.0130108643 6.360879e-03 5.678928e-03 4.803307e-03
+Cumulative Proportion  0.9737416702 9.801025e-01 9.857815e-01 9.905848e-01
                               Comp9       Comp10       Comp11       Comp12
-Eigenvalues            4.313384e-05 1.884719e-05 1.557754e-05 7.427879e-06
-Proportion of Variance 2.968313e-03 1.296995e-03 1.071990e-03 5.111595e-04
-Cumulative Proportion  9.954110e-01 9.967080e-01 9.977800e-01 9.982912e-01
+Eigenvalues            5.089464e-05 2.225546e-05 1.590259e-05 1.111104e-05
+Proportion of Variance 3.662354e-03 1.601492e-03 1.144343e-03 7.995456e-04
+Cumulative Proportion  9.942471e-01 9.958486e-01 9.969930e-01 9.977925e-01
                              Comp13       Comp14       Comp15       Comp16
-Eigenvalues            6.172579e-06 4.604114e-06 4.149235e-06 2.210293e-06
-Proportion of Variance 4.247744e-04 3.168383e-04 2.855352e-04 1.521043e-04
-Cumulative Proportion  9.987159e-01 9.990328e-01 9.993183e-01 9.994704e-01
+Eigenvalues            7.243332e-06 5.660051e-06 4.146274e-06 3.075896e-06
+Proportion of Variance 5.212268e-04 4.072946e-04 2.983640e-04 2.213401e-04
+Cumulative Proportion  9.983137e-01 9.987210e-01 9.990194e-01 9.992407e-01
                              Comp17       Comp18       Comp19       Comp20
-Eigenvalues            2.000337e-06 1.773901e-06 1.233276e-06 9.874623e-07
-Proportion of Variance 1.376559e-04 1.220734e-04 8.486958e-05 6.795356e-05
-Cumulative Proportion  9.996081e-01 9.997301e-01 9.998150e-01 9.998830e-01
+Eigenvalues            2.082742e-06 1.879604e-06 1.402580e-06 1.162853e-06
+Proportion of Variance 1.498731e-04 1.352554e-04 1.009290e-04 8.367838e-05
+Cumulative Proportion  9.993906e-01 9.995259e-01 9.996268e-01 9.997105e-01
                              Comp21       Comp22       Comp23       Comp24
-Eigenvalues            7.968780e-07 4.771590e-07 2.891647e-07 1.376028e-07
-Proportion of Variance 5.483824e-05 3.283634e-05 1.989926e-05 9.469320e-06
-Cumulative Proportion  9.999378e-01 9.999706e-01 9.999905e-01 1.000000e+00</code></pre>
+Eigenvalues            1.051189e-06 8.485087e-07 6.830816e-07 5.594955e-07
+Proportion of Variance 7.564307e-05 6.105829e-05 4.915423e-05 4.026104e-05
+Cumulative Proportion  9.997861e-01 9.998472e-01 9.998963e-01 9.999366e-01
+                             Comp25       Comp26       Comp27       Comp28
+Eigenvalues            2.994319e-07 2.220144e-07 1.600565e-07 1.198621e-07
+Proportion of Variance 2.154698e-05 1.597605e-05 1.151759e-05 8.625218e-06
+Cumulative Proportion  9.999581e-01 9.999741e-01 9.999856e-01 9.999943e-01
+                             Comp29
+Eigenvalues            7.972654e-08
+Proportion of Variance 5.737084e-06
+Cumulative Proportion  1.000000e+00</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># set plot parameters</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>pch.gps <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)[<span class="fu">as.factor</span>(qdata<span class="sc">$</span>ColorGroup)]</span>
@@ -383,7 +391,7 @@ Cumulative Proportion  9.999378e-01 9.999706e-01 9.999905e-01 1.000000e+00</code
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>                   <span class="at">print.progress =</span> <span class="cn">FALSE</span>,</span>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>                   <span class="at">iter =</span> <span class="dv">9999</span>)</span>
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="co"># shape as a function of ColorGroup/raw material?</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="co"># shape as a function of firing practice?</span></span>
 <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(fit.sh)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -395,9 +403,9 @@ Sums of Squares and Cross-products: Type I
 Effect sizes (Z) based on F distributions
 
            Df      SS       MS     Rsq      F      Z Pr(&gt;F)  
-ColorGroup  1 0.04246 0.042462 0.12175 3.1886 1.7758 0.0372 *
-Residuals  23 0.30629 0.013317 0.87825                       
-Total      24 0.34875                                        
+ColorGroup  1 0.04648 0.046481 0.11534 3.6505 1.8933 0.0285 *
+Residuals  28 0.35652 0.012733 0.88466                       
+Total      29 0.40300                                        
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
@@ -409,7 +417,7 @@ Call: procD.lm(f1 = shape ~ ColorGroup, iter = 9999, data = gdf, print.progress 
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>                   <span class="at">print.progress =</span> <span class="cn">FALSE</span>,</span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>                   <span class="at">iter =</span> <span class="dv">9999</span>)</span>
 <span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co"># size as a function of ColorGroup/raw material?</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co"># size as a function of firing practice?</span></span>
 <span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(fit.sz)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -421,9 +429,9 @@ Sums of Squares and Cross-products: Type I
 Effect sizes (Z) based on F distributions
 
            Df     SS      MS     Rsq     F        Z Pr(&gt;F)
-ColorGroup  1   4695  4695.3 0.00836 0.194 -0.39863 0.6539
-Residuals  23 556685 24203.7 0.99164                      
-Total      24 561381                                      
+ColorGroup  1   5217  5217.5 0.00895 0.253 -0.28109 0.6158
+Residuals  28 577415 20622.0 0.99105                      
+Total      29 582632                                      
 
 Call: procD.lm(f1 = size ~ ColorGroup, iter = 9999, data = gdf, print.progress = FALSE)</code></pre>
 </div>
@@ -445,12 +453,15 @@ Call: procD.lm(f1 = size ~ ColorGroup, iter = 9999, data = gdf, print.progress =
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(mean<span class="sc">$</span>B)</span>
 <span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="co"># comparison plots</span></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="fu">plotRefToTarget</span>(mean<span class="sc">$</span>A,</span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>                mean<span class="sc">$</span>B, </span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="fu">plotRefToTarget</span>(mean<span class="sc">$</span>B,</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>                mean<span class="sc">$</span>A, </span>
 <span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>                <span class="at">method =</span> <span class="st">"points"</span>,</span>
 <span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>                <span class="at">mag =</span> <span class="dv">1</span>)</span>
 <span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="co">#knitr::include_graphics('img/fig5.jpg')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">'img/fig5.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="img/fig5.png" class="img-fluid" style="width:100.0%"></p>
+</div>
 </div>
 
 
