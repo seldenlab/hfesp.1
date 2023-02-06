@@ -37,7 +37,7 @@ Landmark data were aligned to a global coordinate system [@RN11622;@RN11623;@RN1
 Y.gpa <- gpagen(coords, print.progress = FALSE)
 
 # plot
-plot(Y.gpa)
+#plot(Y.gpa)
 
 # geomorph data frame ----
 gdf <- geomorph.data.frame(shape = Y.gpa$coords, 
@@ -136,7 +136,7 @@ anova(fit.sz)
 
 ## Mean shapes
 
-```{r mshape, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE}
+```{r mshape, out.width = "100%", dpi = 300, echo=TRUE, eval=FALSE, warning=FALSE}
 # subset landmark coordinates to produce mean shapes for contexts
 new.coords <- coords.subset(A = Y.gpa$coords,
                             group = qdata$ColorGroup)
@@ -153,5 +153,5 @@ plotRefToTarget(mean$B,
                 method = "points",
                 mag = 1)
 
-knitr::include_graphics('img/fig5.png')
+#knitr::include_graphics('img/fig5.png')
 ```
