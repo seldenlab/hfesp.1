@@ -3,7 +3,8 @@ project:
   render:
     - index.qmd
     - c01-color.qmd
-    - c02-morphology.qmd
+    - c02-morphology1.qmd
+    - c03-morphology2.qmd
 
 website:
   margin-header: |
@@ -14,13 +15,13 @@ website:
       - href: index.qmd
         text: Home
       - c01-color.qmd
-      - c02-morphology.qmd
+      - text: Morphology
+        menu:
+          - c02-morphology1.qmd
+          - c03-morphology2.qmd
 
 format:
   html:
     theme: spacelab
     css: styles.css
     toc: true
-
-
-

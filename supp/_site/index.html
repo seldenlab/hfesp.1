@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Robert Z. Selden, Jr.">
-<meta name="dcterms.date" content="2023-02-06">
+<meta name="dcterms.date" content="2023-02-07">
 <meta name="description" content="Supplementary Materials">
 
-<title>Distinct morphologies and firing practices conditioned Early Caddo bottle production</title>
+<title>Did intended firing practice condition the morphology of Caddo bottles?</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -172,10 +172,21 @@ div.csl-indent {
     <a class="nav-link" href="./c01-color.html">
  <span class="menu-text">Firing</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./c02-morphology.html">
- <span class="menu-text">Morphology</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-morphology" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Morphology</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-morphology">    
+        <li>
+    <a class="dropdown-item" href="./c02-morphology1.html">
+ <span class="dropdown-text">Morphology by Type</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./c03-morphology2.html">
+ <span class="dropdown-text">Morphology by Firing Group</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
@@ -202,7 +213,6 @@ div.csl-indent {
   <li><a href="#firing" id="toc-firing" class="nav-link" data-scroll-target="#firing">Firing</a></li>
   <li><a href="#morphology" id="toc-morphology" class="nav-link" data-scroll-target="#morphology">Morphology</a></li>
   </ul></li>
-  <li><a href="#summary-of-findings" id="toc-summary-of-findings" class="nav-link" data-scroll-target="#summary-of-findings">Summary of Findings</a></li>
   <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments">Acknowledgments</a></li>
   <li><a href="#funding" id="toc-funding" class="nav-link" data-scroll-target="#funding">Funding</a></li>
   <li><a href="#data-management" id="toc-data-management" class="nav-link" data-scroll-target="#data-management">Data management</a></li>
@@ -215,7 +225,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Distinct morphologies and firing practices conditioned Early Caddo bottle production</h1>
+<h1 class="title">Did intended firing practice condition the morphology of Caddo bottles?</h1>
 </div>
 
 <div>
@@ -244,7 +254,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 6, 2023</p>
+      <p class="date">February 7, 2023</p>
     </div>
   </div>
   
@@ -255,10 +265,11 @@ div.csl-indent {
 </header>
 
 <blockquote class="blockquote">
-<p>“The question of questions for mankind—the problem which underlies all others, and is more deeply interesting than any other—is the ascertainment of the place which man occupies in nature, and of his relation to the universe of things.” <strong>–H. Thomas Henry Huxley</strong>, <em>Man’s Place in Nature</em></p>
+<p>Each [Caddo] clan had its own shape to make its pottery. One clan never thought of making anything the same pattern of another clan. <strong><em>You could tell who made the pottery by the shape</em></strong> <span class="citation" data-cites="RN9357x">(<a href="#ref-RN9357x" role="doc-biblioref">Cassaway 1937, 395</a>)</span>.</p>
 </blockquote>
 <section id="basis-of-inquiry" class="level1">
 <h1>Basis of inquiry</h1>
+<p>For analysts of ceramics recovered from archaeological contexts, production has long been a fundamental component of their arguments. Within production-based inquiries, color is afforded primacy, as it can provide evidence for use, raw material variability, and firing. This study is focused on the latter, and asks whether intended firing practices may have conditioned the morphology of Formative/Early (CE 800 - 1200) Caddo bottles. To answer this question, 30 three-dimensional (3-D) scans of Hickory Engraved and Smithport Plain bottles were collected from five museums and repositories. The texture (color) data provide 360-degree coverage of the exterior of each vessel, and were used in a quantitative analysis of color where vessels were subsequently binned into two firing groups; oxidized and reduced. The 3-D meshes were then analyzed using the tools of geometric morphometrics to assess whether bottle shape and size differed by firing group. Results demonstrated that the Hickory Engraved and Smithport Plain bottles differ in size—but not shape—and that the two firing groups differ significantly in both color and shape, but not size. Thus, Caddo potters conditioned the shape of Hickory Engraved and Smithport Plain bottles based upon whether they were intended to be fired in an oxidized or reduced environment.</p>
 <section id="keywords" class="level2">
 <h2 class="anchored" data-anchor-id="keywords">Keywords</h2>
 <p><em>Caddo; NAGPRA; ceramic; pottery; 3D; computational archaeology; museum studies; digital humanities; non-Western art history</em></p>
@@ -291,7 +302,7 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p>Pairwise distances between histograms were computed using earth mover’s distance <span class="citation" data-cites="RN11201">(<a href="#ref-RN11201" role="doc-biblioref">Rubner and Tomasi 2001</a>)</span>. The distance matrix was exported for use in a permutational multivariate analysis of variance (MANOVA) using the <code>vegan</code> package to evaluate whether vessel color from each firing category differs (<em>permutations = 10,000; Rsq = 0.31881; <strong>Pr(&gt;F) = 9.999e-05</strong></em>). A neighbor-joining tree was generated using the color distance matrix to illustrate color differences between the oxidized and reduced vessels.</p>
+<p>Pairwise distances between histograms were computed using earth mover’s distance <span class="citation" data-cites="RN11201">(<a href="#ref-RN11201" role="doc-biblioref">Rubner and Tomasi 2001</a>)</span>. The distance matrix was exported for use in a permutational multivariate analysis of variance (MANOVA) using the <code>vegan</code> package to evaluate whether vessel color from each firing category differs (<em>permutations: 10,000; Rsq: 0.31881; <strong>Pr(&gt;F): 9.999e-05</strong></em>). A neighbor-joining tree was generated using the color distance matrix to illustrate color differences between the oxidized and reduced vessels.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">'./img/fig3.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -319,7 +330,7 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p>To assess whether <code>shape</code> and <code>size</code> differs by <code>ColorGroup</code>, Procrustes ANOVAs <span class="citation" data-cites="RN1749">(<a href="#ref-RN1749" role="doc-biblioref">Goodall 1991</a>)</span> were run that enlist effect-sizes (zscores) computed as standard deviates of the generated sampling distributions <span class="citation" data-cites="RN1756">(<a href="#ref-RN1756" role="doc-biblioref">Collyer, Sekora, and Adams 2015</a>)</span>. A residual randomization permutation procedure (RRPP; n = 10,000 permutations) was used for all Procrustes ANOVAs <span class="citation" data-cites="RN1655 RN11775">(<a href="#ref-RN1655" role="doc-biblioref">Adams and Collyer 2015</a>; <a href="#ref-RN11775" role="doc-biblioref">Collyer and Adams 2018</a>)</span>, which has higher statistical power and a greater ability to identify patterns in the data should they be present <span class="citation" data-cites="RN1719">(<a href="#ref-RN1719" role="doc-biblioref">Anderson and Ter Braak 2003</a>)</span>. Results demonstrate a significant difference in shape (<em>RRPP = 10,000; Rsq = 0.11534; <strong>Pr(&gt;F) = 0.0285</strong></em>)</p>
+<p>To assess whether <code>shape</code> and <code>size</code> differs by <code>ColorGroup</code>, Procrustes ANOVAs <span class="citation" data-cites="RN1749">(<a href="#ref-RN1749" role="doc-biblioref">Goodall 1991</a>)</span> were run that enlist effect-sizes (zscores) computed as standard deviates of the generated sampling distributions <span class="citation" data-cites="RN1756">(<a href="#ref-RN1756" role="doc-biblioref">Collyer, Sekora, and Adams 2015</a>)</span>. A residual randomization permutation procedure (RRPP; n = 10,000 permutations) was used for all Procrustes ANOVAs <span class="citation" data-cites="RN1655 RN11775">(<a href="#ref-RN1655" role="doc-biblioref">Adams and Collyer 2015</a>; <a href="#ref-RN11775" role="doc-biblioref">Collyer and Adams 2018</a>)</span>, which has higher statistical power and a greater ability to identify patterns in the data should they be present <span class="citation" data-cites="RN1719">(<a href="#ref-RN1719" role="doc-biblioref">Anderson and Ter Braak 2003</a>)</span>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">'img/fig5.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -331,10 +342,8 @@ div.csl-indent {
 </div>
 </div>
 </div>
+<p>Results demonstrate a significant difference in size by type (RRPP: 10,000; Rsq: 0.14223; <strong>Pr(&gt;F): 0.0373</strong>), where the Hickory Engraved bottles were found to be larger than the Smithport Plain bottles. In the analysis of bottle morphology by firing group, the vessels were found to differ significantly in shape (<em>RRPP: 10,000; Rsq: 0.11534; <strong>Pr(&gt;F) = 0.0285</strong></em>), but not size, by firing group.</p>
 </section>
-</section>
-<section id="summary-of-findings" class="level1">
-<h1>Summary of Findings</h1>
 </section>
 <section id="acknowledgments" class="level1">
 <h1>Acknowledgments</h1>
@@ -351,7 +360,7 @@ div.csl-indent {
 </section>
 <section id="colophon" class="level1 unnumbered">
 <h1 class="unnumbered">Colophon</h1>
-<p>This version of the analysis was generated on 2023-02-06 16:18:48 using the following computational environment and dependencies:</p>
+<p>This version of the analysis was generated on 2023-02-07 09:54:24 using the following computational environment and dependencies:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># what R packages and versions were used?</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="st">"devtools"</span> <span class="sc">%in%</span> <span class="fu">installed.packages</span>()) devtools<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -366,7 +375,7 @@ div.csl-indent {
  collate  English_United States.utf8
  ctype    English_United States.utf8
  tz       America/Chicago
- date     2023-02-06
+ date     2023-02-07
  pandoc   2.19.2 @ C:/Program Files/RStudio/resources/app/bin/quarto/bin/tools/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────
@@ -380,7 +389,7 @@ div.csl-indent {
  ellipsis      0.3.2   2021-04-29 [1] CRAN (R 4.2.2)
  evaluate      0.20    2023-01-17 [1] CRAN (R 4.2.2)
  fastmap       1.1.0   2021-01-25 [1] CRAN (R 4.2.2)
- fs            1.6.0   2023-01-23 [1] CRAN (R 4.2.2)
+ fs            1.6.1   2023-02-06 [1] CRAN (R 4.2.2)
  glue          1.6.2   2022-02-24 [1] CRAN (R 4.2.2)
  htmltools     0.5.4   2022-12-07 [1] CRAN (R 4.2.2)
  htmlwidgets   1.6.1   2023-01-07 [1] CRAN (R 4.2.2)
@@ -432,7 +441,7 @@ div.csl-indent {
 <div class="cell-output cell-output-stdout">
 <pre><code>Local:    main D:/github/hfesp.1
 Remote:   main @ origin (https://github.com/seldenlab/hfesp.1)
-Head:     [f09ed70] 2023-02-06: &lt;edit index&gt;</code></pre>
+Head:     [7457df4] 2023-02-06: &lt;edit index&gt;</code></pre>
 </div>
 </div>
 
@@ -467,6 +476,9 @@ Bookstein, Fred L. 1986. <span>“Size and Shape Spaces for Landmark Data in Two
 </div>
 <div id="ref-RN8477" class="csl-entry" role="doc-biblioentry">
 Bookstein, Fred L., Katrin Schäfer, Hermann Prossinger, Horst Seidler, Martin Fieder, Chris Stringer, Gerhard W. Weber, et al. 1999. <span>“Comparing Frontal Cranial Profiles in Archaic and Modern Homo by Morphometric Analysis.”</span> Journal Article. <em>The Anatomical Record</em> 257 (6): 217–24. https://doi.org/<a href="https://doi.org/10.1002/(SICI)1097-0185(19991215)257:6%3C217::AID-AR7%3E3.0.CO;2-W">https://doi.org/10.1002/(SICI)1097-0185(19991215)257:6%3C217::AID-AR7%3E3.0.CO;2-W</a>.
+</div>
+<div id="ref-RN9357x" class="csl-entry" role="doc-biblioentry">
+Cassaway, Lillian. 1937. <span>“<span class="nocase">Indian-Pioneer History Project for Oklahoma: Sadie Bedoka</span>.”</span> Report. Works Progress Administration.
 </div>
 <div id="ref-RN11139" class="csl-entry" role="doc-biblioentry">
 Chapman, R. E. 1990. <span>“Conventional Procrustes Approaches.”</span> Book Section. In <em>Proceedings of the Michigan Morphometrics Workshop</em>, edited by F. James Rohlf and Fred L. Bookstein, 251–69. Ann Arbor: Special Publication Number 2, The University of Michigan Museum of Zoology.
