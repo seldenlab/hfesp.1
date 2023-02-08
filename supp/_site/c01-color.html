@@ -312,36 +312,37 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>nmds_scores <span class="ot">&lt;-</span> <span class="fu">scores</span>(<span class="fu">metaMDS</span>(<span class="at">comm =</span> <span class="fu">as.dist</span>(cdm)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Run 0 stress 0.03042979 
-Run 1 stress 0.03042965 
+Run 1 stress 0.03765716 
+Run 2 stress 0.03062781 
+... Procrustes: rmse 0.00551615  max resid 0.02535444 
+Run 3 stress 0.03453192 
+Run 4 stress 0.03436597 
+Run 5 stress 0.03860003 
+Run 6 stress 0.03363225 
+Run 7 stress 0.03042962 
 ... New best solution
-... Procrustes: rmse 8.000045e-05  max resid 0.0003628785 
+... Procrustes: rmse 0.0001503761  max resid 0.0006576902 
 ... Similar to previous best
-Run 2 stress 0.03855002 
-Run 3 stress 0.03123807 
-Run 4 stress 0.03062794 
-... Procrustes: rmse 0.005441045  max resid 0.02478671 
-Run 5 stress 0.03043089 
-... Procrustes: rmse 0.0003613647  max resid 0.001553872 
+Run 8 stress 0.03436568 
+Run 9 stress 0.03815375 
+Run 10 stress 0.03407539 
+Run 11 stress 0.03042973 
+... Procrustes: rmse 0.0001288196  max resid 0.0006004652 
 ... Similar to previous best
-Run 6 stress 0.03654069 
-Run 7 stress 0.03062808 
-... Procrustes: rmse 0.005543932  max resid 0.0254793 
-Run 8 stress 0.0402701 
-Run 9 stress 0.03363102 
-Run 10 stress 0.03123842 
-Run 11 stress 0.03042957 
+Run 12 stress 0.3878755 
+Run 13 stress 0.03042973 
+... Procrustes: rmse 0.0001297483  max resid 0.000520516 
+... Similar to previous best
+Run 14 stress 0.03424452 
+Run 15 stress 0.03123816 
+Run 16 stress 0.03042961 
 ... New best solution
-... Procrustes: rmse 1.793071e-05  max resid 7.241264e-05 
+... Procrustes: rmse 6.766477e-05  max resid 0.000306281 
 ... Similar to previous best
-Run 12 stress 0.03123825 
-Run 13 stress 0.03123882 
-Run 14 stress 0.03377023 
-Run 15 stress 0.04183772 
-Run 16 stress 0.03972857 
-Run 17 stress 0.03363233 
-Run 18 stress 0.03817354 
-Run 19 stress 0.03425558 
-Run 20 stress 0.03765915 
+Run 17 stress 0.03363143 
+Run 18 stress 0.03410201 
+Run 19 stress 0.03436783 
+Run 20 stress 0.03123858 
 *** Best solution repeated 1 times</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>plot <span class="ot">&lt;-</span> <span class="fu">scores</span>(nmds_scores) <span class="sc">%&gt;%</span> </span>
@@ -380,8 +381,8 @@ Number of permutations: 10000
 
 adonis2(formula = bottle.dist ~ ColorGroup, data = bottle, permutations = 10000, method = "bray")
            Df SumOfSqs      R2      F    Pr(&gt;F)    
-ColorGroup  1  0.55962 0.32076 13.222 9.999e-05 ***
-Residual   28  1.18506 0.67924                     
+ColorGroup  1  0.75704 0.43392 21.463 9.999e-05 ***
+Residual   28  0.98763 0.56608                     
 Total      29  1.74468 1.00000                     
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>

@@ -153,5 +153,5 @@ plotRefToTarget(mean$B,
                 method = "points",
                 mag = 1)
 
-#knitr::include_graphics('img/fig5.png')
+knitr::include_graphics('img/fig5.png')
 ```
