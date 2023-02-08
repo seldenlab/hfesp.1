@@ -22,7 +22,7 @@ cdm <- imageClusterPipeline(images)
 # replace NAs with 0
 cdm[is.na(cdm)] = 0
 # export color distance matrix
-write.csv(cdm, file = "distance_matrix.csv")
+write.csv(cdm, file = 'distance_matrix.csv')
 
 # import qual data
 hfesp.data <- read.csv('qdata.csv',
@@ -30,29 +30,14 @@ hfesp.data <- read.csv('qdata.csv',
                    as.is = TRUE)
 
 # import color distance matrix
-c.data <- read.csv("distance_matrix.csv",
+c.data <- read.csv('distance_matrix.csv',
                    header = TRUE,
                    as.is = TRUE)
 ```
 
-## Ordination: NMDS
+## Permutational MANOVA
 
-```{r nmdsord, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE, message = FALSE}
-nmds_scores <- scores(metaMDS(comm = as.dist(cdm)))
-
-plot <- scores(nmds_scores) %>% 
-  as_tibble(rownames = 'X') %>%
-  inner_join(., hfesp.data, by = 'X')
-
-## plot
-ggplot(data = plot, aes(x = NMDS1, y = NMDS2, 
-                        color = ColorGroup, fill = ColorGroup)) +
-  geom_point(aes(shape = ColorGroup)) +
-  geom_convexhull(alpha = 0.1) +
-  scale_color_manual(values = wes_palette('Moonrise2')) +
-  scale_fill_manual(values = wes_palette('Moonrise2')) +
-  theme(legend.position = 'none')
-
+```{r permanova, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE, message = FALSE}
 # perMANOVA
 bottle <- left_join(hfesp.data, c.data, by = 'X') # left join by specimen number
 bottle.dist <- bottle[,6:35] # color distance matrix
@@ -71,7 +56,7 @@ bottle.colour
 ## Visualization: Tree
 
 ```{r tree, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE, message = FALSE}
-# define add_image function
+# define add_image function----
 add_image <- function(obj,
                       x = NULL,
                       y = NULL,
@@ -100,15 +85,15 @@ add_image <- function(obj,
                         angle = angle)
 }
 
-# neighbor-joining tree----
+# neighbor-joining tree
 tree <- nj(as.dist(cdm))
 # plot tree
 plot(tree,
      show.tip.label = FALSE,
-     direction = "upward")
+     direction = 'upward')
 
 # get parameters from plotting environment
-lastPP <- get("last_plot.phylo", 
+lastPP <- get('last_plot.phylo', 
               envir = .PlotPhyloEnv)
 
 # get xy coordinates of tips
@@ -130,10 +115,10 @@ images <- images[image_order]
 
 ## final plot
 par(mar = rep(0, 4))
-plot(tree, show.tip.label = FALSE, direction = "upward")
+plot(tree, show.tip.label = FALSE, direction = 'upward')
 
 # parameters from plotting environment
-lastPP <- get("last_plot.phylo", envir = .PlotPhyloEnv)
+lastPP <- get('last_plot.phylo', envir = .PlotPhyloEnv)
 
 # xy coordinates of tips
 ntip <- lastPP$Ntip
