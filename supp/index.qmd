@@ -40,7 +40,11 @@ Each of the 30 vessels was scanned (3D) with a Creaform GoSCAN20 to capture colo
 knitr::include_graphics('./img/fig2.png')
 ```
 
+<<<<<<< HEAD
 Pairwise distances between histograms were computed using earth mover’s distance [@RN11201]. The distance matrix was exported for a permutational multivariate analysis of variance (MANOVA) using the `vegan` package to evaluate whether vessel color between firing categories differs (_permutations: 10,000; Rsq: 0.31881; **Pr(>F): 9.999e-05**_). A neighbor-joining tree was generated using the color distance matrix to illustrate color differences between oxidized and reduced vessels.
+=======
+Pairwise distances between histograms were computed using earth mover’s distance [@RN11201]. The distance matrix was exported for use in a permutational multivariate analysis of variance (MANOVA) using the `vegan` package to evaluate whether vessel color from each firing category differs (_permutations: 10,000; Rsq: 0.4324; **Pr(>F): 9.999e-05**_). A neighbor-joining tree was generated using the color distance matrix to illustrate color differences between the oxidized and reduced vessels.
+>>>>>>> f4d7786d796ca6a463b040c30238f75619ea1842
 
 ```{r fig3, fig.cap="Neighbor-joining tree illustrating the 3D texture (color) data for oxidized (left) and reduced (right) Caddo bottles."}
 
@@ -69,7 +73,7 @@ Results demonstrate a significant difference in size---but not shape---by type (
 
 # Acknowledgments
 
-My thanks to the Caddo Nation of Oklahoma, the Caddo Nation Tribal Council, Tribal Chairman, and Tribal Historic Preservation Office for permission and access to NAGPRA and previously repatriated collections. I also extend my gratitude to the Williamson Museum, Louisiana State Exhibit Museum, Texas Archeological Research Laboratory, and the University of Arkansas Museum for their assistance with access to Caddo bottles in their collection. Special thanks to Mary C. Suter and Anne M. Early for their guidance regarding Hickory Engraved and Smithport Plain vessels in the University of Arkansas Museum collections. Thanks also to John E. Dockall, David H. Dye, Harry J. Shafer, Hiram F. (Pete) Gregory, Christian S. Hoggard, Mary Beth Trubitt, and David K. Thulman for their comments and constructive criticisms on the ongoing analyses of Caddo material culture, to David L. Carlson for guidance regarding the seriation, and to Emma Sherratt, Kersten Bergstrom, Dean C. Adams, and Michael L. Collyer for their constructive criticisms, general comments, and suggestions throughout the development of this research program.
+My thanks to the Caddo Nation of Oklahoma, the Caddo Nation Tribal Council, Tribal Chairman, and Tribal Historic Preservation Office for permission and access to NAGPRA and previously repatriated collections. I also extend my gratitude to the Williamson Museum, Louisiana State Exhibit Museum, Texas Archeological Research Laboratory, and the University of Arkansas Museum for their assistance with access to Caddo bottles in their collection. Special thanks to Mary C. Suter and Anne M. Early for their guidance regarding Hickory Engraved and Smithport Plain vessels in the University of Arkansas Museum collections. Thanks also to John E. Dockall, David H. Dye, Harry J. Shafer, Hiram F. (Pete) Gregory, Christian S. Hoggard, Mary Beth Trubitt, and David K. Thulman for their comments and constructive criticisms on the ongoing analyses of Caddo material culture, and to Emma Sherratt, Kersten Bergstrom, Dean C. Adams, and Michael L. Collyer for their constructive criticisms, general comments, and suggestions throughout the development of this research program.
 
 # Funding
 

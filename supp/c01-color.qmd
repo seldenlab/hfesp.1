@@ -23,7 +23,12 @@ cdm <- imageClusterPipeline(images)
 cdm[is.na(cdm)] = 0
 # export color distance matrix
 write.csv(cdm, file = 'distance_matrix.csv')
+```
 
+## Permutational MANOVA
+
+```{r permanova, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE, message = FALSE}
+#preliminaries
 # import qual data
 hfesp.data <- read.csv('qdata.csv',
                    header = TRUE,
@@ -33,12 +38,7 @@ hfesp.data <- read.csv('qdata.csv',
 c.data <- read.csv('distance_matrix.csv',
                    header = TRUE,
                    as.is = TRUE)
-```
 
-## Permutational MANOVA
-
-```{r permanova, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE, message = FALSE}
-# perMANOVA
 bottle <- left_join(hfesp.data, c.data, by = 'X') # left join by specimen number
 bottle.dist <- bottle[,6:35] # color distance matrix
 set.seed(10) # make results reproducible
