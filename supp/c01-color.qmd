@@ -17,7 +17,10 @@ library(wesanderson)
 images <- colordistance::getImagePaths('out')
 
 # generate color distance matrix
-cdm <- imageClusterPipeline(images)
+cdm <- imageClusterPipeline(images,
+                            lower = FALSE,
+                            upper = FALSE,
+                            plot.bins = TRUE)
 
 # replace NAs with 0
 cdm[is.na(cdm)] = 0
