@@ -20,7 +20,8 @@ images <- colordistance::getImagePaths('out')
 cdm <- imageClusterPipeline(images,
                             lower = FALSE,
                             upper = FALSE,
-                            plot.bins = TRUE)
+                            hist.bins = 3,
+                            color.space = 'rgb')
 
 # replace NAs with 0
 cdm[is.na(cdm)] = 0
@@ -56,10 +57,10 @@ bottle.colour <- adonis2(bottle.dist ~ ColorGroup,
 bottle.colour
 ```
 
-## Visualization: Tree
+## Neighbor-Joining Tree
 
 ```{r tree, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE, message = FALSE}
-# define add_image function----
+# define add_image function
 add_image <- function(obj,
                       x = NULL,
                       y = NULL,
