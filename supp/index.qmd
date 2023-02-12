@@ -1,5 +1,5 @@
 ---
-title: "Did intended firing method condition the morphology of Caddo bottles?"
+title: "Did intended firing method condition the morphology of Formative/Early Caddo bottles?"
 author:
   - name: Robert Z. Selden, Jr.
     affiliations:
@@ -18,7 +18,7 @@ license: "CC BY-NC"
 
 # Basis of inquiry
 
-Color is afforded primacy in ceramic production inquiries, as it provides evidence linked with use, raw material variability, and method of firing. This study is focused on the latter, and asks whether the intended firing method conditioned the morphology of Formative/Early Caddo bottles (CE 800 - 1250). Thirty three-dimensional (3-D) scans of Hickory Engraved and Smithport Plain bottles were collected from five museums and repositories, and provide 360-degree coverage of exterior colors associated with each vessel. Texture (color) files were used in a quantitative analysis of color where vessels were subsequently binned into two groups based upon firing method; oxidized and reduced. The 3-D meshes were then analyzed using the tools of geometric morphometrics to assess whether bottle shape and size differ by method of firing. Results demonstrate significant differences in both color and shape---but not size---by firing method. Thus, Caddo potters conditioned the shape of Hickory Engraved and Smithport Plain bottles based upon the firing method that they intended to use. This finding provides evidence for two discrete, contemporary, and sympatric Caddo potting communities delimited by macroscopic attributes, and advances our understanding of Caddo decision-making behaviors related to ceramic production.
+Color is afforded primacy in ceramic production inquiries, as it provides evidence linked with use, raw material variability, and method of firing. This study is focused on the latter, and asks whether the intended firing method conditioned the morphology of Formative/Early Caddo bottles (CE 800 - 1250). Thirty three-dimensional (3-D) scans of Hickory Engraved and Smithport Plain bottles were collected from five museums and repositories, and provide 360-degree coverage of exterior colors associated with each vessel. Texture (color) files were used in a quantitative analysis of color where vessels were subsequently binned into two groups based upon firing method; oxidized and reduced. The 3-D meshes were then analyzed using the tools of geometric morphometrics to assess whether bottle shape and size differ by method of firing. Results demonstrate significant differences in both color---but not bottle shape or size---by firing method. Thus, Formative/Early Caddo potters did not condition the shape of Hickory Engraved and Smithport Plain bottles based upon their intended firing method. This finding provides evidence for morphological consistency at the population level, and advances our understanding of Caddo decision-making behaviors related to Hickory Engraved and Smithport Plain bottle production.
 
 ## Keywords
 
@@ -40,9 +40,9 @@ Each of the 30 vessels was scanned (3D) with a Creaform GoSCAN20 to capture colo
 knitr::include_graphics('./img/fig2.png')
 ```
 
-The elliptical bifaces were coded as ColorGroup A (reduced) and ColorGroup B (oxidized). To test whether the color groups identified by the clusters differ, the color distance matrix was exported and joined with the categorical data. Those data were used in a permutational multivariate analysis of variance in the `vegan` package to evaluate whether vessel colors differs by firing method (_permutations: 10,000; Rsq: 0.4324; **Pr(>F): 9.999e-05**_). A neighbor-joining tree was generated using the color distance matrix to illustrate color differences between oxidized and reduced vessels.
+The elliptical bifaces were coded as ColorGroup A (reduced) and ColorGroup B (oxidized). To test whether the color groups identified by the clusters differ, the color distance matrix was exported and joined with the categorical data. Those data were used in a permutational multivariate analysis of variance in the `vegan` package to evaluate whether vessel colors differs by firing method (_permutations: 10,000; Rsq: 0.5; **Pr(>F): 9.999e-05**_). A neighbor-joining tree was generated using the color distance matrix to illustrate color differences between oxidized and reduced vessels.
 
-```{r fig3, fig.cap="Neighbor-joining tree illustrating the 3D texture (color) data for oxidized (left) and reduced (right) Caddo bottles."}
+```{r fig3, fig.cap="Neighbor-joining tree illustrating the 3D texture (color) data for reduced (left) and oxidized (right) Hickory Engraved and Smithport Plain Caddo bottles."}
 
 knitr::include_graphics('./img/fig3.png')
 ```
@@ -53,19 +53,12 @@ Landmark data were aligned to a global coordinate system [@RN8477;@RN7502;@RN116
 
 Principal components analysis [@RN1746] was used to visualize shape variation among the bottles, and the scatterplot represents the dispersion of shapes in tangent space [@RN8633;@RN5616;@RN11143;@RN7550]. Shape ranges described by each principal axis are commonly visualized using thin-plate spline warping of a reference mesh [@RN1731;@RN479].
 
-```{r fig4, fig.cap="Principal components analysis plot (PC1/PC2) for Hickory Engraved and Smithport Plain bottles by firing category, where gray indicates bottles fired in a reduced environment, and orange from an oxidized environment, plotted with warp grids for the first two principal components."}
+```{r fig4, fig.cap="Principal components analysis plot (PC1/PC2) for Hickory Engraved and Smithport Plain bottles by firing category, where gray circles indicate bottles fired in a reduced environment, and orange plus signs indicate those from an oxidized environment; warp grids for the first two principal components."}
 
 knitr::include_graphics('./img/fig4.png')
 ```
 
-To assess whether `shape` and `size` differs by `ColorGroup`, Procrustes ANOVAs [@RN1749] were run that enlist effect-sizes (zscores) computed as standard deviates of the generated sampling distributions [@RN1756]. A residual randomization permutation procedure (RRPP; n = 10,000 permutations) was used for all Procrustes ANOVAs [@RN1655;@RN11775], which has higher statistical power and a greater ability to identify patterns in the data should they be present [@RN1719]. 
-
-```{r fig5, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE, fig.cap="Mean shapes summarizing variation in Hickory Engraved and Smithport Plain bottles fired in oxidized (left) and reduced (right) environments. In the comparison, gray spheres articulate with oxidized vessels, and black spheres with reduced."}
-
-knitr::include_graphics('img/fig5.png')
-```
-
-Results demonstrate a significant difference in size---but not shape---by type (_RRPP: 10,000; Rsq: 0.14223; **Pr(>F): 0.0373**_), where the Hickory Engraved bottles were found to be larger than the Smithport Plain bottles. In the analysis of bottle morphology by firing method, vessels were found to differ significantly in shape (_RRPP: 10,000; Rsq: 0.11456; **Pr(>F): 0.0275**_), but not size (_RRPP: 10,000; Rsq: 0.00224; **Pr(>F): 0.8008**_).
+To assess whether `shape` and `size` differs by `ColorGroup`, Procrustes ANOVAs [@RN1749] were run that enlist effect-sizes (zscores) computed as standard deviates of the generated sampling distributions [@RN1756]. A residual randomization permutation procedure (RRPP; n = 10,000 permutations) was used for all Procrustes ANOVAs [@RN1655;@RN11775], which has higher statistical power and a greater ability to identify patterns in the data should they be present [@RN1719]. Results demonstrate a significant difference in size---but not shape---by type (_RRPP: 10,000; Rsq: 0.14223; **Pr(>F): 0.0373**_), where the Hickory Engraved bottles were found to be larger than the Smithport Plain bottles. In the analysis of bottle morphology by firing method, vessels were found to be morphologically consistent in shape (_RRPP: 10,000; Rsq: 0.1392; **Pr(>F): 0.7414**_), as well as size (_RRPP: 10,000; Rsq: 0.01258; **Pr(>F): 0.5571**_).
 
 # Acknowledgments
 
