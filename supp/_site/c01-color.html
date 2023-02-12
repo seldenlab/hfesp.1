@@ -182,8 +182,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#permutational-manova" id="toc-permutational-manova" class="nav-link active" data-scroll-target="#permutational-manova">Permutational MANOVA</a></li>
-  <li><a href="#neighbor-joining-tree" id="toc-neighbor-joining-tree" class="nav-link" data-scroll-target="#neighbor-joining-tree">Neighbor-Joining Tree</a></li>
+  <li><a href="#neighbor-joining-tree" id="toc-neighbor-joining-tree" class="nav-link active" data-scroll-target="#neighbor-joining-tree">Neighbor-Joining Tree</a></li>
+  <li><a href="#permutational-manova" id="toc-permutational-manova" class="nav-link" data-scroll-target="#permutational-manova">Permutational MANOVA</a></li>
   </ul>
 </nav>
     </div>
@@ -228,11 +228,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>                            <span class="at">lower =</span> <span class="cn">FALSE</span>,</span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>                            <span class="at">upper =</span> <span class="cn">FALSE</span>,</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>                            <span class="at">hist.bins =</span> <span class="dv">3</span>,</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>                            <span class="at">color.space =</span> <span class="st">'lab'</span>,</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>                            <span class="at">ref.white =</span> <span class="st">'D65'</span>,</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>                            <span class="at">plot.bins =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>                            <span class="at">pausing =</span> <span class="cn">FALSE</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>                            )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>                            <span class="at">color.space =</span> <span class="st">'rgb'</span>,</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>                            <span class="at">plot.bins =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>                            <span class="at">pausing =</span> <span class="cn">FALSE</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>                            )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
   |                                                                            
@@ -486,68 +485,149 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="co"># export color distance matrix</span></span>
 <span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(cdm, <span class="at">file =</span> <span class="st">'distance_matrix.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<section id="neighbor-joining-tree" class="level2">
+<h2 class="anchored" data-anchor-id="neighbor-joining-tree">Neighbor-Joining Tree</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># define add_image function</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>add_image <span class="ot">&lt;-</span> <span class="cf">function</span>(obj,</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>                      <span class="at">x =</span> <span class="cn">NULL</span>,</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>                      <span class="at">y =</span> <span class="cn">NULL</span>,</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>                      <span class="at">width =</span> <span class="cn">NULL</span>,</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>                      <span class="at">interpolate =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>                      <span class="at">angle =</span> <span class="dv">0</span>) {</span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># get current plotting window parameters:</span></span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>  usr <span class="ot">&lt;-</span> graphics<span class="sc">::</span><span class="fu">par</span>()<span class="sc">$</span>usr</span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a>  pin <span class="ot">&lt;-</span> graphics<span class="sc">::</span><span class="fu">par</span>()<span class="sc">$</span>pin</span>
+<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># image dimensions and scaling factor:</span></span>
+<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a>  imdim <span class="ot">&lt;-</span> <span class="fu">dim</span>(obj)</span>
+<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a>  sf <span class="ot">&lt;-</span> imdim[<span class="dv">1</span>] <span class="sc">/</span> imdim[<span class="dv">2</span>]</span>
+<span id="cb34-16"><a href="#cb34-16" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb34-17"><a href="#cb34-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># set the width of the image (relative to x-axis)</span></span>
+<span id="cb34-18"><a href="#cb34-18" aria-hidden="true" tabindex="-1"></a>  w <span class="ot">&lt;-</span> width <span class="sc">/</span> (usr[<span class="dv">2</span>] <span class="sc">-</span> usr[<span class="dv">1</span>]) <span class="sc">*</span> pin[<span class="dv">1</span>]</span>
+<span id="cb34-19"><a href="#cb34-19" aria-hidden="true" tabindex="-1"></a>  h <span class="ot">&lt;-</span> w <span class="sc">*</span> sf</span>
+<span id="cb34-20"><a href="#cb34-20" aria-hidden="true" tabindex="-1"></a>  hu <span class="ot">&lt;-</span> h <span class="sc">/</span> pin[<span class="dv">2</span>] <span class="sc">*</span> (usr[<span class="dv">4</span>] <span class="sc">-</span> usr[<span class="dv">3</span>])</span>
+<span id="cb34-21"><a href="#cb34-21" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb34-22"><a href="#cb34-22" aria-hidden="true" tabindex="-1"></a>  <span class="co"># plot the image</span></span>
+<span id="cb34-23"><a href="#cb34-23" aria-hidden="true" tabindex="-1"></a>  graphics<span class="sc">::</span><span class="fu">rasterImage</span>(<span class="at">image =</span> obj,</span>
+<span id="cb34-24"><a href="#cb34-24" aria-hidden="true" tabindex="-1"></a>                        <span class="at">xleft =</span> x <span class="sc">-</span> (width <span class="sc">/</span> <span class="dv">2</span>), <span class="at">xright =</span> x <span class="sc">+</span> (width <span class="sc">/</span> <span class="dv">2</span>),</span>
+<span id="cb34-25"><a href="#cb34-25" aria-hidden="true" tabindex="-1"></a>                        <span class="at">ybottom =</span> y <span class="sc">-</span> (hu <span class="sc">/</span> <span class="dv">2</span>), <span class="at">ytop =</span> y <span class="sc">+</span> (hu<span class="sc">/</span><span class="dv">2</span>),</span>
+<span id="cb34-26"><a href="#cb34-26" aria-hidden="true" tabindex="-1"></a>                        <span class="at">interpolate =</span> interpolate,</span>
+<span id="cb34-27"><a href="#cb34-27" aria-hidden="true" tabindex="-1"></a>                        <span class="at">angle =</span> angle)</span>
+<span id="cb34-28"><a href="#cb34-28" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb34-29"><a href="#cb34-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-30"><a href="#cb34-30" aria-hidden="true" tabindex="-1"></a><span class="co"># neighbor-joining tree</span></span>
+<span id="cb34-31"><a href="#cb34-31" aria-hidden="true" tabindex="-1"></a>tree <span class="ot">&lt;-</span> <span class="fu">nj</span>(<span class="fu">as.dist</span>(cdm))</span>
+<span id="cb34-32"><a href="#cb34-32" aria-hidden="true" tabindex="-1"></a><span class="co"># plot tree</span></span>
+<span id="cb34-33"><a href="#cb34-33" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(tree,</span>
+<span id="cb34-34"><a href="#cb34-34" aria-hidden="true" tabindex="-1"></a>     <span class="at">show.tip.label =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb34-35"><a href="#cb34-35" aria-hidden="true" tabindex="-1"></a>     <span class="at">direction =</span> <span class="st">'upward'</span>)</span>
+<span id="cb34-36"><a href="#cb34-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-37"><a href="#cb34-37" aria-hidden="true" tabindex="-1"></a><span class="co"># get parameters from plotting environment</span></span>
+<span id="cb34-38"><a href="#cb34-38" aria-hidden="true" tabindex="-1"></a>lastPP <span class="ot">&lt;-</span> <span class="fu">get</span>(<span class="st">'last_plot.phylo'</span>, </span>
+<span id="cb34-39"><a href="#cb34-39" aria-hidden="true" tabindex="-1"></a>              <span class="at">envir =</span> .PlotPhyloEnv)</span>
+<span id="cb34-40"><a href="#cb34-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-41"><a href="#cb34-41" aria-hidden="true" tabindex="-1"></a><span class="co"># get xy coordinates of tips</span></span>
+<span id="cb34-42"><a href="#cb34-42" aria-hidden="true" tabindex="-1"></a>ntip <span class="ot">&lt;-</span> lastPP<span class="sc">$</span>Ntip</span>
+<span id="cb34-43"><a href="#cb34-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-44"><a href="#cb34-44" aria-hidden="true" tabindex="-1"></a><span class="co"># first n values are tips/remaining values are node coordinates</span></span>
+<span id="cb34-45"><a href="#cb34-45" aria-hidden="true" tabindex="-1"></a>xy <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> lastPP<span class="sc">$</span>xx[<span class="dv">1</span><span class="sc">:</span>ntip],</span>
+<span id="cb34-46"><a href="#cb34-46" aria-hidden="true" tabindex="-1"></a>                 <span class="at">y =</span> lastPP<span class="sc">$</span>yy[<span class="dv">1</span><span class="sc">:</span>ntip])</span>
+<span id="cb34-47"><a href="#cb34-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-48"><a href="#cb34-48" aria-hidden="true" tabindex="-1"></a><span class="co"># get image names</span></span>
+<span id="cb34-49"><a href="#cb34-49" aria-hidden="true" tabindex="-1"></a>imnames <span class="ot">&lt;-</span> tools<span class="sc">::</span><span class="fu">file_path_sans_ext</span>(<span class="fu">basename</span>(images))</span>
+<span id="cb34-50"><a href="#cb34-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-51"><a href="#cb34-51" aria-hidden="true" tabindex="-1"></a><span class="co"># get tip labels</span></span>
+<span id="cb34-52"><a href="#cb34-52" aria-hidden="true" tabindex="-1"></a>tipnames <span class="ot">&lt;-</span> tree<span class="sc">$</span>tip.label</span>
+<span id="cb34-53"><a href="#cb34-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-54"><a href="#cb34-54" aria-hidden="true" tabindex="-1"></a><span class="co"># check that images are in correct order:</span></span>
+<span id="cb34-55"><a href="#cb34-55" aria-hidden="true" tabindex="-1"></a>image_order <span class="ot">&lt;-</span> <span class="fu">match</span>(tipnames, imnames)</span>
+<span id="cb34-56"><a href="#cb34-56" aria-hidden="true" tabindex="-1"></a>images <span class="ot">&lt;-</span> images[image_order]</span>
+<span id="cb34-57"><a href="#cb34-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-58"><a href="#cb34-58" aria-hidden="true" tabindex="-1"></a><span class="do">## final plot</span></span>
+<span id="cb34-59"><a href="#cb34-59" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">rep</span>(<span class="dv">0</span>, <span class="dv">4</span>))</span>
+<span id="cb34-60"><a href="#cb34-60" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(tree, <span class="at">show.tip.label =</span> <span class="cn">FALSE</span>, <span class="at">direction =</span> <span class="st">'upward'</span>)</span>
+<span id="cb34-61"><a href="#cb34-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-62"><a href="#cb34-62" aria-hidden="true" tabindex="-1"></a><span class="co"># parameters from plotting environment</span></span>
+<span id="cb34-63"><a href="#cb34-63" aria-hidden="true" tabindex="-1"></a>lastPP <span class="ot">&lt;-</span> <span class="fu">get</span>(<span class="st">'last_plot.phylo'</span>, <span class="at">envir =</span> .PlotPhyloEnv)</span>
+<span id="cb34-64"><a href="#cb34-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-65"><a href="#cb34-65" aria-hidden="true" tabindex="-1"></a><span class="co"># xy coordinates of tips</span></span>
+<span id="cb34-66"><a href="#cb34-66" aria-hidden="true" tabindex="-1"></a>ntip <span class="ot">&lt;-</span> lastPP<span class="sc">$</span>Ntip</span>
+<span id="cb34-67"><a href="#cb34-67" aria-hidden="true" tabindex="-1"></a>xy <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> lastPP<span class="sc">$</span>xx[<span class="dv">1</span><span class="sc">:</span>ntip],</span>
+<span id="cb34-68"><a href="#cb34-68" aria-hidden="true" tabindex="-1"></a>                 <span class="at">y =</span> lastPP<span class="sc">$</span>yy[<span class="dv">1</span><span class="sc">:</span>ntip]) </span>
+<span id="cb34-69"><a href="#cb34-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-70"><a href="#cb34-70" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(images)) {</span>
+<span id="cb34-71"><a href="#cb34-71" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_image</span>(png<span class="sc">::</span><span class="fu">readPNG</span>(images[i]),</span>
+<span id="cb34-72"><a href="#cb34-72" aria-hidden="true" tabindex="-1"></a>            <span class="at">x =</span> xy[i, <span class="dv">1</span>],</span>
+<span id="cb34-73"><a href="#cb34-73" aria-hidden="true" tabindex="-1"></a>            <span class="at">y =</span> xy[i, <span class="dv">2</span>], </span>
+<span id="cb34-74"><a href="#cb34-74" aria-hidden="true" tabindex="-1"></a>            <span class="at">width =</span> <span class="dv">2</span>)</span>
+<span id="cb34-75"><a href="#cb34-75" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="c01-color_files/figure-html/tree-1.png" class="img-fluid" style="width:100.0%"></p>
+</div>
+</div>
+</section>
 <section id="permutational-manova" class="level2">
 <h2 class="anchored" data-anchor-id="permutational-manova">Permutational MANOVA</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co">#preliminaries</span></span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="co"># import qual data</span></span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>hfesp.data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'qdata.csv'</span>,</span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>                       <span class="at">header =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>                       <span class="at">as.is =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="co"># import color distance matrix</span></span>
-<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>c.data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'distance_matrix.csv'</span>,</span>
-<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>                   <span class="at">header =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>                   <span class="at">as.is =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a><span class="co"># cdm rev sans .png</span></span>
-<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a>c.data2 <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(c.data <span class="sc">%&gt;%</span> </span>
-<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(<span class="fu">c</span>(CNO.Pohler.<span class="dv">2002</span>.<span class="dv">01</span>.<span class="fl">18.</span>png<span class="sc">:</span>UArk_BattleMound.<span class="dv">55</span>.<span class="dv">15</span>.<span class="fl">9.</span>png)) <span class="sc">%&gt;%</span> </span>
-<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a>      <span class="fu">rename</span>(<span class="st">'CNO-Pohler-2002-01-18'</span> <span class="ot">=</span> CNO.Pohler.<span class="dv">2002</span>.<span class="dv">01</span>.<span class="fl">18.</span>png,</span>
-<span id="cb34-16"><a href="#cb34-16" aria-hidden="true" tabindex="-1"></a>             <span class="st">'CNO-Pohler-2002-01-20'</span> <span class="ot">=</span> CNO.Pohler.<span class="dv">2002</span>.<span class="dv">01</span>.<span class="fl">20.</span>png,</span>
-<span id="cb34-17"><a href="#cb34-17" aria-hidden="true" tabindex="-1"></a>             <span class="st">'CNO-Pohler-2002-01-23'</span> <span class="ot">=</span> CNO.Pohler.<span class="dv">2002</span>.<span class="dv">01</span>.<span class="fl">23.</span>png,</span>
-<span id="cb34-18"><a href="#cb34-18" aria-hidden="true" tabindex="-1"></a>             <span class="st">'CNO-Pohler-2002-01-27'</span> <span class="ot">=</span> CNO.Pohler.<span class="dv">2002</span>.<span class="dv">01</span>.<span class="fl">27.</span>png,</span>
-<span id="cb34-19"><a href="#cb34-19" aria-hidden="true" tabindex="-1"></a>             <span class="st">'LSEM-Haley-HFE1'</span> <span class="ot">=</span> LSEM.Haley.HFE1.png,</span>
-<span id="cb34-20"><a href="#cb34-20" aria-hidden="true" tabindex="-1"></a>             <span class="st">'LSEM-Haley-HFE2'</span> <span class="ot">=</span> LSEM.Haley.HFE2.png,</span>
-<span id="cb34-21"><a href="#cb34-21" aria-hidden="true" tabindex="-1"></a>             <span class="st">'LSEM-Haley-HFE3'</span> <span class="ot">=</span> LSEM.Haley.HFE3.png,</span>
-<span id="cb34-22"><a href="#cb34-22" aria-hidden="true" tabindex="-1"></a>             <span class="st">'LSEM-Haley-HFE4'</span> <span class="ot">=</span> LSEM.Haley.HFE4.png,</span>
-<span id="cb34-23"><a href="#cb34-23" aria-hidden="true" tabindex="-1"></a>             <span class="st">'LSEM-Haley-HFE5'</span> <span class="ot">=</span> LSEM.Haley.HFE5.png,</span>
-<span id="cb34-24"><a href="#cb34-24" aria-hidden="true" tabindex="-1"></a>             <span class="st">'NSU-AllenPlantation-142'</span> <span class="ot">=</span> NSU.AllenPlantation.<span class="fl">142.</span>png,</span>
-<span id="cb34-25"><a href="#cb34-25" aria-hidden="true" tabindex="-1"></a>             <span class="st">'NSU-Belcher-404'</span> <span class="ot">=</span> NSU.Belcher.<span class="fl">404.</span>png,</span>
-<span id="cb34-26"><a href="#cb34-26" aria-hidden="true" tabindex="-1"></a>             <span class="st">'NSU-Gahagan-955'</span> <span class="ot">=</span> NSU.Gahagan.<span class="fl">955.</span>png,</span>
-<span id="cb34-27"><a href="#cb34-27" aria-hidden="true" tabindex="-1"></a>             <span class="st">'NSU-Gahagan-956'</span> <span class="ot">=</span> NSU.Gahagan.<span class="fl">956.</span>png,</span>
-<span id="cb34-28"><a href="#cb34-28" aria-hidden="true" tabindex="-1"></a>             <span class="st">'NSU-SmithportLanding-152'</span> <span class="ot">=</span> NSU.SmithportLanding.<span class="fl">152.</span>png,</span>
-<span id="cb34-29"><a href="#cb34-29" aria-hidden="true" tabindex="-1"></a>             <span class="st">'NSU-SmithportLanding-157'</span> <span class="ot">=</span> NSU.SmithportLanding.<span class="fl">157.</span>png,</span>
-<span id="cb34-30"><a href="#cb34-30" aria-hidden="true" tabindex="-1"></a>             <span class="st">'NSU-SmithportLanding-95'</span> <span class="ot">=</span> NSU.SmithportLanding.<span class="fl">95.</span>png,</span>
-<span id="cb34-31"><a href="#cb34-31" aria-hidden="true" tabindex="-1"></a>             <span class="st">'NSU-SmithportLanding-96'</span> <span class="ot">=</span> NSU.SmithportLanding.<span class="fl">96.</span>png,</span>
-<span id="cb34-32"><a href="#cb34-32" aria-hidden="true" tabindex="-1"></a>             <span class="st">'TARL-41BW3-6-1-7-FS7'</span> <span class="ot">=</span> TARL<span class="fl">.41</span>BW3.<span class="dv">6</span>.<span class="dv">1</span>.<span class="fl">7.</span>FS7.png,</span>
-<span id="cb34-33"><a href="#cb34-33" aria-hidden="true" tabindex="-1"></a>             <span class="st">'TARL-41BW4-341-427'</span> <span class="ot">=</span> TARL<span class="fl">.41</span>BW4.<span class="dv">341</span>.<span class="fl">427.</span>png,</span>
-<span id="cb34-34"><a href="#cb34-34" aria-hidden="true" tabindex="-1"></a>             <span class="st">'TARL-41BW4-341-464'</span> <span class="ot">=</span> TARL<span class="fl">.41</span>BW4.<span class="dv">341</span>.<span class="fl">464.</span>png,</span>
-<span id="cb34-35"><a href="#cb34-35" aria-hidden="true" tabindex="-1"></a>             <span class="st">'TARL-41BW4-6-2-132'</span> <span class="ot">=</span> TARL<span class="fl">.41</span>BW4.<span class="dv">6</span>.<span class="dv">2</span>.<span class="fl">132.</span>png,</span>
-<span id="cb34-36"><a href="#cb34-36" aria-hidden="true" tabindex="-1"></a>             <span class="st">'TARL-41BW4-6-2-67'</span> <span class="ot">=</span> TARL<span class="fl">.41</span>BW4.<span class="dv">6</span>.<span class="dv">2</span>.<span class="fl">67.</span>png,</span>
-<span id="cb34-37"><a href="#cb34-37" aria-hidden="true" tabindex="-1"></a>             <span class="st">'TARL-41BW4-6-2-78'</span> <span class="ot">=</span> TARL<span class="fl">.41</span>BW4.<span class="dv">6</span>.<span class="dv">2</span>.<span class="fl">78.</span>png,</span>
-<span id="cb34-38"><a href="#cb34-38" aria-hidden="true" tabindex="-1"></a>             <span class="st">'TARL-41CE19-2015-1'</span> <span class="ot">=</span> TARL<span class="fl">.41</span>CE19.<span class="dv">2015</span>.<span class="fl">1.</span>png,</span>
-<span id="cb34-39"><a href="#cb34-39" aria-hidden="true" tabindex="-1"></a>             <span class="st">'TARL-41RR3-2'</span> <span class="ot">=</span> TARL<span class="fl">.41</span>RR3.<span class="fl">2.</span>png,</span>
-<span id="cb34-40"><a href="#cb34-40" aria-hidden="true" tabindex="-1"></a>             <span class="st">'UArk-Burrows-55-19-2'</span> <span class="ot">=</span> UArk.Burrows.<span class="dv">55</span>.<span class="dv">19</span>.<span class="fl">2.</span>png,</span>
-<span id="cb34-41"><a href="#cb34-41" aria-hidden="true" tabindex="-1"></a>             <span class="st">'UArk-Crenshaw-55-1-10'</span> <span class="ot">=</span> UArk.Crenshaw.<span class="dv">55</span>.<span class="dv">1</span>.<span class="fl">10.</span>png,</span>
-<span id="cb34-42"><a href="#cb34-42" aria-hidden="true" tabindex="-1"></a>             <span class="st">'UArk-Crenshaw-55-1-4'</span> <span class="ot">=</span> UArk.Crenshaw.<span class="dv">55</span>.<span class="dv">1</span>.<span class="fl">4.</span>png,</span>
-<span id="cb34-43"><a href="#cb34-43" aria-hidden="true" tabindex="-1"></a>             <span class="st">'UArk-Crenshaw-55-1-43'</span> <span class="ot">=</span> UArk.Crenshaw.<span class="dv">55</span>.<span class="dv">1</span>.<span class="fl">43.</span>png,</span>
-<span id="cb34-44"><a href="#cb34-44" aria-hidden="true" tabindex="-1"></a>             <span class="st">'UArk_BattleMound-55-15-9'</span> <span class="ot">=</span> UArk_BattleMound.<span class="dv">55</span>.<span class="dv">15</span>.<span class="fl">9.</span>png)</span>
-<span id="cb34-45"><a href="#cb34-45" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb34-46"><a href="#cb34-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-47"><a href="#cb34-47" aria-hidden="true" tabindex="-1"></a>c.data2<span class="sc">$</span>X <span class="ot">&lt;-</span> <span class="fu">colnames</span>(c.data2)</span>
-<span id="cb34-48"><a href="#cb34-48" aria-hidden="true" tabindex="-1"></a>bottle <span class="ot">&lt;-</span> <span class="fu">full_join</span>(hfesp.data, c.data2, <span class="at">by =</span> <span class="st">'X'</span>) <span class="co"># left join by specimen number</span></span>
-<span id="cb34-49"><a href="#cb34-49" aria-hidden="true" tabindex="-1"></a>bottle.dist <span class="ot">&lt;-</span> bottle[,<span class="dv">6</span><span class="sc">:</span><span class="dv">35</span>] <span class="co"># color distance matrix</span></span>
-<span id="cb34-50"><a href="#cb34-50" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">10</span>) <span class="co"># make results reproducible</span></span>
-<span id="cb34-51"><a href="#cb34-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-52"><a href="#cb34-52" aria-hidden="true" tabindex="-1"></a><span class="co"># model: color as a function of firing category (oxidized v. reduced)</span></span>
-<span id="cb34-53"><a href="#cb34-53" aria-hidden="true" tabindex="-1"></a>bottle.colour <span class="ot">&lt;-</span> <span class="fu">adonis2</span>(bottle.dist <span class="sc">~</span> ColorGroup,</span>
-<span id="cb34-54"><a href="#cb34-54" aria-hidden="true" tabindex="-1"></a>                         <span class="at">data =</span> bottle,</span>
-<span id="cb34-55"><a href="#cb34-55" aria-hidden="true" tabindex="-1"></a>                         <span class="at">permutations =</span> <span class="dv">10000</span>,</span>
-<span id="cb34-56"><a href="#cb34-56" aria-hidden="true" tabindex="-1"></a>                         <span class="at">method =</span> <span class="st">'bray'</span>)</span>
-<span id="cb34-57"><a href="#cb34-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-58"><a href="#cb34-58" aria-hidden="true" tabindex="-1"></a><span class="do">## does color differ by firing category?</span></span>
-<span id="cb34-59"><a href="#cb34-59" aria-hidden="true" tabindex="-1"></a>bottle.colour</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co">#preliminaries</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="co"># import categorical data</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>hfesp.data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'qdata.csv'</span>,</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>                       <span class="at">header =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>                       <span class="at">as.is =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="co"># import color distance matrix</span></span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>c.data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'distance_matrix.csv'</span>,</span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>                   <span class="at">header =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a>                   <span class="at">as.is =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a>c.data2 <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(c.data <span class="sc">%&gt;%</span> </span>
+<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a>                           <span class="fu">select</span>(<span class="fu">c</span>(X<span class="sc">:</span>UArk_BattleMound.<span class="dv">55</span>.<span class="fl">15.9</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a>                           <span class="fu">rename</span>(<span class="st">'CNO-Pohler-2002-01-18'</span> <span class="ot">=</span> CNO.Pohler.<span class="dv">2002</span>.<span class="fl">01.18</span>,</span>
+<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'CNO-Pohler-2002-01-20'</span> <span class="ot">=</span> CNO.Pohler.<span class="dv">2002</span>.<span class="fl">01.20</span>,</span>
+<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'CNO-Pohler-2002-01-23'</span> <span class="ot">=</span> CNO.Pohler.<span class="dv">2002</span>.<span class="fl">01.23</span>,</span>
+<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'CNO-Pohler-2002-01-27'</span> <span class="ot">=</span> CNO.Pohler.<span class="dv">2002</span>.<span class="fl">01.27</span>,</span>
+<span id="cb35-18"><a href="#cb35-18" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'LSEM-Haley-HFE1'</span> <span class="ot">=</span> LSEM.Haley.HFE1,</span>
+<span id="cb35-19"><a href="#cb35-19" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'LSEM-Haley-HFE2'</span> <span class="ot">=</span> LSEM.Haley.HFE2,</span>
+<span id="cb35-20"><a href="#cb35-20" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'LSEM-Haley-HFE3'</span> <span class="ot">=</span> LSEM.Haley.HFE3,</span>
+<span id="cb35-21"><a href="#cb35-21" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'LSEM-Haley-HFE4'</span> <span class="ot">=</span> LSEM.Haley.HFE4,</span>
+<span id="cb35-22"><a href="#cb35-22" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'LSEM-Haley-HFE5'</span> <span class="ot">=</span> LSEM.Haley.HFE5,</span>
+<span id="cb35-23"><a href="#cb35-23" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'NSU-AllenPlantation-142'</span> <span class="ot">=</span> NSU.AllenPlantation<span class="fl">.142</span>,</span>
+<span id="cb35-24"><a href="#cb35-24" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'NSU-Belcher-404'</span> <span class="ot">=</span> NSU.Belcher<span class="fl">.404</span>,</span>
+<span id="cb35-25"><a href="#cb35-25" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'NSU-Gahagan-955'</span> <span class="ot">=</span> NSU.Gahagan<span class="fl">.955</span>,</span>
+<span id="cb35-26"><a href="#cb35-26" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'NSU-Gahagan-956'</span> <span class="ot">=</span> NSU.Gahagan<span class="fl">.956</span>,</span>
+<span id="cb35-27"><a href="#cb35-27" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'NSU-SmithportLanding-152'</span> <span class="ot">=</span> NSU.SmithportLanding<span class="fl">.152</span>,</span>
+<span id="cb35-28"><a href="#cb35-28" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'NSU-SmithportLanding-157'</span> <span class="ot">=</span> NSU.SmithportLanding<span class="fl">.157</span>,</span>
+<span id="cb35-29"><a href="#cb35-29" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'NSU-SmithportLanding-95'</span> <span class="ot">=</span> NSU.SmithportLanding<span class="fl">.95</span>,</span>
+<span id="cb35-30"><a href="#cb35-30" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'NSU-SmithportLanding-96'</span> <span class="ot">=</span> NSU.SmithportLanding<span class="fl">.96</span>,</span>
+<span id="cb35-31"><a href="#cb35-31" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'TARL-41BW3-6-1-7-FS7'</span> <span class="ot">=</span> TARL<span class="fl">.41</span>BW3.<span class="dv">6</span>.<span class="dv">1</span>.<span class="fl">7.</span>FS7,</span>
+<span id="cb35-32"><a href="#cb35-32" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'TARL-41BW4-341-427'</span> <span class="ot">=</span> TARL<span class="fl">.41</span>BW4.<span class="fl">341.427</span>,</span>
+<span id="cb35-33"><a href="#cb35-33" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'TARL-41BW4-341-464'</span> <span class="ot">=</span> TARL<span class="fl">.41</span>BW4.<span class="fl">341.464</span>,</span>
+<span id="cb35-34"><a href="#cb35-34" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'TARL-41BW4-6-2-132'</span> <span class="ot">=</span> TARL<span class="fl">.41</span>BW4.<span class="dv">6</span>.<span class="fl">2.132</span>,</span>
+<span id="cb35-35"><a href="#cb35-35" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'TARL-41BW4-6-2-67'</span> <span class="ot">=</span> TARL<span class="fl">.41</span>BW4.<span class="dv">6</span>.<span class="fl">2.67</span>,</span>
+<span id="cb35-36"><a href="#cb35-36" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'TARL-41BW4-6-2-78'</span> <span class="ot">=</span> TARL<span class="fl">.41</span>BW4.<span class="dv">6</span>.<span class="fl">2.78</span>,</span>
+<span id="cb35-37"><a href="#cb35-37" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'TARL-41CE19-2015-1'</span> <span class="ot">=</span> TARL<span class="fl">.41</span>CE19.<span class="fl">2015.1</span>,</span>
+<span id="cb35-38"><a href="#cb35-38" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'TARL-41RR3-2'</span> <span class="ot">=</span> TARL<span class="fl">.41</span>RR3<span class="fl">.2</span>,</span>
+<span id="cb35-39"><a href="#cb35-39" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'UArk-Burrows-55-19-2'</span> <span class="ot">=</span> UArk.Burrows.<span class="dv">55</span>.<span class="fl">19.2</span>,</span>
+<span id="cb35-40"><a href="#cb35-40" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'UArk-Crenshaw-55-1-10'</span> <span class="ot">=</span> UArk.Crenshaw.<span class="dv">55</span>.<span class="fl">1.10</span>,</span>
+<span id="cb35-41"><a href="#cb35-41" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'UArk-Crenshaw-55-1-4'</span> <span class="ot">=</span> UArk.Crenshaw.<span class="dv">55</span>.<span class="fl">1.4</span>,</span>
+<span id="cb35-42"><a href="#cb35-42" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'UArk-Crenshaw-55-1-43'</span> <span class="ot">=</span> UArk.Crenshaw.<span class="dv">55</span>.<span class="fl">1.43</span>,</span>
+<span id="cb35-43"><a href="#cb35-43" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'UArk_BattleMound-55-15-9'</span> <span class="ot">=</span> UArk_BattleMound.<span class="dv">55</span>.<span class="fl">15.9</span>)</span>
+<span id="cb35-44"><a href="#cb35-44" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb35-45"><a href="#cb35-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-46"><a href="#cb35-46" aria-hidden="true" tabindex="-1"></a>bottle <span class="ot">&lt;-</span> <span class="fu">full_join</span>(hfesp.data, c.data2, <span class="at">by =</span> <span class="st">'X'</span>) <span class="co"># left join by specimen number</span></span>
+<span id="cb35-47"><a href="#cb35-47" aria-hidden="true" tabindex="-1"></a>bottle.dist <span class="ot">&lt;-</span> bottle[,<span class="dv">6</span><span class="sc">:</span><span class="dv">35</span>] <span class="co"># color distance matrix</span></span>
+<span id="cb35-48"><a href="#cb35-48" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">10</span>) <span class="co"># make results reproducible</span></span>
+<span id="cb35-49"><a href="#cb35-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-50"><a href="#cb35-50" aria-hidden="true" tabindex="-1"></a><span class="co"># model: color as a function of firing category (oxidized v. reduced)</span></span>
+<span id="cb35-51"><a href="#cb35-51" aria-hidden="true" tabindex="-1"></a>bottle.colour <span class="ot">&lt;-</span> <span class="fu">adonis2</span>(bottle.dist <span class="sc">~</span> ColorGroup,</span>
+<span id="cb35-52"><a href="#cb35-52" aria-hidden="true" tabindex="-1"></a>                         <span class="at">data =</span> bottle,</span>
+<span id="cb35-53"><a href="#cb35-53" aria-hidden="true" tabindex="-1"></a>                         <span class="at">permutations =</span> <span class="dv">10000</span>,</span>
+<span id="cb35-54"><a href="#cb35-54" aria-hidden="true" tabindex="-1"></a>                         <span class="at">method =</span> <span class="st">'bray'</span>)</span>
+<span id="cb35-55"><a href="#cb35-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-56"><a href="#cb35-56" aria-hidden="true" tabindex="-1"></a><span class="do">## does color differ by firing category?</span></span>
+<span id="cb35-57"><a href="#cb35-57" aria-hidden="true" tabindex="-1"></a>bottle.colour</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Permutation test for adonis under reduced model
 Terms added sequentially (first to last)
@@ -555,101 +635,12 @@ Permutation: free
 Number of permutations: 10000
 
 adonis2(formula = bottle.dist ~ ColorGroup, data = bottle, permutations = 10000, method = "bray")
-           Df SumOfSqs      R2      F    Pr(&gt;F)    
-ColorGroup  1  0.79901 0.50493 28.558 9.999e-05 ***
-Residual   28  0.78340 0.49507                     
-Total      29  1.58241 1.00000                     
+           Df SumOfSqs     R2      F    Pr(&gt;F)    
+ColorGroup  1  0.75296 0.4324 21.331 9.999e-05 ***
+Residual   28  0.98839 0.5676                     
+Total      29  1.74135 1.0000                     
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
-</div>
-</div>
-</section>
-<section id="neighbor-joining-tree" class="level2">
-<h2 class="anchored" data-anchor-id="neighbor-joining-tree">Neighbor-Joining Tree</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># define add_image function</span></span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>add_image <span class="ot">&lt;-</span> <span class="cf">function</span>(obj,</span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>                      <span class="at">x =</span> <span class="cn">NULL</span>,</span>
-<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>                      <span class="at">y =</span> <span class="cn">NULL</span>,</span>
-<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>                      <span class="at">width =</span> <span class="cn">NULL</span>,</span>
-<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>                      <span class="at">interpolate =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a>                      <span class="at">angle =</span> <span class="dv">0</span>) {</span>
-<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># get current plotting window parameters:</span></span>
-<span id="cb36-10"><a href="#cb36-10" aria-hidden="true" tabindex="-1"></a>  usr <span class="ot">&lt;-</span> graphics<span class="sc">::</span><span class="fu">par</span>()<span class="sc">$</span>usr</span>
-<span id="cb36-11"><a href="#cb36-11" aria-hidden="true" tabindex="-1"></a>  pin <span class="ot">&lt;-</span> graphics<span class="sc">::</span><span class="fu">par</span>()<span class="sc">$</span>pin</span>
-<span id="cb36-12"><a href="#cb36-12" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb36-13"><a href="#cb36-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># image dimensions and scaling factor:</span></span>
-<span id="cb36-14"><a href="#cb36-14" aria-hidden="true" tabindex="-1"></a>  imdim <span class="ot">&lt;-</span> <span class="fu">dim</span>(obj)</span>
-<span id="cb36-15"><a href="#cb36-15" aria-hidden="true" tabindex="-1"></a>  sf <span class="ot">&lt;-</span> imdim[<span class="dv">1</span>] <span class="sc">/</span> imdim[<span class="dv">2</span>]</span>
-<span id="cb36-16"><a href="#cb36-16" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb36-17"><a href="#cb36-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># set the width of the image (relative to x-axis)</span></span>
-<span id="cb36-18"><a href="#cb36-18" aria-hidden="true" tabindex="-1"></a>  w <span class="ot">&lt;-</span> width <span class="sc">/</span> (usr[<span class="dv">2</span>] <span class="sc">-</span> usr[<span class="dv">1</span>]) <span class="sc">*</span> pin[<span class="dv">1</span>]</span>
-<span id="cb36-19"><a href="#cb36-19" aria-hidden="true" tabindex="-1"></a>  h <span class="ot">&lt;-</span> w <span class="sc">*</span> sf</span>
-<span id="cb36-20"><a href="#cb36-20" aria-hidden="true" tabindex="-1"></a>  hu <span class="ot">&lt;-</span> h <span class="sc">/</span> pin[<span class="dv">2</span>] <span class="sc">*</span> (usr[<span class="dv">4</span>] <span class="sc">-</span> usr[<span class="dv">3</span>])</span>
-<span id="cb36-21"><a href="#cb36-21" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb36-22"><a href="#cb36-22" aria-hidden="true" tabindex="-1"></a>  <span class="co"># plot the image</span></span>
-<span id="cb36-23"><a href="#cb36-23" aria-hidden="true" tabindex="-1"></a>  graphics<span class="sc">::</span><span class="fu">rasterImage</span>(<span class="at">image =</span> obj,</span>
-<span id="cb36-24"><a href="#cb36-24" aria-hidden="true" tabindex="-1"></a>                        <span class="at">xleft =</span> x <span class="sc">-</span> (width <span class="sc">/</span> <span class="dv">2</span>), <span class="at">xright =</span> x <span class="sc">+</span> (width <span class="sc">/</span> <span class="dv">2</span>),</span>
-<span id="cb36-25"><a href="#cb36-25" aria-hidden="true" tabindex="-1"></a>                        <span class="at">ybottom =</span> y <span class="sc">-</span> (hu <span class="sc">/</span> <span class="dv">2</span>), <span class="at">ytop =</span> y <span class="sc">+</span> (hu<span class="sc">/</span><span class="dv">2</span>),</span>
-<span id="cb36-26"><a href="#cb36-26" aria-hidden="true" tabindex="-1"></a>                        <span class="at">interpolate =</span> interpolate,</span>
-<span id="cb36-27"><a href="#cb36-27" aria-hidden="true" tabindex="-1"></a>                        <span class="at">angle =</span> angle)</span>
-<span id="cb36-28"><a href="#cb36-28" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb36-29"><a href="#cb36-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-30"><a href="#cb36-30" aria-hidden="true" tabindex="-1"></a><span class="co"># c.data2 sans 'X'</span></span>
-<span id="cb36-31"><a href="#cb36-31" aria-hidden="true" tabindex="-1"></a>c.data2 <span class="ot">&lt;-</span> c.data2 <span class="sc">%&gt;%</span> </span>
-<span id="cb36-32"><a href="#cb36-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="st">'CNO-Pohler-2002-01-18'</span><span class="sc">:</span><span class="st">'UArk_BattleMound-55-15-9'</span>)</span>
-<span id="cb36-33"><a href="#cb36-33" aria-hidden="true" tabindex="-1"></a><span class="co"># column names to ID</span></span>
-<span id="cb36-34"><a href="#cb36-34" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(c.data2) <span class="ot">&lt;-</span> <span class="fu">colnames</span>(c.data2)</span>
-<span id="cb36-35"><a href="#cb36-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-36"><a href="#cb36-36" aria-hidden="true" tabindex="-1"></a><span class="co"># neighbor-joining tree</span></span>
-<span id="cb36-37"><a href="#cb36-37" aria-hidden="true" tabindex="-1"></a>tree <span class="ot">&lt;-</span> <span class="fu">nj</span>(<span class="fu">as.dist</span>(c.data2))</span>
-<span id="cb36-38"><a href="#cb36-38" aria-hidden="true" tabindex="-1"></a><span class="co"># plot tree</span></span>
-<span id="cb36-39"><a href="#cb36-39" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(tree,</span>
-<span id="cb36-40"><a href="#cb36-40" aria-hidden="true" tabindex="-1"></a>     <span class="at">show.tip.label =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb36-41"><a href="#cb36-41" aria-hidden="true" tabindex="-1"></a>     <span class="at">direction =</span> <span class="st">'upward'</span>)</span>
-<span id="cb36-42"><a href="#cb36-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-43"><a href="#cb36-43" aria-hidden="true" tabindex="-1"></a><span class="co"># get parameters from plotting environment</span></span>
-<span id="cb36-44"><a href="#cb36-44" aria-hidden="true" tabindex="-1"></a>lastPP <span class="ot">&lt;-</span> <span class="fu">get</span>(<span class="st">'last_plot.phylo'</span>, </span>
-<span id="cb36-45"><a href="#cb36-45" aria-hidden="true" tabindex="-1"></a>              <span class="at">envir =</span> .PlotPhyloEnv)</span>
-<span id="cb36-46"><a href="#cb36-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-47"><a href="#cb36-47" aria-hidden="true" tabindex="-1"></a><span class="co"># get xy coordinates of tips</span></span>
-<span id="cb36-48"><a href="#cb36-48" aria-hidden="true" tabindex="-1"></a>ntip <span class="ot">&lt;-</span> lastPP<span class="sc">$</span>Ntip</span>
-<span id="cb36-49"><a href="#cb36-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-50"><a href="#cb36-50" aria-hidden="true" tabindex="-1"></a><span class="co"># first n values are tips/remaining values are node coordinates</span></span>
-<span id="cb36-51"><a href="#cb36-51" aria-hidden="true" tabindex="-1"></a>xy <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> lastPP<span class="sc">$</span>xx[<span class="dv">1</span><span class="sc">:</span>ntip],</span>
-<span id="cb36-52"><a href="#cb36-52" aria-hidden="true" tabindex="-1"></a>                 <span class="at">y =</span> lastPP<span class="sc">$</span>yy[<span class="dv">1</span><span class="sc">:</span>ntip])</span>
-<span id="cb36-53"><a href="#cb36-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-54"><a href="#cb36-54" aria-hidden="true" tabindex="-1"></a><span class="co"># get image names</span></span>
-<span id="cb36-55"><a href="#cb36-55" aria-hidden="true" tabindex="-1"></a>imnames <span class="ot">&lt;-</span> tools<span class="sc">::</span><span class="fu">file_path_sans_ext</span>(<span class="fu">basename</span>(images))</span>
-<span id="cb36-56"><a href="#cb36-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-57"><a href="#cb36-57" aria-hidden="true" tabindex="-1"></a><span class="co"># get tip labels</span></span>
-<span id="cb36-58"><a href="#cb36-58" aria-hidden="true" tabindex="-1"></a>tipnames <span class="ot">&lt;-</span> tree<span class="sc">$</span>tip.label</span>
-<span id="cb36-59"><a href="#cb36-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-60"><a href="#cb36-60" aria-hidden="true" tabindex="-1"></a><span class="co"># check that images are in correct order:</span></span>
-<span id="cb36-61"><a href="#cb36-61" aria-hidden="true" tabindex="-1"></a>image_order <span class="ot">&lt;-</span> <span class="fu">match</span>(tipnames, imnames)</span>
-<span id="cb36-62"><a href="#cb36-62" aria-hidden="true" tabindex="-1"></a>images <span class="ot">&lt;-</span> images[image_order]</span>
-<span id="cb36-63"><a href="#cb36-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-64"><a href="#cb36-64" aria-hidden="true" tabindex="-1"></a><span class="do">## final plot</span></span>
-<span id="cb36-65"><a href="#cb36-65" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">rep</span>(<span class="dv">0</span>, <span class="dv">4</span>))</span>
-<span id="cb36-66"><a href="#cb36-66" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(tree, <span class="at">show.tip.label =</span> <span class="cn">FALSE</span>, <span class="at">direction =</span> <span class="st">'upward'</span>)</span>
-<span id="cb36-67"><a href="#cb36-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-68"><a href="#cb36-68" aria-hidden="true" tabindex="-1"></a><span class="co"># parameters from plotting environment</span></span>
-<span id="cb36-69"><a href="#cb36-69" aria-hidden="true" tabindex="-1"></a>lastPP <span class="ot">&lt;-</span> <span class="fu">get</span>(<span class="st">'last_plot.phylo'</span>, <span class="at">envir =</span> .PlotPhyloEnv)</span>
-<span id="cb36-70"><a href="#cb36-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-71"><a href="#cb36-71" aria-hidden="true" tabindex="-1"></a><span class="co"># xy coordinates of tips</span></span>
-<span id="cb36-72"><a href="#cb36-72" aria-hidden="true" tabindex="-1"></a>ntip <span class="ot">&lt;-</span> lastPP<span class="sc">$</span>Ntip</span>
-<span id="cb36-73"><a href="#cb36-73" aria-hidden="true" tabindex="-1"></a>xy <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> lastPP<span class="sc">$</span>xx[<span class="dv">1</span><span class="sc">:</span>ntip],</span>
-<span id="cb36-74"><a href="#cb36-74" aria-hidden="true" tabindex="-1"></a>                 <span class="at">y =</span> lastPP<span class="sc">$</span>yy[<span class="dv">1</span><span class="sc">:</span>ntip]) </span>
-<span id="cb36-75"><a href="#cb36-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-76"><a href="#cb36-76" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(images)) {</span>
-<span id="cb36-77"><a href="#cb36-77" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_image</span>(png<span class="sc">::</span><span class="fu">readPNG</span>(images[i]),</span>
-<span id="cb36-78"><a href="#cb36-78" aria-hidden="true" tabindex="-1"></a>            <span class="at">x =</span> xy[i, <span class="dv">1</span>],</span>
-<span id="cb36-79"><a href="#cb36-79" aria-hidden="true" tabindex="-1"></a>            <span class="at">y =</span> xy[i, <span class="dv">2</span>], </span>
-<span id="cb36-80"><a href="#cb36-80" aria-hidden="true" tabindex="-1"></a>            <span class="at">width =</span> <span class="dv">2</span>)</span>
-<span id="cb36-81"><a href="#cb36-81" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="c01-color_files/figure-html/tree-1.png" class="img-fluid" style="width:100.0%"></p>
 </div>
 </div>
 

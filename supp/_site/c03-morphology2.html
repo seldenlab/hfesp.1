@@ -205,6 +205,7 @@ div.csl-indent {
   <li><a href="#boxplot-centroid-size" id="toc-boxplot-centroid-size" class="nav-link" data-scroll-target="#boxplot-centroid-size">Boxplot (centroid size)</a></li>
   <li><a href="#principal-components-analysis" id="toc-principal-components-analysis" class="nav-link" data-scroll-target="#principal-components-analysis">Principal Components Analysis</a></li>
   <li><a href="#procrustes-anova" id="toc-procrustes-anova" class="nav-link" data-scroll-target="#procrustes-anova">Procrustes ANOVA</a></li>
+  <li><a href="#mean-shapes" id="toc-mean-shapes" class="nav-link" data-scroll-target="#mean-shapes">Mean shapes</a></li>
   </ul>
 </nav>
     </div>
@@ -412,10 +413,12 @@ Estimation method: Ordinary Least Squares
 Sums of Squares and Cross-products: Type I 
 Effect sizes (Z) based on F distributions
 
-           Df      SS        MS     Rsq      F        Z Pr(&gt;F)
-ColorGroup  1 0.00561 0.0056096 0.01392 0.3952 -0.66654 0.7414
-Residuals  28 0.39739 0.0141927 0.98608                       
-Total      29 0.40300                                         
+           Df      SS       MS     Rsq      F      Z Pr(&gt;F)  
+ColorGroup  1 0.04617 0.046168 0.11456 3.6227 1.8686 0.0275 *
+Residuals  28 0.35684 0.012744 0.88544                       
+Total      29 0.40300                                        
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Call: procD.lm(f1 = shape ~ ColorGroup, iter = 9999, data = gdf, print.progress = FALSE)</code></pre>
 </div>
@@ -437,11 +440,38 @@ Sums of Squares and Cross-products: Type I
 Effect sizes (Z) based on F distributions
 
            Df     SS      MS     Rsq      F        Z Pr(&gt;F)
-ColorGroup  1   7329  7328.9 0.01258 0.3567 -0.12102 0.5571
-Residuals  28 575304 20546.6 0.98742                       
+ColorGroup  1   1305  1304.7 0.00224 0.0628 -0.88986 0.8008
+Residuals  28 581328 20761.7 0.99776                       
 Total      29 582632                                       
 
 Call: procD.lm(f1 = size ~ ColorGroup, iter = 9999, data = gdf, print.progress = FALSE)</code></pre>
+</div>
+</div>
+</section>
+<section id="mean-shapes" class="level2">
+<h2 class="anchored" data-anchor-id="mean-shapes">Mean shapes</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># subset landmark coordinates to produce mean shapes for contexts</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>new.coords <span class="ot">&lt;-</span> <span class="fu">coords.subset</span>(<span class="at">A =</span> Y.gpa<span class="sc">$</span>coords,</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>                            <span class="at">group =</span> qdata<span class="sc">$</span>ColorGroup)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(new.coords)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "A" "B"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="do">## plot shape means</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>mean <span class="ot">&lt;-</span> <span class="fu">lapply</span>(new.coords, mshape)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(mean<span class="sc">$</span>A)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(mean<span class="sc">$</span>B)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="co"># comparison plots</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="fu">plotRefToTarget</span>(mean<span class="sc">$</span>B,</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>                mean<span class="sc">$</span>A, </span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>                <span class="at">method =</span> <span class="st">"points"</span>,</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>                <span class="at">mag =</span> <span class="dv">2</span>)</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">'img/fig5.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="img/fig5.png" class="img-fluid" style="width:100.0%"></p>
 </div>
 </div>
 
