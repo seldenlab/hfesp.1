@@ -26,12 +26,7 @@ e.biface.hist <- getImageHist(e.biface,
                             ylab="Proportion of image")
 
 
----
-  title: "Firing"
----
-  
-  ```{r colorload, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE, message = FALSE}
-# compare colors
+# compare colors----
 library(here)
 library(colordistance)
 library(recolorize)
@@ -107,11 +102,8 @@ c.data2 <- as.data.frame(c.data %>%
                                   'UArk-Crenshaw-55-1-43' = UArk.Crenshaw.55.1.43.png,
                                   'UArk_BattleMound-55-15-9' = UArk_BattleMound.55.15.9.png)
 )
-```
 
-## Neighbor-Joining Tree
-
-```{r tree, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE, message = FALSE}
+## Neighbor-Joining Tree----
 # define add_image function
 add_image <- function(obj,
                       x = NULL,
@@ -147,7 +139,7 @@ c.data2 <- c.data2 %>%
 # column names to ID
 rownames(c.data2) <- colnames(c.data2)
 
-# neighbor-joining tree
+# neighbor-joining tree----
 tree <- nj(as.dist(c.data2))
 # plot tree
 plot(tree,
@@ -193,11 +185,8 @@ for (i in 1:length(images)) {
             y = xy[i, 2], 
             width = 2)
 }
-```
 
-## NMDS Ordination
-
-```{r nmdsord, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE, message=FALSE}
+## NMDS Ordination----
 nmds_scores <- scores(metaMDS(comm = as.dist(c.data2)))
 
 # set plot parameters
@@ -227,12 +216,8 @@ for (i in 1:length(images)) {
             y = nmds_scores[i, 2],
             width = 2)
 }
-```
 
-
-## Permutational MANOVA
-
-```{r permanova, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE, message = FALSE}
+## Permutational MANOVA----
 c.data2$X <- colnames(c.data2)
 bottle <- full_join(hfesp.data, c.data2, by = 'X') # left join by specimen number
 bottle.dist <- bottle[,6:35] # color distance matrix
@@ -246,4 +231,3 @@ bottle.colour <- adonis2(bottle.dist ~ ColorGroup,
 
 ## does color differ by firing category?
 bottle.colour
-```
