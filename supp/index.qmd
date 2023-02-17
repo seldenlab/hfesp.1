@@ -75,7 +75,7 @@ Special thanks to Mary C. Suter and Anne M. Early for their time and guidance re
 
 # Funding
 
-Components of this analytical work flow were developed and funded by a Preservation Technology and Training grant (P14AP00138) to the author from the National Center for Preservation Technology and Training (NCPTT), and additional grants from the Caddo Nation of Oklahoma, National Forests and Grasslands in Texas (15-PA-11081300-033) and the United States Forest Service (20-PA-11081300-074). Funding and logistical support to analyze the Caddo bottles for this project was provided by the Heritage Research Center at Stephen F. Austin State University, as well as a grant and residency from the Spatial Archaeometry Research Collaboration at the Center for Advanced Spatial Technology at the University of Arkansas.
+Components of this analytical work flow were developed and funded by a Preservation Technology and Training grant (P14AP00138) to the author from the National Center for Preservation Technology and Training (NCPTT), and additional grants from the Caddo Nation of Oklahoma, National Forests and Grasslands in Texas (15-PA-11081300-033) and the United States Forest Service (20-PA-11081300-074). Funding and logistical support to analyze the Caddo bottles for this project was provided by the Heritage Research Center at Stephen F. Austin State University, as well as a data and analytics grant and SPARC residency from the Spatial Archaeometry Research Collaboration in the Center for Advanced Spatial Technology at the University of Arkansas.
 
 # Data management
 
