@@ -176,7 +176,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<p><img src=".\img/slab.png" class="img-fluid"></p>
+<p><img src="./img/slab.png" class="img-fluid"></p>
 </div></div>
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
@@ -583,7 +583,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a>                   <span class="at">as.is =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a>c.data2 <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(c.data <span class="sc">%&gt;%</span> </span>
-<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a>                           <span class="fu">select</span>(<span class="fu">c</span>(X<span class="sc">:</span>UArk_BattleMound.<span class="dv">55</span>.<span class="fl">15.9</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a>                           <span class="fu">select</span>(<span class="fu">c</span>(X<span class="sc">:</span>UArk.Crenshaw.<span class="dv">55</span>.<span class="fl">1.43</span>)) <span class="sc">%&gt;%</span> </span>
 <span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a>                           <span class="fu">rename</span>(<span class="st">'CNO-Pohler-2002-01-18'</span> <span class="ot">=</span> CNO.Pohler.<span class="dv">2002</span>.<span class="fl">01.18</span>,</span>
 <span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'CNO-Pohler-2002-01-20'</span> <span class="ot">=</span> CNO.Pohler.<span class="dv">2002</span>.<span class="fl">01.20</span>,</span>
 <span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">'CNO-Pohler-2002-01-23'</span> <span class="ot">=</span> CNO.Pohler.<span class="dv">2002</span>.<span class="fl">01.23</span>,</span>
@@ -635,10 +635,10 @@ Permutation: free
 Number of permutations: 10000
 
 adonis2(formula = bottle.dist ~ ColorGroup, data = bottle, permutations = 10000, method = "bray")
-           Df SumOfSqs     R2      F    Pr(&gt;F)    
-ColorGroup  1  0.75296 0.4324 21.331 9.999e-05 ***
-Residual   28  0.98839 0.5676                     
-Total      29  1.74135 1.0000                     
+           Df SumOfSqs    R2      F    Pr(&gt;F)    
+ColorGroup  1  0.44787 0.555 34.921 9.999e-05 ***
+Residual   28  0.35911 0.445                     
+Total      29  0.80698 1.000                     
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>

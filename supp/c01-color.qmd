@@ -129,7 +129,7 @@ c.data <- read.csv('distance_matrix.csv',
                    as.is = TRUE)
 
 c.data2 <- as.data.frame(c.data %>% 
-                           select(c(X:UArk_BattleMound.55.15.9)) %>% 
+                           select(c(X:UArk.Crenshaw.55.1.43)) %>% 
                            rename('CNO-Pohler-2002-01-18' = CNO.Pohler.2002.01.18,
                                   'CNO-Pohler-2002-01-20' = CNO.Pohler.2002.01.20,
                                   'CNO-Pohler-2002-01-23' = CNO.Pohler.2002.01.23,

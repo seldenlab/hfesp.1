@@ -11,7 +11,7 @@ date: "`r format(Sys.time(), '%d %B, %Y')`"
 link-citations: yes
 github-repo: seldenlab/hfesp.1
 description: Supplementary Materials
-license: "CC BY-NC"
+license: "CC BY-NC-ND [https://creativecommons.org/licenses/by-nc-nd/4.0/](https://creativecommons.org/licenses/by-nc-nd/4.0/)"
 ---
 
 >Each [Caddo] clan had its own shape to make its pottery. One clan never thought of making anything the same pattern of another clan. **_You could tell who made the pottery by the shape_** [@RN9357x, 395].
