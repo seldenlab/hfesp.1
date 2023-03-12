@@ -124,5 +124,12 @@
     "title": "Morphology by Firing Group",
     "section": "Mean shapes",
     "text": "Mean shapes\n\n# subset landmark coordinates to produce mean shapes for contexts\nnew.coords <- coords.subset(A = Y.gpa$coords,\n                            group = qdata$ColorGroup)\nnames(new.coords)\n\n[1] \"A\" \"B\"\n\n## plot shape means\nmean <- lapply(new.coords, mshape)\nplot(mean$A)\nplot(mean$B)\n\n# comparison plots\nplotRefToTarget(mean$B,\n                mean$A, \n                method = \"points\",\n                mag = 2)\n\nknitr::include_graphics('img/fig5.png')"
+  },
+  {
+    "objectID": "index.html#geography",
+    "href": "index.html#geography",
+    "title": "Did intended firing method condition the morphology of Caddo bottles?",
+    "section": "Geography",
+    "text": "Geography\nSite locations and color group assignments were subsequently imported to a GIS where core production areas associated with reduced and oxidized Hickory Engraved and Smithport Plain bottle manufacture were identified using kernel density plots. Following production, raster values were extracted for each point location, which were used to delimit the 50 and 75 percent quantiles for each plot. Results demonstrate a single core area related to the production of reduced bottles; however, oxidized bottle production occurred across two core areas (one north; the other south). It is noteworthy that all three core bottle production areas occur in the Red River basin.\n\nknitr::include_graphics('./img/geo.jpg')\n\n\n\n\nKernel densities representing the 50 (black) and 75 percent (gray) quantiles for reduced bottles, and the 50 (dark brown) and 75 percent (light brown) quantiles for the oxidized bottles."
   }
 ]
