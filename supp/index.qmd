@@ -74,7 +74,7 @@ To assess whether `shape` and `size` differs by `ColorGroup`, Procrustes ANOVAs 
 knitr::include_graphics('./img/fig5.png')
 ```
 
-Results demonstrate a significant difference in size---but not shape---by type (_RRPP: 10,000; Rsq: 0.14223; **Pr(>F): 0.0373**_), where the Hickory Engraved bottles were found to be larger than the Smithport Plain bottles. In the analysis of bottle morphology by firing method, vessels were found to differ in shape (_RRPP: 10,000; Rsq: 0.11456; **Pr(>F): 0.0275**_), but not size (_RRPP: 10,000; Rsq: 0.00224; **Pr(>F): 0.8008**_).
+Results demonstrate a significant difference in size (_RRPP: 10,000; Rsq: 0.14223; **Pr(>F): 0.0373**_)---but not shape (_RRPP: 10,000; Rsq: 0.05789; **Pr(>F): 0.1652**)---by type, where the Hickory Engraved bottles were found to be larger than the Smithport Plain bottles. In the analysis of bottle morphology by firing method, vessels were found to differ in shape (_RRPP: 10,000; Rsq: 0.11456; **Pr(>F): 0.0275**_), but not size (_RRPP: 10,000; Rsq: 0.00224; **Pr(>F): 0.8008**_).
 
 ## Summary of results
 
