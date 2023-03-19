@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Robert Z. Selden, Jr.">
-<meta name="dcterms.date" content="2023-03-13">
+<meta name="dcterms.date" content="2023-03-19">
 <meta name="description" content="Supplementary Materials">
 
 <title>Did intended firing method condition the morphology of Caddo bottles?</title>
@@ -213,6 +213,7 @@ div.csl-indent {
   <li><a href="#firing" id="toc-firing" class="nav-link" data-scroll-target="#firing">Firing</a></li>
   <li><a href="#geography" id="toc-geography" class="nav-link" data-scroll-target="#geography">Geography</a></li>
   <li><a href="#morphology" id="toc-morphology" class="nav-link" data-scroll-target="#morphology">Morphology</a></li>
+  <li><a href="#summary-of-results" id="toc-summary-of-results" class="nav-link" data-scroll-target="#summary-of-results">Summary of results</a></li>
   </ul></li>
   <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments">Acknowledgments</a></li>
   <li><a href="#funding" id="toc-funding" class="nav-link" data-scroll-target="#funding">Funding</a></li>
@@ -255,7 +256,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 13, 2023</p>
+      <p class="date">March 19, 2023</p>
     </div>
   </div>
   
@@ -270,7 +271,7 @@ div.csl-indent {
 </blockquote>
 <section id="basis-of-inquiry" class="level1">
 <h1>Basis of inquiry</h1>
-<p>Color is afforded primacy in ceramic production inquiries, as it provides evidence linked with use, raw material variability, and method of firing. This study is focused on the latter, and asks whether Caddo potters conditioned the morphology of bottles based on the method by which they intended to fire them. Thirty three-dimensional (3-D) scans of Hickory Engraved and Smithport Plain bottles were collected from five museums and repositories, and provide 360-degree coverage of exterior colors associated with each vessel. Texture (color) files were used in a quantitative analysis of color where vessels were subsequently binned into two groups based upon firing method; oxidized and reduced. The 3-D meshes were then analyzed using the tools of geometric morphometrics to assess whether bottle shape and size differ by method of firing. Results demonstrate significant differences in both color and bottle shape—but not size—by firing method. Thus, Formative/Early Caddo potters conditioned the shape of Hickory Engraved and Smithport Plain bottles based on the method by which they intended to fire them. This finding provides evidence for two discrete, contemporary, and sympatric Caddo potting communities delimited by macroscopic production attributes, and advances our understanding of Caddo decision-making behaviors related to Formative/Early bottle production.</p>
+<p>Color is afforded primacy in ceramic production inquiries, as it provides evidence linked with use, raw material variability, and method of firing. This study focuses on the latter, and asks whether Caddo potters conditioned the morphology of bottles based on the method by which they intended to fire them. Thirty three-dimensional (3D) scans of Hickory Engraved and Smithport Plain bottles were collected from five museums and repositories, and provide 360-degree coverage of exterior colors associated with each vessel. Texture (color) files were used in a quantitative analysis of color where vessels were subsequently binned into two groups based on firing method; oxidized and reduced. A geographic information system was subsequently used to identify core production areas associated each firing method, and 3D meshes were then analyzed using the tools of geometric morphometrics to assess whether bottle shape and size differ by method of firing. Results demonstrate a single core production area for the reduced bottles, and two—one north; the other, south—for oxidized bottles, as well as significant differences in both color and bottle shape, but not size, by firing method. Thus, Formative/Early Caddo potters conditioned the shape of Hickory Engraved and Smithport Plain bottles based upon their intended firing method. This finding provides evidence for two discrete, contemporary, and sympatric Caddo potting communities delimited by macroscopic production attributes, advancing our understanding of Caddo decision-making behaviors related to bottle production.</p>
 <section id="keywords" class="level2">
 <h2 class="anchored" data-anchor-id="keywords">Keywords</h2>
 <p><em>Caddo; NAGPRA; ceramic; pottery; 3D; computational archaeology; museum studies; digital humanities; non-Western art history; STEM; STEAM</em></p>
@@ -318,7 +319,7 @@ div.csl-indent {
 </section>
 <section id="geography" class="level2">
 <h2 class="anchored" data-anchor-id="geography">Geography</h2>
-<p>Coordinate data were subsequently harvested and added to the categorical dataset, and all data were imported to a GIS for a distribution analysis to identify core production areas. The GIS environment was modified to ensure that both distributions (oxidized and reduced) would share the same extent, defined by the distribution of all sites in the sample. The distribution of sites serves as a proxy for the distribution of the two types (Hickory Engraved and Smithport Plain), where a minimum convex polygon could be fitted to those data as a means of delimiting their utilization distribution. Within the utilization distribution <span class="citation" data-cites="RN11347">(<a href="#ref-RN11347" role="doc-biblioref">Worton 1989</a>)</span>, core production areas were defined using kernel density, where raster values from the location of each site were exported to identify the 50 and 75 percent quantiles. Each raster was reclassified using three classifications; the darkest indicating the 50 percent quantile, another lighter color at 75, and a third—transparent—that holds the remainder. Results demonstrate a single core area related to the production of reduced bottles; however, oxidized bottle production occurred across two core areas (one north; the other south). All core production areas occur in the Red River Basin within the known boundary of the ancestral Caddo region.</p>
+<p>Coordinate data were subsequently harvested and joined with the categorical dataset, and all data were imported to a GIS for a distribution analysis to identify core production areas. The GIS environment was modified to ensure that both distributions (oxidized and reduced) would share the same extent, defined by the distribution of all sites in the sample. The distribution of sites serves as a proxy for the distribution of the two types (Hickory Engraved and Smithport Plain), where a minimum convex polygon could be fitted to those data as a means of delimiting their utilization distribution <span class="citation" data-cites="RN11347">(sensu <a href="#ref-RN11347" role="doc-biblioref">Worton 1989</a>)</span>. Within that utilization distribution, core production areas were defined using kernel density, where raster values from the location of each site were subsequently exported to identify the 50 and 75 percent quantiles. Each raster was reclassified using three classifications; the darkest indicating the 50 percent quantile, another lighter color at 75, and a third—transparent—holding the remainder. Results demonstrate a single core area related to the production of reduced bottles; however, oxidized bottle production occurred across two core areas (one north; the other south). All core production areas occur in the Red River Basin inside the ancestral Caddo area.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">'./img/geo.jpg'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -360,6 +361,12 @@ div.csl-indent {
 </div>
 <p>Results demonstrate a significant difference in size—but not shape—by type (<em>RRPP: 10,000; Rsq: 0.14223; <strong>Pr(&gt;F): 0.0373</strong></em>), where the Hickory Engraved bottles were found to be larger than the Smithport Plain bottles. In the analysis of bottle morphology by firing method, vessels were found to differ in shape (<em>RRPP: 10,000; Rsq: 0.11456; <strong>Pr(&gt;F): 0.0275</strong></em>), but not size (<em>RRPP: 10,000; Rsq: 0.00224; <strong>Pr(&gt;F): 0.8008</strong></em>).</p>
 </section>
+<section id="summary-of-results" class="level2">
+<h2 class="anchored" data-anchor-id="summary-of-results">Summary of results</h2>
+<p>This study used a quantitative analysis of 3D vessel color to demarcate oxidized and reduced Hickory Engraved and Smithport Plain bottles, demonstrating a methodologically rigorous and reproducible approach to categorizing continuous variables associated with color. Bottles in each group were found to differ in shape, but not size, and while the oxidized vessels were produced in two core areas, reduced vessels were produced in one. Thus, Formative/Early Caddo potters conditioned the shape of Hickory Engraved and Smithport Plain bottles based upon the intended firing method.</p>
+<p>This finding provides evidence for two discrete, contemporary, and sympatric Caddo potting communities delimited by macroscopic production attributes, and is the first to posit differential production-based intentions among Caddo potters. While spatial overlap occurs between the oxidized and reduced core production areas in the north, the southern core production area is geographically isolated. This then begs the question of whether extant morphological differences may be apparent between the two core production areas for oxidized bottles. While beyond the purview of the current study, it has been demonstrated elsewhere that differences exist between ceramics <span class="citation" data-cites="RN11801 RN11782 RN11716 RN8312">(<a href="#ref-RN11801" role="doc-biblioref">Selden Jr. 2018a</a>, <a href="#ref-RN11782" role="doc-biblioref">2018b</a>, <a href="#ref-RN11716" role="doc-biblioref">2019</a>, <a href="#ref-RN8312" role="doc-biblioref">2021</a>)</span>, bifaces <span class="citation" data-cites="RN21001 RN11783">(<a href="#ref-RN21001" role="doc-biblioref">Selden Jr., Dockall, and Dubied 2020</a>; <a href="#ref-RN11783" role="doc-biblioref">Selden Jr., Dockall, and Shafer 2018</a>)</span>, and arrow points <span class="citation" data-cites="RN11172 RN11264 RN9364">(<a href="#ref-RN11172" role="doc-biblioref">Selden Jr. and Dockall 2023</a>; <a href="#ref-RN11264" role="doc-biblioref">Selden Jr. 2022</a>; <a href="#ref-RN9364" role="doc-biblioref">Selden Jr et al. 2021</a>)</span> recovered from the northern and southern Caddo behavioral regions. Thus, while further study is warranted, should a morphological difference exist between the northern and southern core production areas for oxidized bottles, such a finding would—perhaps—not come as a surprise.</p>
+<p>While ancillary to the primary research question, a morphological comparison of Hickory Engraved and Smithport Plain bottles was included in this analysis. Similarities in shape between the two types are known—and demonstrated here—however, what was not known is that Hickory Engraved bottles are significantly larger. This difference in volume may translate to a difference in which the two bottle types were used by the Caddo. To date, no residue studies have endeavored to identify what specific bottle types were meant to stow.</p>
+</section>
 </section>
 <section id="acknowledgments" class="level1">
 <h1>Acknowledgments</h1>
@@ -377,7 +384,7 @@ div.csl-indent {
 </section>
 <section id="colophon" class="level1 unnumbered">
 <h1 class="unnumbered">Colophon</h1>
-<p>This version of the analysis was generated on 2023-03-13 07:15:51 using the following computational environment and dependencies:</p>
+<p>This version of the analysis was generated on 2023-03-19 02:30:32 using the following computational environment and dependencies:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># what R packages and versions were used?</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="st">"devtools"</span> <span class="sc">%in%</span> <span class="fu">installed.packages</span>()) devtools<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -392,7 +399,7 @@ div.csl-indent {
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/Chicago
- date     2023-03-13
+ date     2023-03-19
  pandoc   2.19.2 @ /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────
@@ -458,7 +465,7 @@ div.csl-indent {
 <div class="cell-output cell-output-stdout">
 <pre><code>Local:    main /Users/seldenjrz/Documents/github/hfesp.1
 Remote:   main @ origin (https://github.com/seldenlab/hfesp.1)
-Head:     [125922d] 2023-03-12: &lt;edit index&gt;</code></pre>
+Head:     [a2f46d9] 2023-03-13: &lt;edit ms&gt;</code></pre>
 </div>
 </div>
 
@@ -581,8 +588,23 @@ Rubner, Yossi, and Carlo Tomasi. 2001. <em>Perceptual Metrics for Image Database
 <div id="ref-RN9364" class="csl-entry" role="doc-biblioentry">
 Selden Jr, Robert Z., John E. Dockall, C. Britt Bousman, and Timothy K. Perttula. 2021. <span>“<span class="nocase">Shape as a function of time + raw material + burial context? An exploratory analysis of Perdiz arrow points from the ancestral Caddo area of the American Southeast</span>.”</span> Journal Article. <em>Journal of Archaeological Science: Reports</em> 37: 102916. <a href="https://doi.org/10.1016/j.jasrep.2021.102916">https://doi.org/10.1016/j.jasrep.2021.102916</a>.
 </div>
+<div id="ref-RN11801" class="csl-entry" role="doc-biblioentry">
+Selden Jr., Robert Z. 2018a. <span>“A Preliminary Study of Smithport Plain Bottle Morphology in the Southern Caddo Area.”</span> <em>Bulletin of the Texas Archeological Society</em> 89: 63–89.
+</div>
+<div id="ref-RN11782" class="csl-entry" role="doc-biblioentry">
+———. 2018b. <span>“<span class="nocase">Ceramic Morphological Organisation in the Southern Caddo Area: Quiddity of Shape for Hickory Engraved Bottles</span>.”</span> <em>Journal of Archaeological Science: Reports</em> 21: 884–96. <a href="https://doi.org/10.1016/j.jasrep.2018.08.045">https://doi.org/10.1016/j.jasrep.2018.08.045</a>.
+</div>
+<div id="ref-RN11716" class="csl-entry" role="doc-biblioentry">
+———. 2019. <span>“<span class="nocase">Ceramic Morphological Organisation in the Southern Caddo Area: The Clarence H. Webb Collections</span>.”</span> <em>Journal of Cultural Heritage</em> 35: 41–55. https://doi.org/<a href="https://doi.org/10.1016/j.culher.2018.07.002">https://doi.org/10.1016/j.culher.2018.07.002</a>.
+</div>
+<div id="ref-RN8312" class="csl-entry" role="doc-biblioentry">
+———. 2021. <span>“Louisiana Limitrophe: An Iterative Morphological Exegesis of Caddo Bottle and Biface Production.”</span> Book Section. In <em>Ancestral Caddo Ceramic Traditions</em>, edited by Duncan P. McKinnon, Jeffrey S. Girard, and Timothy K. Perttula, 258–76. Baton Rouge: LSU Press.
+</div>
 <div id="ref-RN11264" class="csl-entry" role="doc-biblioentry">
-Selden Jr., Robert Z. 2022. <span>“Morphologically Similar, but Regionally Distinct: Perdiz Arrow Points from Caddo Burial Contexts in the American Southeast.”</span> Journal Article. <em>Lithic Technology</em> (in press). <a href="https://doi.org/10.1080/01977261.2022.2095492">https://doi.org/10.1080/01977261.2022.2095492</a>.
+———. 2022. <span>“Morphologically Similar, but Regionally Distinct: Perdiz Arrow Points from Caddo Burial Contexts in the American Southeast.”</span> Journal Article. <em>Lithic Technology</em> (in press). <a href="https://doi.org/10.1080/01977261.2022.2095492">https://doi.org/10.1080/01977261.2022.2095492</a>.
+</div>
+<div id="ref-RN11172" class="csl-entry" role="doc-biblioentry">
+Selden Jr., Robert Z., and John E. Dockall. 2023. <span>“Perdiz Arrow Points from Caddo Burial Contexts Aid in Defining Discrete Behavioral Regions.”</span> Journal Article. <em>Southeastern Archaeology</em> (in press). <a href="https://doi.org/10.1080/0734578X.2023.2182260">https://doi.org/10.1080/0734578X.2023.2182260</a>.
 </div>
 <div id="ref-RN21001" class="csl-entry" role="doc-biblioentry">
 Selden Jr., Robert Z., John E. Dockall, and Morgane Dubied. 2020. <span>“A Quantitative Assessment of Intraspecific Morphological Variation in Gahagan Bifaces from the Southern Caddo Area and Central Texas.”</span> <em>Southeastern Archaeology</em> 39 (2): 125–45. <a href="https://doi.org/10.1080/0734578x.2020.1744416">https://doi.org/10.1080/0734578x.2020.1744416</a>.
