@@ -1,31 +1,31 @@
-X,site,type,time,ColorGroup
-CNO-Pohler-2002-01-18,Pohler Coll,Smithport Plain,Formative-Early,A
-CNO-Pohler-2002-01-20,Pohler Coll,Hickory Fine Engraved,Formative-Early,B
-CNO-Pohler-2002-01-23,Pohler Coll,Hickory Fine Engraved,Formative-Early,A
-CNO-Pohler-2002-01-27,Pohler Coll,Smithport Plain,Formative-Early,B
-LSEM-Haley-HFE1,Haley Place,Hickory Fine Engraved,Formative-Early,A
-LSEM-Haley-HFE2,Haley Place,Hickory Fine Engraved,Formative-Early,A
-LSEM-Haley-HFE3,Haley Place,Hickory Fine Engraved,Formative-Early,A
-LSEM-Haley-HFE4,Haley Place,Hickory Fine Engraved,Formative-Early,A
-LSEM-Haley-HFE5,Haley Place,Hickory Fine Engraved,Formative-Early,A
-NSU-AllenPlantation-142,Allen Plantation,Hickory Fine Engraved,Formative-Early,B
-NSU-Belcher-404,Belcher Mound,Hickory Fine Engraved,Formative-Early,B
-NSU-Gahagan-955,Gahagan Mound,Hickory Fine Engraved,Formative-Early,B
-NSU-Gahagan-956,Gahagan Mound,Hickory Fine Engraved,Formative-Early,B
-NSU-SmithportLanding-152,Smithport Landing,Smithport Plain,Formative-Early,B
-NSU-SmithportLanding-157,Smithport Landing,Hickory Fine Engraved,Formative-Early,B
-NSU-SmithportLanding-95,Smithport Landing,Smithport Plain,Formative-Early,B
-NSU-SmithportLanding-96,Smithport Landing,Hickory Fine Engraved,Formative-Early,B
-TARL-41BW3-6-1-7-FS7,Hatchel,Hickory Fine Engraved,Formative-Early,B
-TARL-41BW4-341-427,Paul Mitchell,Hickory Fine Engraved,Formative-Early,B
-TARL-41BW4-341-464,Paul Mitchell,Hickory Fine Engraved,Formative-Early,B
-TARL-41BW4-6-2-132,Paul Mitchell,Hickory Fine Engraved,Formative-Early,A
-TARL-41BW4-6-2-67,Paul Mitchell,Smithport Plain,Formative-Early,B
-TARL-41BW4-6-2-78,Paul Mitchell,Smithport Plain,Formative-Early,B
-TARL-41CE19-2015-1,George C Davis,Hickory Fine Engraved,Formative-Early,A
-TARL-41RR3-2,Mustang Creek Mound,Hickory Fine Engraved,Formative-Early,B
-UArk_BattleMound-55-15-9,Battle Mound,Smithport Plain,Formative-Early,A
-UArk-Burrows-55-19-2,Burrows,Smithport Plain,Formative-Early,B
-UArk-Crenshaw-55-1-10,Crenshaw,Hickory Fine Engraved,Formative-Early,B
-UArk-Crenshaw-55-1-4,Crenshaw,Hickory Fine Engraved,Formative-Early,A
-UArk-Crenshaw-55-1-43,Crenshaw,Hickory Fine Engraved,Formative-Early,B
+X,site,type,time,ColorGroup,production
+CNO-Pohler-2002-01-18,Pohler Coll,Smithport Plain,Formative-Early,A,
+CNO-Pohler-2002-01-20,Pohler Coll,Hickory Fine Engraved,Formative-Early,B,
+CNO-Pohler-2002-01-23,Pohler Coll,Hickory Fine Engraved,Formative-Early,A,
+CNO-Pohler-2002-01-27,Pohler Coll,Smithport Plain,Formative-Early,B,
+LSEM-Haley-HFE1,Haley Place,Hickory Fine Engraved,Formative-Early,A,C
+LSEM-Haley-HFE2,Haley Place,Hickory Fine Engraved,Formative-Early,A,C
+LSEM-Haley-HFE3,Haley Place,Hickory Fine Engraved,Formative-Early,A,C
+LSEM-Haley-HFE4,Haley Place,Hickory Fine Engraved,Formative-Early,A,C
+LSEM-Haley-HFE5,Haley Place,Hickory Fine Engraved,Formative-Early,A,C
+NSU-AllenPlantation-142,Allen Plantation,Hickory Fine Engraved,Formative-Early,B,B
+NSU-Belcher-404,Belcher Mound,Hickory Fine Engraved,Formative-Early,B,
+NSU-Gahagan-955,Gahagan Mound,Hickory Fine Engraved,Formative-Early,B,B
+NSU-Gahagan-956,Gahagan Mound,Hickory Fine Engraved,Formative-Early,B,B
+NSU-SmithportLanding-152,Smithport Landing,Smithport Plain,Formative-Early,B,B
+NSU-SmithportLanding-157,Smithport Landing,Hickory Fine Engraved,Formative-Early,B,B
+NSU-SmithportLanding-95,Smithport Landing,Smithport Plain,Formative-Early,B,B
+NSU-SmithportLanding-96,Smithport Landing,Hickory Fine Engraved,Formative-Early,B,B
+TARL-41BW3-6-1-7-FS7,Hatchel,Hickory Fine Engraved,Formative-Early,B,A
+TARL-41BW4-341-427,Paul Mitchell,Hickory Fine Engraved,Formative-Early,B,A
+TARL-41BW4-341-464,Paul Mitchell,Hickory Fine Engraved,Formative-Early,B,A
+TARL-41BW4-6-2-132,Paul Mitchell,Hickory Fine Engraved,Formative-Early,A,A
+TARL-41BW4-6-2-67,Paul Mitchell,Smithport Plain,Formative-Early,B,A
+TARL-41BW4-6-2-78,Paul Mitchell,Smithport Plain,Formative-Early,B,A
+TARL-41CE19-2015-1,George C Davis,Hickory Fine Engraved,Formative-Early,A,
+TARL-41RR3-2,Mustang Creek Mound,Hickory Fine Engraved,Formative-Early,B,
+UArk_BattleMound-55-15-9,Battle Mound,Smithport Plain,Formative-Early,A,C
+UArk-Burrows-55-19-2,Burrows,Smithport Plain,Formative-Early,B,A
+UArk-Crenshaw-55-1-10,Crenshaw,Hickory Fine Engraved,Formative-Early,B,C
+UArk-Crenshaw-55-1-4,Crenshaw,Hickory Fine Engraved,Formative-Early,A,C
+UArk-Crenshaw-55-1-43,Crenshaw,Hickory Fine Engraved,Formative-Early,B,C

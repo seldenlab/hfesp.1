@@ -5,6 +5,7 @@ project:
     - c01-color.qmd
     - c02-morphology1.qmd
     - c03-morphology2.qmd
+    - c04-morphology3.qmd
 
 website:
   margin-header: |
@@ -19,6 +20,7 @@ website:
         menu:
           - c02-morphology1.qmd
           - c03-morphology2.qmd
+          - c04-morphology3.qmd
 
 format:
   html:

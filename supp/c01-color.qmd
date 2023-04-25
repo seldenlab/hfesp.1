@@ -163,7 +163,7 @@ c.data2 <- as.data.frame(c.data %>%
 )
 
 bottle <- full_join(hfesp.data, c.data2, by = 'X') # left join by specimen number
-bottle.dist <- bottle[,6:35] # color distance matrix
+bottle.dist <- bottle[,7:36] # color distance matrix
 set.seed(10) # make results reproducible
 
 # model: color as a function of firing category (oxidized v. reduced)

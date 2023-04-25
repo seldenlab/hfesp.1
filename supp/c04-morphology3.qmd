@@ -1,0 +1,159 @@
+---
+title: "Morphology by Core Production Area"
+bibliography: [book.bib]
+---
+
+```{r loadgmP, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE, message = FALSE}
+# load required analysis packages
+library(here)
+library(StereoMorph)
+library(geomorph)
+library(tidyverse)
+library(wesanderson)
+library(ggplot2)
+
+## load shape data
+source('readmulti.csv.R')
+
+# read .csv files
+setwd('./data2')
+filelist <- list.files(pattern = '.csv')
+coords <- readmulti.csv(filelist)
+setwd('../')
+
+# read qualitative data
+qdata <- read.csv('qdata.csv', 
+                  header = TRUE, 
+                  row.names = 1)
+
+qdata <- qdata %>% 
+  filter(production %in% c('A', 'B', 'C'))
+
+qdata <- qdata[match(dimnames(coords)[[3]], rownames(qdata)),]
+```
+
+## Generalized Procrustes Analysis
+
+Landmark data were aligned to a global coordinate system [@RN11622;@RN11623;@RN11563], achieved through generalized Procrustes superimposition [@RN478] performed in R [@R] using the `geomorph` library [@RN11530;@RN1774;@RN9565]. Procrustes superimposition translates, scales, and rotates the coordinate data to allow for comparisons among objects [@RN11564;@RN478]. The `geomorph` package uses a partial Procrustes superimposition that projects the aligned specimens into tangent space subsequent to alignment in preparation for the use of multivariate methods that assume linear space [@RN1646;@RN11563]. 
+
+```{r gpaP, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE, message = FALSE}
+# gpa
+Y.gpa <- gpagen(coords, print.progress = FALSE)
+
+# plot
+#plot(Y.gpa)
+
+# geomorph data frame
+gdf <- geomorph.data.frame(shape = Y.gpa$coords, 
+                           size = Y.gpa$Csize,
+                           production = qdata$production)
+```
+
+## Principal Components Analysis
+
+Principal components analysis [@RN1746] was used to visualize shape variation among the Perdiz arrow points. The shape changes described by each principal axis are commonly visualized using thin-plate spline warping of a reference 3D mesh [@RN1731;@RN479].
+
+```{r pca.plotColorGrouprawP, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE}
+# principal components analysis
+pca<-gm.prcomp(Y.gpa$coords)
+summary(pca)
+
+# set plot parameters
+pch.gps <- c(1:3)[as.factor(qdata$production)]
+col.gps <- wes_palette('Moonrise2')[as.factor(qdata$production)]
+col.hull <- c('#CCC591','#C27D38','#798E87')
+
+# plot pca by merged
+pc.plot <- plot(pca, 
+                asp = 1,
+                pch = pch.gps,
+                col = col.gps)
+shapeHulls(pc.plot, 
+           groups = qdata$production,
+           group.cols = col.hull)
+
+# plot x/y maxima/minima
+## x - minima
+mean.shape <- mshape(Y.gpa$coords)
+plotRefToTarget(pca$shapes$shapes.comp1$min, 
+                mean.shape)
+
+## x - maxima
+plotRefToTarget(pca$shapes$shapes.comp1$max, 
+                mean.shape)
+
+## y - minima
+plotRefToTarget(pca$shapes$shapes.comp2$min, 
+                mean.shape)
+
+## y - maxima
+plotRefToTarget(pca$shapes$shapes.comp2$max, 
+                mean.shape)
+
+knitr::include_graphics('img/fig6.jpg')
+```
+
+## Procrustes ANOVA
+
+To assess whether shape and size differ by `size class`, Procrustes ANOVAs [@RN1749] were run that enlist effect-sizes (zscores) computed as standard deviates of the generated sampling distributions [@RN1756]. A residual randomization permutation procedure (RRPP; n = 10,000 permutations) was used for all Procrustes ANOVAs [@RN1655;@RN11775], which has higher statistical power and a greater ability to identify patterns in the data should they be present [@RN1719].
+
+```{r anovaColorGrouprawP, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE}
+# shape
+fit.sh <- procD.lm(shape ~ production,
+                   data = gdf,
+                   print.progress = FALSE,
+                   iter = 9999)
+
+# shape as a function of core production area?
+anova(fit.sh)
+
+# pairwise comparison of LS means = which differ?
+pairwise.sh <- pairwise(fit.sh,
+                        groups = qdata$production)
+
+summary(pairwise.sh, 
+        confidence = 0.95, 
+        test.type = "dist")
+
+# size
+fit.sz <- procD.lm(size ~ production,
+                   data = gdf,
+                   print.progress = FALSE,
+                   iter = 9999)
+
+# size as a function of firing practice?
+anova(fit.sz)
+```
+
+## Mean shapes
+
+```{r mshapeP, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE}
+# subset landmark coordinates to produce mean shapes for contexts
+new.coords <- coords.subset(A = Y.gpa$coords,
+                            group = qdata$production)
+names(new.coords)
+
+## plot shape means
+mean <- lapply(new.coords, mshape)
+plot(mean$A)
+plot(mean$B)
+plot(mean$C)
+
+# comparison plots
+plotRefToTarget(mean$A,
+                mean$B, 
+                method = "points",
+                mag = 1)
+
+plotRefToTarget(mean$A,
+                mean$C, 
+                method = "points",
+                mag = 1)
+
+plotRefToTarget(mean$B,
+                mean$C, 
+                method = "points",
+                mag = 1)
+
+knitr::include_graphics('img/fig7.jpg')
+```

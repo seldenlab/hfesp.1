@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -162,6 +162,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         <li>
     <a class="dropdown-item" href="./c03-morphology2.html">
  <span class="dropdown-text">Morphology by Firing Group</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./c04-morphology3.html">
+ <span class="dropdown-text">Morphology by Core Production Area</span></a>
   </li>  
     </ul>
   </li>
@@ -617,7 +621,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb35-44"><a href="#cb35-44" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb35-45"><a href="#cb35-45" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb35-46"><a href="#cb35-46" aria-hidden="true" tabindex="-1"></a>bottle <span class="ot">&lt;-</span> <span class="fu">full_join</span>(hfesp.data, c.data2, <span class="at">by =</span> <span class="st">'X'</span>) <span class="co"># left join by specimen number</span></span>
-<span id="cb35-47"><a href="#cb35-47" aria-hidden="true" tabindex="-1"></a>bottle.dist <span class="ot">&lt;-</span> bottle[,<span class="dv">6</span><span class="sc">:</span><span class="dv">35</span>] <span class="co"># color distance matrix</span></span>
+<span id="cb35-47"><a href="#cb35-47" aria-hidden="true" tabindex="-1"></a>bottle.dist <span class="ot">&lt;-</span> bottle[,<span class="dv">7</span><span class="sc">:</span><span class="dv">36</span>] <span class="co"># color distance matrix</span></span>
 <span id="cb35-48"><a href="#cb35-48" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">10</span>) <span class="co"># make results reproducible</span></span>
 <span id="cb35-49"><a href="#cb35-49" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb35-50"><a href="#cb35-50" aria-hidden="true" tabindex="-1"></a><span class="co"># model: color as a function of firing category (oxidized v. reduced)</span></span>

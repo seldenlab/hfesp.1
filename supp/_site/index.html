@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Robert Z. Selden, Jr.">
-<meta name="dcterms.date" content="2023-04-19">
+<meta name="dcterms.date" content="2023-04-25">
 <meta name="description" content="Supplementary Materials">
 
 <title>Did intended firing method condition the morphology of Caddo bottles?</title>
@@ -185,6 +185,10 @@ div.csl-indent {
     <a class="dropdown-item" href="./c03-morphology2.html">
  <span class="dropdown-text">Morphology by Firing Group</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./c04-morphology3.html">
+ <span class="dropdown-text">Morphology by Core Production Area</span></a>
+  </li>  
     </ul>
   </li>
 </ul>
@@ -212,7 +216,8 @@ div.csl-indent {
   <ul class="collapse">
   <li><a href="#firing" id="toc-firing" class="nav-link" data-scroll-target="#firing">Firing</a></li>
   <li><a href="#geography" id="toc-geography" class="nav-link" data-scroll-target="#geography">Geography</a></li>
-  <li><a href="#morphology" id="toc-morphology" class="nav-link" data-scroll-target="#morphology">Morphology</a></li>
+  <li><a href="#morphology-by-firing-method" id="toc-morphology-by-firing-method" class="nav-link" data-scroll-target="#morphology-by-firing-method">Morphology by Firing Method</a></li>
+  <li><a href="#morphology-by-core-production-area" id="toc-morphology-by-core-production-area" class="nav-link" data-scroll-target="#morphology-by-core-production-area">Morphology by Core Production Area</a></li>
   <li><a href="#summary-of-results" id="toc-summary-of-results" class="nav-link" data-scroll-target="#summary-of-results">Summary of results</a></li>
   </ul></li>
   <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments">Acknowledgments</a></li>
@@ -256,7 +261,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 19, 2023</p>
+      <p class="date">April 25, 2023</p>
     </div>
   </div>
   
@@ -271,7 +276,7 @@ div.csl-indent {
 </blockquote>
 <section id="basis-of-inquiry" class="level1">
 <h1>Basis of inquiry</h1>
-<p>Color is afforded primacy in ceramic production inquiries, as it provides evidence linked with use, raw material variability, and method of firing. This study focuses on the latter, and asks whether Caddo potters conditioned the morphology of bottles based on the method by which they intended to fire them. Thirty three-dimensional (3D) scans of Hickory Engraved and Smithport Plain bottles were collected from five museums and repositories, and provide 360-degree coverage of exterior colors associated with each vessel. Texture (color) files were used in a quantitative analysis of color where vessels were subsequently binned into two groups based on firing method; oxidized and reduced. A geographic information system was subsequently used to identify core production areas associated each firing method, and 3D meshes were then analyzed using the tools of geometric morphometrics to assess whether bottle shape and size differ by method of firing. Results demonstrate a single core production area for the reduced bottles, and two—one north; the other, south—for oxidized bottles, as well as significant differences in both color and bottle shape, but not size, by firing method. Thus, Formative/Early Caddo potters conditioned the shape of Hickory Engraved and Smithport Plain bottles based upon their intended firing method. This finding provides evidence for two discrete, contemporary, and sympatric Caddo potting communities delimited by macroscopic production attributes, advancing our understanding of Caddo decision-making behaviors related to bottle production.</p>
+<p>Color is afforded primacy in ceramic production inquiries, as it provides evidence linked with use, raw material variability, and method of firing. This study focuses on the latter, and asks whether Caddo potters conditioned the morphology of bottles based on the method by which they intended to fire them. Thirty three-dimensional (3D) scans of Hickory Engraved and Smithport Plain bottles were collected from five museums and repositories, and provide 360-degree coverage of exterior colors associated with each vessel. Texture (color) files were used in a quantitative analysis of color where vessels were subsequently binned into two groups based on firing method; oxidized and reduced. A geographic information system was subsequently used to identify core production areas associated each firing method, and 3D meshes were analyzed using the tools of geometric morphometrics to assess whether bottle shape and size differ by method of firing. Results demonstrate a single core production area for the reduced bottles, and two—one north; the other, south—for oxidized bottles, as well as significant differences in both color and bottle shape, but not size, by firing method. A subsequent analysis was limited to bottles from the three core production areas, and demonstrated a significant difference in shape between the northern and southern oxidized bottles, but no difference in shape was found between the northern oxidized and reduced firing groups. Thus, Formative/Early Caddo potters conditioned the shape of Hickory Engraved and Smithport Plain bottles based upon the geography of manufacture, and not the intended firing method. This finding yields evidence for discrete, contemporary, and sympatric Caddo potting communities delimited by macroscopic production attributes, and advances our understanding of Caddo decision-making behaviors related to bottle production.</p>
 <section id="keywords" class="level2">
 <h2 class="anchored" data-anchor-id="keywords">Keywords</h2>
 <p><em>Caddo; NAGPRA; ceramic; pottery; 3D; computational archaeology; museum studies; digital humanities; non-Western art history; STEM; STEAM</em></p>
@@ -332,9 +337,10 @@ div.csl-indent {
 </div>
 </div>
 </section>
-<section id="morphology" class="level2">
-<h2 class="anchored" data-anchor-id="morphology">Morphology</h2>
-<p>Landmark data were aligned to a global coordinate system <span class="citation" data-cites="RN8477 RN7502 RN11622 RN11623 RN11563">(<a href="#ref-RN8477" role="doc-biblioref">Bookstein et al. 1999</a>; <a href="#ref-RN7502" role="doc-biblioref">Gunz, Mitteroecker, and Bookstein 2005</a>; <a href="#ref-RN11622" role="doc-biblioref">Kendall 1981</a>, <a href="#ref-RN11623" role="doc-biblioref">1984</a>; <a href="#ref-RN11563" role="doc-biblioref">Slice 2001</a>)</span>, achieved through generalized Procrustes superimposition <span class="citation" data-cites="RN11138 RN478 RN1646">(<a href="#ref-RN11138" role="doc-biblioref">Bookstein 1986</a>; <a href="#ref-RN478" role="doc-biblioref">Rohlf and Slice 1990</a>; <a href="#ref-RN1646" role="doc-biblioref">Rohlf 1999</a>)</span> in R using the <code>geomorph</code> and <code>RRPP</code> packages <span class="citation" data-cites="RN1655 RN11775 RN11530 RN1774 RN9565">(<a href="#ref-RN1655" role="doc-biblioref">Adams and Collyer 2015</a>; <a href="#ref-RN11775" role="doc-biblioref">Collyer and Adams 2018</a>; <a href="#ref-RN11530" role="doc-biblioref">Adams et al. 2017</a>; <a href="#ref-RN1774" role="doc-biblioref">Adams and Otarola-Castillo 2013</a>; <a href="#ref-RN9565" role="doc-biblioref">Baken et al. 2021</a>)</span>. Procrustes superimposition translates and rotates the coordinate data to allow for comparisons among objects, while also scaling each bottle using unit-centroid size—the square root of the sum of squared distances from each landmark to the specimen’s centroid <span class="citation" data-cites="RN11139 RN11140 RN11564 RN478">(<a href="#ref-RN11139" role="doc-biblioref">Chapman 1990</a>; <a href="#ref-RN11140" role="doc-biblioref">Dryden and Mardia 1998</a>; <a href="#ref-RN11564" role="doc-biblioref">Gower 1975</a>; <a href="#ref-RN478" role="doc-biblioref">Rohlf and Slice 1990</a>)</span>. The <code>geomorph</code> package uses a partial Procrustes superimposition that projects the aligned specimens into tangent space subsequent to alignment in preparation for the use of multivariate methods that assume linear space <span class="citation" data-cites="RN11141 RN11142 RN1646 RN11563">(<a href="#ref-RN11141" role="doc-biblioref">Dryden and Mardia 1993</a>; <a href="#ref-RN11142" role="doc-biblioref">Kent and Mardia 2001</a>; <a href="#ref-RN1646" role="doc-biblioref">Rohlf 1999</a>; <a href="#ref-RN11563" role="doc-biblioref">Slice 2001</a>)</span>.</p>
+<section id="morphology-by-firing-method" class="level2">
+<h2 class="anchored" data-anchor-id="morphology-by-firing-method">Morphology by Firing Method</h2>
+<p>To assess whether bottle morphology differed by method of firing, landmark data were aligned to a global coordinate system <span class="citation" data-cites="RN8477 RN7502 RN11622 RN11623 RN11563">(<a href="#ref-RN8477" role="doc-biblioref">Bookstein et al. 1999</a>; <a href="#ref-RN7502" role="doc-biblioref">Gunz, Mitteroecker, and Bookstein 2005</a>; <a href="#ref-RN11622" role="doc-biblioref">Kendall 1981</a>, <a href="#ref-RN11623" role="doc-biblioref">1984</a>; <a href="#ref-RN11563" role="doc-biblioref">Slice 2001</a>)</span>, achieved through generalized Procrustes superimposition <span class="citation" data-cites="RN11138 RN478 RN1646">(<a href="#ref-RN11138" role="doc-biblioref">Bookstein 1986</a>; <a href="#ref-RN478" role="doc-biblioref">Rohlf and Slice 1990</a>; <a href="#ref-RN1646" role="doc-biblioref">Rohlf 1999</a>)</span> in R using the <code>geomorph</code> and <code>RRPP</code> packages <span class="citation" data-cites="RN1655 RN11775 RN11530 RN1774 RN9565">(<a href="#ref-RN1655" role="doc-biblioref">Adams and Collyer 2015</a>; <a href="#ref-RN11775" role="doc-biblioref">Collyer and Adams 2018</a>; <a href="#ref-RN11530" role="doc-biblioref">Adams et al. 2017</a>; <a href="#ref-RN1774" role="doc-biblioref">Adams and Otarola-Castillo 2013</a>; <a href="#ref-RN9565" role="doc-biblioref">Baken et al. 2021</a>)</span>.</p>
+<p>Procrustes superimposition translates and rotates the coordinate data to allow for comparisons among objects, while also scaling each bottle using unit-centroid size—the square root of the sum of squared distances from each landmark to the specimen’s centroid <span class="citation" data-cites="RN11139 RN11140 RN11564 RN478">(<a href="#ref-RN11139" role="doc-biblioref">Chapman 1990</a>; <a href="#ref-RN11140" role="doc-biblioref">Dryden and Mardia 1998</a>; <a href="#ref-RN11564" role="doc-biblioref">Gower 1975</a>; <a href="#ref-RN478" role="doc-biblioref">Rohlf and Slice 1990</a>)</span>. The <code>geomorph</code> package uses a partial Procrustes superimposition that projects the aligned specimens into tangent space subsequent to alignment in preparation for the use of multivariate methods that assume linear space <span class="citation" data-cites="RN11141 RN11142 RN1646 RN11563">(<a href="#ref-RN11141" role="doc-biblioref">Dryden and Mardia 1993</a>; <a href="#ref-RN11142" role="doc-biblioref">Kent and Mardia 2001</a>; <a href="#ref-RN1646" role="doc-biblioref">Rohlf 1999</a>; <a href="#ref-RN11563" role="doc-biblioref">Slice 2001</a>)</span>.</p>
 <p>Principal components analysis <span class="citation" data-cites="RN1746">(<a href="#ref-RN1746" role="doc-biblioref">Jolliffe 2002</a>)</span> was used to visualize shape variation among the bottles, and the scatterplot represents the dispersion of shapes in tangent space <span class="citation" data-cites="RN8633 RN5616 RN11143 RN7550">(<a href="#ref-RN8633" role="doc-biblioref">Adams, Rohlf, and Slice 2013</a>; <a href="#ref-RN5616" role="doc-biblioref">Bookstein 1991</a>; <a href="#ref-RN11143" role="doc-biblioref">O’Higgins and Jones 1998</a>; <a href="#ref-RN7550" role="doc-biblioref">Rohlf and Marcus 1993</a>)</span>. Shape ranges described by each principal axis are commonly visualized using thin-plate spline warping of a reference mesh <span class="citation" data-cites="RN1731 RN479">(<a href="#ref-RN1731" role="doc-biblioref">Klingenberg 2013</a>; <a href="#ref-RN479" role="doc-biblioref">Sherratt et al. 2014</a>)</span>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">'./img/fig4.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -361,11 +367,38 @@ div.csl-indent {
 </div>
 <p>Results demonstrate a significant difference in size (<em>RRPP: 10,000; Rsq: 0.14223; <strong>Pr(&gt;F): 0.0373</strong></em>)—but not shape (_RRPP: 10,000; Rsq: 0.05789; <strong>Pr(&gt;F): 0.1652</strong>)—by type, where the Hickory Engraved bottles were found to be larger than the Smithport Plain bottles. In the analysis of bottle morphology by firing method, vessels were found to differ in shape (<em>RRPP: 10,000; Rsq: 0.11456; <strong>Pr(&gt;F): 0.0275</strong></em>), but not size (<em>RRPP: 10,000; Rsq: 0.00224; <strong>Pr(&gt;F): 0.8008</strong></em>).</p>
 </section>
+<section id="morphology-by-core-production-area" class="level2">
+<h2 class="anchored" data-anchor-id="morphology-by-core-production-area">Morphology by Core Production Area</h2>
+<p>To assess whether bottle morphology differed by core production area, the sample was filtered to include only those bottles from the three core production areas. Principal components analysis <span class="citation" data-cites="RN1746">(<a href="#ref-RN1746" role="doc-biblioref">Jolliffe 2002</a>)</span> was used to visualize shape variation among the bottles, and the scatterplot represents the dispersion of shapes in tangent space <span class="citation" data-cites="RN8633 RN5616 RN11143 RN7550">(<a href="#ref-RN8633" role="doc-biblioref">Adams, Rohlf, and Slice 2013</a>; <a href="#ref-RN5616" role="doc-biblioref">Bookstein 1991</a>; <a href="#ref-RN11143" role="doc-biblioref">O’Higgins and Jones 1998</a>; <a href="#ref-RN7550" role="doc-biblioref">Rohlf and Marcus 1993</a>)</span>. Shape ranges described by each principal axis are commonly visualized using thin-plate spline warping of a reference mesh <span class="citation" data-cites="RN1731 RN479">(<a href="#ref-RN1731" role="doc-biblioref">Klingenberg 2013</a>; <a href="#ref-RN479" role="doc-biblioref">Sherratt et al. 2014</a>)</span>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">'./img/fig6.jpg'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./img/fig6.jpg" class="img-fluid figure-img" width="2620"></p>
+<p></p><figcaption class="figure-caption">Principal components analysis plot (PC1/PC2) for Hickory Engraved and Smithport Plain bottles by core production areas, where gray circles indicate bottles fired in a reduced environment in the north, orange plus signs indicate those from an oxidized environment in the south, and tan plus signs indicate those from an oxidized environment in the north; warp grids for the first two principal components.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>To assess whether <code>shape</code> and <code>size</code> differs by <code>production area</code>, Procrustes ANOVAs <span class="citation" data-cites="RN1749">(<a href="#ref-RN1749" role="doc-biblioref">Goodall 1991</a>)</span> were run that enlist effect-sizes (zscores) computed as standard deviates of the generated sampling distributions <span class="citation" data-cites="RN1756">(<a href="#ref-RN1756" role="doc-biblioref">Collyer, Sekora, and Adams 2015</a>)</span>. A residual randomization permutation procedure (RRPP; n = 10,000 permutations) was used for all Procrustes ANOVAs <span class="citation" data-cites="RN1655 RN11775">(<a href="#ref-RN1655" role="doc-biblioref">Adams and Collyer 2015</a>; <a href="#ref-RN11775" role="doc-biblioref">Collyer and Adams 2018</a>)</span>, which has higher statistical power and a greater ability to identify patterns in the data should they be present <span class="citation" data-cites="RN1719">(<a href="#ref-RN1719" role="doc-biblioref">Anderson and Ter Braak 2003</a>)</span>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">'./img/fig7.jpg'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./img/fig7.jpg" class="img-fluid figure-img" width="5077"></p>
+<p></p><figcaption class="figure-caption">Mean shapes summarizing variation in Hickory Engraved and Smithport Plain bottles fired in oxidized and reduced environments from each of the three core production areas.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Results demonstrate no difference in the morphology of oxidized and reduced bottles recovered from sites in the two northern core production areas (<em>RRPP: 10,000; <strong>Pr(&gt;F): 0.9374</strong></em>). However, a significant difference in bottle shape exists between the northern and southern core production areas associated with oxidized firing (<em>RRPP: 10,000; <strong>Pr(&gt;F): 0.0031</strong></em>), and between the reduced (north) and southern core production areas (<em>RRPP: 10,000; <strong>Pr(&gt;F): 0.0003)</strong></em>).</p>
+</section>
 <section id="summary-of-results" class="level2">
 <h2 class="anchored" data-anchor-id="summary-of-results">Summary of results</h2>
-<p>This study used a quantitative analysis of 3D vessel color to demarcate oxidized and reduced Hickory Engraved and Smithport Plain bottles, demonstrating a methodologically rigorous and reproducible approach to categorizing continuous variables associated with color. Bottles in each group were found to differ in shape, but not size, and while the oxidized vessels were produced in two core areas, reduced vessels were produced in one. Thus, Formative/Early Caddo potters conditioned the shape of Hickory Engraved and Smithport Plain bottles based upon the intended firing method.</p>
-<p>While ancillary to the primary research question, a morphological comparison of Hickory Engraved and Smithport Plain bottles was included in this analysis. Similarities in shape between the two types are known—and demonstrated here—however, what was not known is that Hickory Engraved bottles are significantly larger. This difference in volume may translate to a difference in which these two bottle types may have been used by the Caddo.</p>
-<p>This finding provides evidence for two discrete, contemporary, and sympatric Caddo potting communities delimited by macroscopic production attributes, and posits differential production-based intentions among Caddo potters. While spatial overlap occurs between the oxidized and reduced core production areas in the north, the southern core production area is geographically isolated. This then begs the question of whether extant morphological differences may be apparent between the two core production areas for oxidized bottles. While beyond the purview of the current study, it has been demonstrated elsewhere that differences exist between ceramics <span class="citation" data-cites="RN11801 RN11782 RN11716 RN8312">(<a href="#ref-RN11801" role="doc-biblioref">Selden Jr. 2018a</a>, <a href="#ref-RN11782" role="doc-biblioref">2018b</a>, <a href="#ref-RN11716" role="doc-biblioref">2019</a>, <a href="#ref-RN8312" role="doc-biblioref">2021</a>)</span>, bifaces <span class="citation" data-cites="RN21001 RN11783">(<a href="#ref-RN21001" role="doc-biblioref">Selden Jr., Dockall, and Dubied 2020</a>; <a href="#ref-RN11783" role="doc-biblioref">Selden Jr., Dockall, and Shafer 2018</a>)</span>, and arrow points <span class="citation" data-cites="RN11172 RN11264 RN9364">(<a href="#ref-RN11172" role="doc-biblioref">Selden Jr. and Dockall 2023</a>; <a href="#ref-RN11264" role="doc-biblioref">Selden Jr. 2023</a>; <a href="#ref-RN9364" role="doc-biblioref">Selden Jr. et al. 2021</a>)</span> recovered from the northern and southern Caddo behavioral regions. Thus, while further study is warranted, should a morphological difference exist between the northern and southern core production areas for oxidized bottles, such a finding would not come as a surprise.</p>
+<p>This study used a quantitative analysis of 3D vessel color to demarcate oxidized and reduced Hickory Engraved and Smithport Plain bottles, demonstrating a methodologically rigorous and reproducible approach to categorizing continuous variables associated with color. Bottles in each group were found to differ in shape, but not size, and while the oxidized vessels were produced in two core areas, reduced vessels were produced in one. While ancillary to the primary research question, a morphological comparison of Hickory Engraved and Smithport Plain bottles was included in this analysis. Similarities in shape between the two types are known—and demonstrated here—however, what was not known is that Hickory Engraved bottles are significantly larger. This difference in volume may translate to a difference in which these two bottle types may have been used by the Caddo.</p>
+<p>This finding provides evidence for two discrete, contemporary, and sympatric Caddo potting communities delimited by macroscopic production attributes, and posits differential production-based intentions among Caddo potters. While spatial overlap occurs between the oxidized and reduced core production areas in the north, the southern core production area is geographically isolated. This then begs the question of whether extant morphological differences may be apparent between the two core production areas for oxidized bottles. Using only those vessels recovered from sites in the core production areas in a subsequent comparison of bottle morphology demonstrated that the oxidized and reduced bottles from the core production areas in the north are similar, but both differ significantly from the core production area associated with oxidized bottle production in the south. Elsewhere it has been demonstrated that differences exist between ceramics <span class="citation" data-cites="RN11801 RN11782 RN11716 RN8312">(<a href="#ref-RN11801" role="doc-biblioref">Selden Jr. 2018a</a>, <a href="#ref-RN11782" role="doc-biblioref">2018b</a>, <a href="#ref-RN11716" role="doc-biblioref">2019</a>, <a href="#ref-RN8312" role="doc-biblioref">2021</a>)</span>, bifaces <span class="citation" data-cites="RN21001 RN11783">(<a href="#ref-RN21001" role="doc-biblioref">Selden Jr., Dockall, and Dubied 2020</a>; <a href="#ref-RN11783" role="doc-biblioref">Selden Jr., Dockall, and Shafer 2018</a>)</span>, and arrow points <span class="citation" data-cites="RN11172 RN11264 RN9364">(<a href="#ref-RN11172" role="doc-biblioref">Selden Jr. and Dockall 2023</a>; <a href="#ref-RN11264" role="doc-biblioref">Selden Jr. 2023</a>; <a href="#ref-RN9364" role="doc-biblioref">Selden Jr. et al. 2021</a>)</span> recovered from the northern and southern Caddo behavioral regions; a theory to which this effort contributes added support. Further, the two communities of practice (morphology + firing) can be concatenated as a means of positing the possible provenance of Hickory Engraved and Smithport Plain bottles found outside of the three core production areas, where bottle shape discriminates between the northern and southern manufacturing traditions, and firing method discriminates—among the northern production areas—between the eastern (reduced) and western (oxidized) firing traditions.</p>
 </section>
 </section>
 <section id="acknowledgments" class="level1">
@@ -384,10 +417,10 @@ div.csl-indent {
 </section>
 <section id="colophon" class="level1 unnumbered">
 <h1 class="unnumbered">Colophon</h1>
-<p>This version of the analysis was generated on 2023-04-19 06:13:18 using the following computational environment and dependencies:</p>
+<p>This version of the analysis was generated on 2023-04-25 05:38:59 using the following computational environment and dependencies:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># what R packages and versions were used?</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="st">"devtools"</span> <span class="sc">%in%</span> <span class="fu">installed.packages</span>()) devtools<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># what R packages and versions were used?</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="st">"devtools"</span> <span class="sc">%in%</span> <span class="fu">installed.packages</span>()) devtools<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────
  setting  value
@@ -399,7 +432,7 @@ div.csl-indent {
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/Chicago
- date     2023-04-19
+ date     2023-04-25
  pandoc   2.19.2 @ /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────
@@ -434,7 +467,7 @@ div.csl-indent {
  processx      3.8.1   2023-04-18 [1] CRAN (R 4.2.3)
  profvis       0.3.7   2020-11-02 [1] CRAN (R 4.2.0)
  promises      1.2.0.1 2021-02-11 [1] CRAN (R 4.2.0)
- ps            1.7.4   2023-04-02 [1] CRAN (R 4.2.3)
+ ps            1.7.5   2023-04-18 [1] CRAN (R 4.2.0)
  purrr         1.0.1   2023-01-10 [1] CRAN (R 4.2.0)
  R6            2.5.1   2021-08-19 [1] CRAN (R 4.2.0)
  Rcpp          1.0.10  2023-01-22 [1] CRAN (R 4.2.0)
@@ -460,12 +493,12 @@ div.csl-indent {
 </div>
 <p>Current Git commit details are:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># where can I find this commit? </span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="st">"git2r"</span> <span class="sc">%in%</span> <span class="fu">installed.packages</span>() <span class="sc">&amp;</span> git2r<span class="sc">::</span><span class="fu">in_repository</span>(<span class="at">path =</span> <span class="st">"."</span>)) git2r<span class="sc">::</span><span class="fu">repository</span>(here<span class="sc">::</span><span class="fu">here</span>())  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># where can I find this commit? </span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="st">"git2r"</span> <span class="sc">%in%</span> <span class="fu">installed.packages</span>() <span class="sc">&amp;</span> git2r<span class="sc">::</span><span class="fu">in_repository</span>(<span class="at">path =</span> <span class="st">"."</span>)) git2r<span class="sc">::</span><span class="fu">repository</span>(here<span class="sc">::</span><span class="fu">here</span>())  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Local:    main /Users/seldenjrz/Documents/github/hfesp.1
 Remote:   main @ origin (https://github.com/seldenlab/hfesp.1)
-Head:     [37780a9] 2023-03-19: &lt;edit index&gt;</code></pre>
+Head:     [b1aa1a7] 2023-04-19: &lt;edit index&gt;</code></pre>
 </div>
 </div>
 

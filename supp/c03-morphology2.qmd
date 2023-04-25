@@ -43,28 +43,6 @@ plot(Y.gpa)
 gdf <- geomorph.data.frame(shape = Y.gpa$coords, 
                            size = Y.gpa$Csize,
                            ColorGroup = qdata$ColorGroup)
-
-# add centroid size to qdata
-qdata$csz <- Y.gpa$Csize
-```
-
-## Boxplot (centroid size)
-
-```{r box, echo=TRUE, out.width = "100%", dpi = 300, warning=FALSE}
-# attributes
-csz <- qdata$csz
-ColorG <- qdata$ColorGroup
-
-# palette
-pal = wes_palette('Moonrise2')
-
-# boxplot of Perdiz arrow points by region
-ggplot(qdata, aes(x = ColorG, y = csz, color = ColorG)) +
-  geom_boxplot() +
-  geom_dotplot(binaxis = 'y', stackdir = 'center', dotsize = 0.3) +
-  scale_color_manual(values = pal) +
-  theme(legend.position = 'none') +
-  labs(x = 'ColorGroup', y = 'Centroid Size')
 ```
 
 ## Principal Components Analysis
