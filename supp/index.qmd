@@ -53,7 +53,7 @@ Coordinate data were subsequently harvested and joined with the categorical data
 
 Within the utilization distribution, _core production areas_ were defined using kernel density, where raster values associated with the location of each site were subsequently exported to identify the 50 and 75 percent quantiles. Each raster was then reclassified, where the darkest ring indicates the 50 percent quantile, the lighter ring indicates the 75 percent quantile, and a third---transparent---holds the remainder. Results demonstrate a single core area related to the production of reduced bottles; however, oxidized bottle production occurred across two core areas (one north; the other south), and all three _core production areas_ occur within the Red River Basin.
 
-```{r, fig.cap="Kernel densities representing the 50 (black) and 75 percent (gray) quantiles for reduced bottles, and the 50 (dark brown) and 75 percent (light brown) quantiles for the oxidized bottles."}
+```{r, fig.cap="Minimum convex polygon representing the utilization distribution (blue), and kernel densities representing the 50 (black) and 75 percent (gray) quantiles for reduced bottles, and the 50 (dark brown) and 75 percent (light brown) quantiles for the oxidized bottles."}
 
 knitr::include_graphics('./img/geo.jpg')
 ```
