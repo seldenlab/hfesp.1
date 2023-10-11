@@ -3,12 +3,12 @@ title: "Did intended firing method condition the morphology of Caddo bottles?"
 author:
   - name: Robert Z. Selden, Jr.
     affiliations:
-      - Heritage Research Center, Stephen F. Austin State University; Department of Biology, Stephen F. Austin State University; Texas Archeological Research Laboratory, The University of Texas at Austin; Cultural Heritage Department, Jean Monnet University
+      - Heritage Research Center and Department of Biology, Stephen F. Austin State University
     email: zselden@sfasu.edu
     orcid: 0000-0002-1789-8449
 bibliography: [book.bib]
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-link-citations: yes
+link-citations: TRUE
 github-repo: seldenlab/hfesp.1
 description: Supplementary Materials
 license: "CC BY-NC-ND [https://creativecommons.org/licenses/by-nc-nd/4.0/](https://creativecommons.org/licenses/by-nc-nd/4.0/)"

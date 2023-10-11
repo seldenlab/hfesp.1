@@ -24,6 +24,6 @@ website:
 
 format:
   html:
-    theme: spacelab
+    theme: pulse
     css: styles.css
     toc: true

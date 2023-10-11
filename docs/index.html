@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.3.433">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Robert Z. Selden, Jr.">
-<meta name="dcterms.date" content="2023-05-06">
+<meta name="dcterms.date" content="2023-10-11">
 <meta name="description" content="Supplementary Materials">
 
 <title>Did intended firing method condition the morphology of Caddo bottles?</title>
@@ -20,9 +20,10 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -49,48 +50,19 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -104,8 +76,7 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -140,7 +111,8 @@ div.csl-indent {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -159,40 +131,42 @@ div.csl-indent {
     <img src="./sfasu.png" alt="" class="navbar-logo">
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">
+    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./c01-color.html">
+    <a class="nav-link" href="./c01-color.html" rel="" target="">
  <span class="menu-text">Firing</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-morphology" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-morphology" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
  <span class="menu-text">Morphology</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-morphology">    
         <li>
-    <a class="dropdown-item" href="./c02-morphology1.html">
+    <a class="dropdown-item" href="./c02-morphology1.html" rel="" target="">
  <span class="dropdown-text">Morphology by Type</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./c03-morphology2.html">
+    <a class="dropdown-item" href="./c03-morphology2.html" rel="" target="">
  <span class="dropdown-text">Morphology by Firing Group</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./c04-morphology3.html">
+    <a class="dropdown-item" href="./c04-morphology3.html" rel="" target="">
  <span class="dropdown-text">Morphology by Core Production Area</span></a>
   </li>  
     </ul>
   </li>
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools">
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -246,11 +220,11 @@ div.csl-indent {
   <div class="quarto-title-meta-heading">Affiliation</div>
   
     <div class="quarto-title-meta-contents">
-    Robert Z. Selden, Jr. <a href="https://orcid.org/0000-0002-1789-8449" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
+    <p class="author">Robert Z. Selden, Jr. <a href="https://orcid.org/0000-0002-1789-8449" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
   </div>
     <div class="quarto-title-meta-contents">
         <p class="affiliation">
-            Heritage Research Center, Stephen F. Austin State University; Department of Biology, Stephen F. Austin State University; Texas Archeological Research Laboratory, The University of Texas at Austin; Cultural Heritage Department, Jean Monnet University
+            Heritage Research Center and Department of Biology, Stephen F. Austin State University
           </p>
       </div>
     </div>
@@ -261,7 +235,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 6, 2023</p>
+      <p class="date">October 11, 2023</p>
     </div>
   </div>
   
@@ -290,7 +264,7 @@ div.csl-indent {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./img/fig1.png" class="img-fluid figure-img" width="1650"></p>
-<p></p><figcaption class="figure-caption">Location of sites with vessels included in the analysis, illustrating major river basins, and geographic extent of ancestral Caddo area (dashed white).</figcaption><p></p>
+<figcaption class="figure-caption">Location of sites with vessels included in the analysis, illustrating major river basins, and geographic extent of ancestral Caddo area (dashed white).</figcaption>
 </figure>
 </div>
 </div>
@@ -304,7 +278,7 @@ div.csl-indent {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./img/fig2.png" class="img-fluid figure-img" width="3287"></p>
-<p></p><figcaption class="figure-caption">Color binning process for a single object; adapted from Weller and Westneat (2019:Figure 2). In a, image of a Smithport Plain bottle with a transparent background; b, 3D scatterplot of 10,000 non-background pixels in RGB color space; c, clusters from histogram displayed in RGB color space; and d, histogram showing the proportion of non-background pixels assigned to each bin.</figcaption><p></p>
+<figcaption class="figure-caption">Color binning process for a single object; adapted from Weller and Westneat (2019:Figure 2). In a, image of a Smithport Plain bottle with a transparent background; b, 3D scatterplot of 10,000 non-background pixels in RGB color space; c, clusters from histogram displayed in RGB color space; and d, histogram showing the proportion of non-background pixels assigned to each bin.</figcaption>
 </figure>
 </div>
 </div>
@@ -316,7 +290,7 @@ div.csl-indent {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./img/fig3.png" class="img-fluid figure-img" width="2100"></p>
-<p></p><figcaption class="figure-caption">Neighbor-joining tree illustrating the 3D texture (color) data for oxidized (left) and reduced (right) Hickory Engraved and Smithport Plain Caddo bottles.</figcaption><p></p>
+<figcaption class="figure-caption">Neighbor-joining tree illustrating the 3D texture (color) data for oxidized (left) and reduced (right) Hickory Engraved and Smithport Plain Caddo bottles.</figcaption>
 </figure>
 </div>
 </div>
@@ -332,7 +306,7 @@ div.csl-indent {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./img/geo.jpg" class="img-fluid figure-img" width="1650"></p>
-<p></p><figcaption class="figure-caption">Minimum convex polygon representing the utilization distribution (blue), and kernel densities representing the 50 (black) and 75 percent (gray) quantiles for reduced bottles, and the 50 (dark brown) and 75 percent (light brown) quantiles for the oxidized bottles.</figcaption><p></p>
+<figcaption class="figure-caption">Minimum convex polygon representing the utilization distribution (blue), and kernel densities representing the 50 (black) and 75 percent (gray) quantiles for reduced bottles, and the 50 (dark brown) and 75 percent (light brown) quantiles for the oxidized bottles.</figcaption>
 </figure>
 </div>
 </div>
@@ -349,7 +323,7 @@ div.csl-indent {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./img/fig4.png" class="img-fluid figure-img" width="2128"></p>
-<p></p><figcaption class="figure-caption">Principal components analysis plot (PC1/PC2) for Hickory Engraved and Smithport Plain bottles by firing category, where gray circles indicate bottles fired in a reduced environment, and orange plus signs indicate those from an oxidized environment; warp grids for the first two principal components.</figcaption><p></p>
+<figcaption class="figure-caption">Principal components analysis plot (PC1/PC2) for Hickory Engraved and Smithport Plain bottles by firing category, where gray circles indicate bottles fired in a reduced environment, and orange plus signs indicate those from an oxidized environment; warp grids for the first two principal components.</figcaption>
 </figure>
 </div>
 </div>
@@ -361,7 +335,7 @@ div.csl-indent {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./img/fig5.png" class="img-fluid figure-img" width="1047"></p>
-<p></p><figcaption class="figure-caption">Mean shapes summarizing variation in Hickory Engraved and Smithport Plain bottles fired in oxidized (left) and reduced (right) environments. In the comparison (center), gray spheres articulate with oxidized vessels, and black spheres with reduced.</figcaption><p></p>
+<figcaption class="figure-caption">Mean shapes summarizing variation in Hickory Engraved and Smithport Plain bottles fired in oxidized (left) and reduced (right) environments. In the comparison (center), gray spheres articulate with oxidized vessels, and black spheres with reduced.</figcaption>
 </figure>
 </div>
 </div>
@@ -377,7 +351,7 @@ div.csl-indent {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./img/fig6.jpg" class="img-fluid figure-img" width="2620"></p>
-<p></p><figcaption class="figure-caption">Principal components analysis plot (PC1/PC2) for Hickory Engraved and Smithport Plain bottles by core production areas, where gray circles indicate reduced firing in the north, orange plus signs indicate oxidized firing in the south, and tan plus signs indicate oxidized firing in the north; warp grids for the first two principal components.</figcaption><p></p>
+<figcaption class="figure-caption">Principal components analysis plot (PC1/PC2) for Hickory Engraved and Smithport Plain bottles by core production areas, where gray circles indicate reduced firing in the north, orange plus signs indicate oxidized firing in the south, and tan plus signs indicate oxidized firing in the north; warp grids for the first two principal components.</figcaption>
 </figure>
 </div>
 </div>
@@ -389,7 +363,7 @@ div.csl-indent {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./img/fig7.jpg" class="img-fluid figure-img" width="5077"></p>
-<p></p><figcaption class="figure-caption">Mean shapes summarizing variation in Hickory Engraved and Smithport Plain bottles fired in oxidized and reduced environments from each of the three core production areas.</figcaption><p></p>
+<figcaption class="figure-caption">Mean shapes summarizing variation in Hickory Engraved and Smithport Plain bottles fired in oxidized and reduced environments from each of the three core production areas.</figcaption>
 </figure>
 </div>
 </div>
@@ -418,76 +392,77 @@ div.csl-indent {
 </section>
 <section id="colophon" class="level1 unnumbered">
 <h1 class="unnumbered">Colophon</h1>
-<p>This version of the analysis was generated on 2023-05-06 06:00:24 using the following computational environment and dependencies:</p>
+<p>This version of the analysis was generated on 2023-10-11 02:53:33.174105 using the following computational environment and dependencies:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># what R packages and versions were used?</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="st">"devtools"</span> <span class="sc">%in%</span> <span class="fu">installed.packages</span>()) devtools<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.2.3 (2023-03-15)
- os       macOS Ventura 13.3.1
+ version  R version 4.3.1 (2023-06-16)
+ os       macOS Sonoma 14.0
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/Chicago
- date     2023-05-06
- pandoc   2.19.2 @ /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/ (via rmarkdown)
+ date     2023-10-11
+ pandoc   3.1.1 @ /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────
  package     * version date (UTC) lib source
- cachem        1.0.8   2023-05-01 [1] CRAN (R 4.2.0)
- callr         3.7.3   2022-11-02 [1] CRAN (R 4.2.0)
- cli           3.6.1   2023-03-23 [1] CRAN (R 4.2.0)
- crayon        1.5.2   2022-09-29 [1] CRAN (R 4.2.0)
- devtools      2.4.5   2022-10-11 [1] CRAN (R 4.2.0)
- digest        0.6.31  2022-12-11 [1] CRAN (R 4.2.0)
- ellipsis      0.3.2   2021-04-29 [1] CRAN (R 4.2.0)
- evaluate      0.20    2023-01-17 [1] CRAN (R 4.2.0)
- fastmap       1.1.1   2023-02-24 [1] CRAN (R 4.2.0)
- fs            1.6.2   2023-04-25 [1] CRAN (R 4.2.0)
- glue          1.6.2   2022-02-24 [1] CRAN (R 4.2.0)
- htmltools     0.5.5   2023-03-23 [1] CRAN (R 4.2.0)
- htmlwidgets   1.6.2   2023-03-17 [1] CRAN (R 4.2.0)
- httpuv        1.6.9   2023-02-14 [1] CRAN (R 4.2.0)
- jpeg          0.1-10  2022-11-29 [1] CRAN (R 4.2.0)
- jsonlite      1.8.4   2022-12-06 [1] CRAN (R 4.2.0)
- knitr         1.42    2023-01-25 [1] CRAN (R 4.2.0)
- later         1.3.0   2021-08-18 [1] CRAN (R 4.2.0)
- lifecycle     1.0.3   2022-10-07 [1] CRAN (R 4.2.0)
- magrittr      2.0.3   2022-03-30 [1] CRAN (R 4.2.0)
- memoise       2.0.1   2021-11-26 [1] CRAN (R 4.2.0)
- mime          0.12    2021-09-28 [1] CRAN (R 4.2.0)
- miniUI        0.1.1.1 2018-05-18 [1] CRAN (R 4.2.0)
- pkgbuild      1.4.0   2022-11-27 [1] CRAN (R 4.2.0)
- pkgload       1.3.2   2022-11-16 [1] CRAN (R 4.2.0)
- png           0.1-8   2022-11-29 [1] CRAN (R 4.2.0)
- prettyunits   1.1.1   2020-01-24 [1] CRAN (R 4.2.0)
- processx      3.8.1   2023-04-18 [1] CRAN (R 4.2.3)
- profvis       0.3.7   2020-11-02 [1] CRAN (R 4.2.0)
- promises      1.2.0.1 2021-02-11 [1] CRAN (R 4.2.0)
- ps            1.7.5   2023-04-18 [1] CRAN (R 4.2.0)
- purrr         1.0.1   2023-01-10 [1] CRAN (R 4.2.0)
- R6            2.5.1   2021-08-19 [1] CRAN (R 4.2.0)
- Rcpp          1.0.10  2023-01-22 [1] CRAN (R 4.2.0)
- remotes       2.4.2   2021-11-30 [1] CRAN (R 4.2.0)
- rlang         1.1.1   2023-04-28 [1] CRAN (R 4.2.0)
- rmarkdown     2.21    2023-03-26 [1] CRAN (R 4.2.2)
- rstudioapi    0.14    2022-08-22 [1] CRAN (R 4.2.0)
- sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.2.0)
- shiny         1.7.4   2022-12-15 [1] CRAN (R 4.2.0)
- stringi       1.7.12  2023-01-11 [1] CRAN (R 4.2.0)
- stringr       1.5.0   2022-12-02 [1] CRAN (R 4.2.0)
- urlchecker    1.0.1   2021-11-30 [1] CRAN (R 4.2.0)
- usethis       2.1.6   2022-05-25 [1] CRAN (R 4.2.0)
- vctrs         0.6.2   2023-04-19 [1] CRAN (R 4.2.0)
- xfun          0.39    2023-04-20 [1] CRAN (R 4.2.0)
- xtable        1.8-4   2019-04-21 [1] CRAN (R 4.2.0)
- yaml          2.3.7   2023-01-23 [1] CRAN (R 4.2.0)
+ cachem        1.0.8   2023-05-01 [2] CRAN (R 4.3.0)
+ callr         3.7.3   2022-11-02 [2] CRAN (R 4.3.0)
+ cli           3.6.1   2023-03-23 [2] CRAN (R 4.3.0)
+ crayon        1.5.2   2022-09-29 [2] CRAN (R 4.3.0)
+ devtools      2.4.5   2022-10-11 [2] CRAN (R 4.3.0)
+ digest        0.6.33  2023-07-07 [2] CRAN (R 4.3.0)
+ ellipsis      0.3.2   2021-04-29 [2] CRAN (R 4.3.0)
+ evaluate      0.22    2023-09-29 [2] CRAN (R 4.3.1)
+ fastmap       1.1.1   2023-02-24 [2] CRAN (R 4.3.0)
+ fs            1.6.3   2023-07-20 [2] CRAN (R 4.3.0)
+ glue          1.6.2   2022-02-24 [2] CRAN (R 4.3.0)
+ htmltools     0.5.6.1 2023-10-06 [2] CRAN (R 4.3.1)
+ htmlwidgets   1.6.2   2023-03-17 [2] CRAN (R 4.3.0)
+ httpuv        1.6.11  2023-05-11 [2] CRAN (R 4.3.0)
+ jpeg          0.1-10  2022-11-29 [2] CRAN (R 4.3.0)
+ jsonlite      1.8.7   2023-06-29 [2] CRAN (R 4.3.0)
+ knitr         1.44    2023-09-11 [2] CRAN (R 4.3.0)
+ later         1.3.1   2023-05-02 [2] CRAN (R 4.3.0)
+ lifecycle     1.0.3   2022-10-07 [2] CRAN (R 4.3.0)
+ magrittr      2.0.3   2022-03-30 [2] CRAN (R 4.3.0)
+ memoise       2.0.1   2021-11-26 [2] CRAN (R 4.3.0)
+ mime          0.12    2021-09-28 [2] CRAN (R 4.3.0)
+ miniUI        0.1.1.1 2018-05-18 [2] CRAN (R 4.3.0)
+ pkgbuild      1.4.2   2023-06-26 [2] CRAN (R 4.3.0)
+ pkgload       1.3.3   2023-09-22 [2] CRAN (R 4.3.1)
+ png           0.1-8   2022-11-29 [2] CRAN (R 4.3.0)
+ prettyunits   1.2.0   2023-09-24 [2] CRAN (R 4.3.1)
+ processx      3.8.2   2023-06-30 [1] CRAN (R 4.3.0)
+ profvis       0.3.8   2023-05-02 [2] CRAN (R 4.3.0)
+ promises      1.2.1   2023-08-10 [2] CRAN (R 4.3.0)
+ ps            1.7.5   2023-04-18 [2] CRAN (R 4.3.0)
+ purrr         1.0.2   2023-08-10 [2] CRAN (R 4.3.0)
+ R6            2.5.1   2021-08-19 [2] CRAN (R 4.3.0)
+ Rcpp          1.0.11  2023-07-06 [2] CRAN (R 4.3.0)
+ remotes       2.4.2.1 2023-07-18 [2] CRAN (R 4.3.0)
+ rlang         1.1.1   2023-04-28 [2] CRAN (R 4.3.0)
+ rmarkdown     2.25    2023-09-18 [2] CRAN (R 4.3.1)
+ rstudioapi    0.15.0  2023-07-07 [2] CRAN (R 4.3.0)
+ sessioninfo   1.2.2   2021-12-06 [2] CRAN (R 4.3.0)
+ shiny         1.7.5   2023-08-12 [1] CRAN (R 4.3.0)
+ stringi       1.7.12  2023-01-11 [2] CRAN (R 4.3.0)
+ stringr       1.5.0   2022-12-02 [2] CRAN (R 4.3.0)
+ urlchecker    1.0.1   2021-11-30 [2] CRAN (R 4.3.0)
+ usethis       2.2.2   2023-07-06 [2] CRAN (R 4.3.0)
+ vctrs         0.6.3   2023-06-14 [1] CRAN (R 4.3.0)
+ xfun          0.40    2023-08-09 [2] CRAN (R 4.3.0)
+ xtable        1.8-4   2019-04-21 [2] CRAN (R 4.3.0)
+ yaml          2.3.7   2023-01-23 [2] CRAN (R 4.3.0)
 
- [1] /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library
+ [1] /Users/seldenjrz/Library/R/arm64/4.3/library
+ [2] /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library
 
 ──────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>
@@ -499,7 +474,7 @@ div.csl-indent {
 <div class="cell-output cell-output-stdout">
 <pre><code>Local:    main /Users/seldenjrz/Documents/github/hfesp.1
 Remote:   main @ origin (https://github.com/seldenlab/hfesp.1)
-Head:     [b763ad1] 2023-05-01: &lt;edit index&gt;</code></pre>
+Head:     [51618a2] 2023-05-06: &lt;edit index&gt;</code></pre>
 </div>
 </div>
 
@@ -507,158 +482,158 @@ Head:     [b763ad1] 2023-05-01: &lt;edit index&gt;</code></pre>
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-RN1655" class="csl-entry" role="doc-biblioentry">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-RN1655" class="csl-entry" role="listitem">
 Adams, Dean C., and Michael L. Collyer. 2015. <span>“<span class="nocase">Permutation Tests for Phylogenetic Comparative Analyses of High-Dimensional Shape Data: What you Shuffle Matters</span>.”</span> <em>Evolution</em> 69 (3): 823–29. <a href="https://doi.org/10.1111/evo.12596">https://doi.org/10.1111/evo.12596</a>.
 </div>
-<div id="ref-RN11530" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN11530" class="csl-entry" role="listitem">
 Adams, Dean C., Michael L. Collyer, Antigoni Kaliontzopoulou, and Emma Sherratt. 2017. <span>“<span class="nocase">Package geomorph: Geometric Morphometric Analyses of Landmark Data. R package version 3.0.5</span>.”</span> <a href="http://geomorphr.github.io/geomorph/">http://geomorphr.github.io/geomorph/</a>.
 </div>
-<div id="ref-RN1774" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN1774" class="csl-entry" role="listitem">
 Adams, Dean C., and Erik Otarola-Castillo. 2013. <span>“<span class="nocase">geomorph: An R Package for the Collection and Analysis of Geometric Morphometric Shape Data</span>.”</span> <em>Methods in Ecology and Evolution</em> 4 (4): 393–99. <a href="https://doi.org/10.1111/2041-210x.12035">https://doi.org/10.1111/2041-210x.12035</a>.
 </div>
-<div id="ref-RN8633" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN8633" class="csl-entry" role="listitem">
 Adams, Dean C., F. James Rohlf, and Dennis E. Slice. 2013. <span>“A Field Comes of Age: Geometric Morphometrics in the 21st Century.”</span> Journal Article. <em>Hystrix</em> 24 (1): 7–14. <a href="https://doi.org/doi:10.4404/hystrix-24.1-6283">https://doi.org/doi:10.4404/hystrix-24.1-6283</a>.
 </div>
-<div id="ref-RN1719" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN1719" class="csl-entry" role="listitem">
 Anderson, M. J., and C. J. F. Ter Braak. 2003. <span>“<span class="nocase">Permutation Tests for Multi-Factoral Analysis of Variance</span>.”</span> <em>Journal of Statistical Computation and Simulation</em> 73 (2): 85–113. <a href="https://doi.org/10.1080=0094965021000015558">https://doi.org/10.1080=0094965021000015558</a>.
 </div>
-<div id="ref-RN9565" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN9565" class="csl-entry" role="listitem">
 Baken, Erica K., Michael L. Collyer, Antigoni Kaliontzopoulou, and Dean C. Adams. 2021. <span>“<span class="nocase">geomorph v4.0 and gmShiny: Enhanced analytics and a new graphical interface for a comprehensive morphometric experience</span>.”</span> Journal Article. <em>Methods in Ecology and Evolution</em>. <a href="https://doi.org/10.1111/2041-210x.13723">https://doi.org/10.1111/2041-210x.13723</a>.
 </div>
-<div id="ref-RN11138" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN11138" class="csl-entry" role="listitem">
 Bookstein, Fred L. 1986. <span>“Size and Shape Spaces for Landmark Data in Two Dimensions.”</span> Journal Article. <em>Statistical Science</em> 1 (2): 181–242.
 </div>
-<div id="ref-RN5616" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN5616" class="csl-entry" role="listitem">
 ———. 1991. <em>Morphometric Tools for Landmark Data: Geometry and Biology</em>. Book. Cambridge: Cambridge University Press.
 </div>
-<div id="ref-RN8477" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN8477" class="csl-entry" role="listitem">
 Bookstein, Fred L., Katrin Schäfer, Hermann Prossinger, Horst Seidler, Martin Fieder, Chris Stringer, Gerhard W. Weber, et al. 1999. <span>“Comparing Frontal Cranial Profiles in Archaic and Modern Homo by Morphometric Analysis.”</span> Journal Article. <em>The Anatomical Record</em> 257 (6): 217–24. https://doi.org/<a href="https://doi.org/10.1002/(SICI)1097-0185(19991215)257:6%3C217::AID-AR7%3E3.0.CO;2-W">https://doi.org/10.1002/(SICI)1097-0185(19991215)257:6%3C217::AID-AR7%3E3.0.CO;2-W</a>.
 </div>
-<div id="ref-RN9357x" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN9357x" class="csl-entry" role="listitem">
 Cassaway, Lillian. 1937. <span>“<span class="nocase">Indian-Pioneer History Project for Oklahoma: Sadie Bedoka</span>.”</span> Report. Works Progress Administration.
 </div>
-<div id="ref-RN11139" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN11139" class="csl-entry" role="listitem">
 Chapman, R. E. 1990. <span>“Conventional Procrustes Approaches.”</span> Book Section. In <em>Proceedings of the Michigan Morphometrics Workshop</em>, edited by F. James Rohlf and Fred L. Bookstein, 251–69. Ann Arbor: Special Publication Number 2, The University of Michigan Museum of Zoology.
 </div>
-<div id="ref-RN11775" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN11775" class="csl-entry" role="listitem">
 Collyer, Michael L., and Dean C. Adams. 2018. <span>“<span class="nocase">RRPP: An R Package for Fitting Linear Models to High-Dimensional Data using Residual Randomization</span>.”</span> <em>Methods in Ecology and Evolution</em> 9 (7): 1772–79. https://doi.org/<a href="https://doi.org/10.1111/2041-210X.13029">https://doi.org/10.1111/2041-210X.13029</a>.
 </div>
-<div id="ref-RN1756" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN1756" class="csl-entry" role="listitem">
 Collyer, Michael L., David J. Sekora, and Dean C. Adams. 2015. <span>“<span class="nocase">A Method for Analysis of Phenotypic Change for Phenotypes Described by High-Dimensional Data</span>.”</span> <em>Heredity</em> 115 (4): 357–65. <a href="https://doi.org/10.1038/hdy.2014.75">https://doi.org/10.1038/hdy.2014.75</a>.
 </div>
-<div id="ref-RN11141" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN11141" class="csl-entry" role="listitem">
 Dryden, I. L., and K. V. Mardia. 1993. <span>“Multivariate Shape Analysis.”</span> Journal Article. <em>Sankhya: The Indian Journal of Statistics, Series A</em> Special Volume 55, Series A, Pt. 3: 460–80.
 </div>
-<div id="ref-RN11140" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN11140" class="csl-entry" role="listitem">
 ———. 1998. <em>Statistical Shape Analysis</em>. Book. Chichester: Wiley.
 </div>
-<div id="ref-RN20917" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN20917" class="csl-entry" role="listitem">
 Gandrud, Christopher. 2014. <em>Reproducible Research with r and RStudio</em>. The r Series. London: CRC Press.
 </div>
-<div id="ref-RN1749" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN1749" class="csl-entry" role="listitem">
 Goodall, Colin. 1991. <span>“<span class="nocase">Procrustes Methods in the Statistical Analysis of Shape</span>.”</span> <em>Journal of the Royal Statistical Society. Series B (Methodological)</em> 53 (2): 285–339.
 </div>
-<div id="ref-RN11564" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN11564" class="csl-entry" role="listitem">
 Gower, J. C. 1975. <span>“<span>Generalized Procrustes Analysis</span>.”</span> <em>Psychometrika</em> 40 (1): 33–51. https://doi.org/<a href="https://doi.org/10.1007/BF02291478">https://doi.org/10.1007/BF02291478</a>.
 </div>
-<div id="ref-RN20915" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN20915" class="csl-entry" role="listitem">
 Gray, Charles T., and Ben Marwick. 2019. <span>“Truth, Proof, and Reproducibility: There’s No Counter-Attack for the Codeless.”</span> In <em>Statistics and Data Science</em>, 111–29. Communications in Computer and Information Science. <a href="https://doi.org/10.1007/978-981-15-1960-4_8">https://doi.org/10.1007/978-981-15-1960-4_8</a>.
 </div>
-<div id="ref-RN7502" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN7502" class="csl-entry" role="listitem">
 Gunz, P., P. Mitteroecker, and F. L. Bookstein. 2005. <span>“Semilandmarks in Three Dimensions.”</span> Book Section. In <em>Modern Morphometrics in Physical Anthropology</em>, edited by D. E. Slice, 73–98. New York: Plenum Publishers.
 </div>
-<div id="ref-RN21009" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN21009" class="csl-entry" role="listitem">
 Ivanovaite, Livija, Kamil Serwatka, Christian Steven Hoggard, Florian Sauer, and Felix Riede. 2020. <span>“All These Fantastic Cultures? Research History and Regionalization in the Late Palaeolithic Tanged Point Cultures of Eastern Europe.”</span> <em>European Journal of Archaeology</em> 23 (2): 162–85. <a href="https://doi.org/10.1017/eaa.2019.59">https://doi.org/10.1017/eaa.2019.59</a>.
 </div>
-<div id="ref-RN1746" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN1746" class="csl-entry" role="listitem">
 Jolliffe, Ian T. 2002. <em>Principal Component Analysis</em>. New York: Springer.
 </div>
-<div id="ref-RN11622" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN11622" class="csl-entry" role="listitem">
 Kendall, David G. 1981. <span>“<span class="nocase">The Statistics of Shape</span>.”</span> In <em>Interpreting Multivariate Data</em>, edited by V. Barnett, 75–80. New York: Wiley.
 </div>
-<div id="ref-RN11623" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN11623" class="csl-entry" role="listitem">
 ———. 1984. <span>“<span class="nocase">Shape Manifolds, Procrustean Metrics, and Complex Projective Spaces</span>.”</span> <em>Bulletin of the London Mathematical Society</em> 16 (2): 81–121. <a href="https://doi.org/10.1112/blms/16.2.81">https://doi.org/10.1112/blms/16.2.81</a>.
 </div>
-<div id="ref-RN11142" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN11142" class="csl-entry" role="listitem">
 Kent, J. T., and K. V. Mardia. 2001. <span>“Shape, Procrustes Tangent Projections and Bilateral Symmetry.”</span> Journal Article. <em>Biometrika</em> 88 (2): 469–85.
 </div>
-<div id="ref-RN1731" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN1731" class="csl-entry" role="listitem">
 Klingenberg, Christian Peter. 2013. <span>“<span class="nocase">Visualizations in Geometric Morphometrics: How to Read and How to Make Graphs Showing Shape Changes</span>.”</span> <em>Hystrix</em> 24 (1): 15–24. https://doi.org/<a href="http://dx.doi.org/10.4404/hystrix-24.1-7691">http://dx.doi.org/10.4404/hystrix-24.1-7691</a>.
 </div>
-<div id="ref-RN20918" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN20918" class="csl-entry" role="listitem">
 Leek, Jeffrey T., and Roger D. Peng. 2015. <span>“Opinion: Reproducible Research Can Still Be Wrong: Adopting a Prevention Approach.”</span> <em>Proc Natl Acad Sci U S A</em> 112 (6): 1645–46. <a href="https://doi.org/10.1073/pnas.1421412111">https://doi.org/10.1073/pnas.1421412111</a>.
 </div>
-<div id="ref-RN20804" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN20804" class="csl-entry" role="listitem">
 Marwick, Ben. 2016. <span>“Computational Reproducibility in Archaeological Research: Basic Principles and a Case Study of Their Implementation.”</span> <em>Journal of Archaeological Method and Theory</em> 24 (2): 424–50. <a href="https://doi.org/10.1007/s10816-015-9272-9">https://doi.org/10.1007/s10816-015-9272-9</a>.
 </div>
-<div id="ref-RN21007" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN21007" class="csl-entry" role="listitem">
 Marwick, Ben, Li-Ying Wang, Ryan Robinson, and Hope Loiselle. 2019. <span>“How to Use Replication Assignments for Teaching Integrity in Empirical Archaeology.”</span> <em>Advances in Archaeological Practice</em> 8 (1): 78–86. <a href="https://doi.org/10.1017/aap.2019.38">https://doi.org/10.1017/aap.2019.38</a>.
 </div>
-<div id="ref-RN11143" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN11143" class="csl-entry" role="listitem">
 O’Higgins, Paul, and Nicholas Jones. 1998. <span>“Facial Growth in Cercocbus Torquatus: An Application of Three-Dimensional Geometric Morphometric Techniques to the Study of Morphological Variation.”</span> Journal Article. <em>The Journal of Anatomy</em> 193 (2): 251–72.
 </div>
-<div id="ref-RN21008" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN21008" class="csl-entry" role="listitem">
 Peels, Rik, and Lex Bouter. 2018. <span>“Humanities Need a Replication Drive Too.”</span> <em>Nature</em> 558 (7710): 372. <a href="https://doi.org/10.1038/d41586-018-05454-w">https://doi.org/10.1038/d41586-018-05454-w</a>.
 </div>
-<div id="ref-RN20916" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN20916" class="csl-entry" role="listitem">
 Peng, Roger D. 2011. <span>“Reproducible Research in Computational Science.”</span> <em>Science</em> 334 (6060): 1226–27. <a href="https://doi.org/10.1126/science.1213847">https://doi.org/10.1126/science.1213847</a>.
 </div>
-<div id="ref-R" class="csl-entry" role="doc-biblioentry">
+<div id="ref-R" class="csl-entry" role="listitem">
 R Core Development Team,. 2023. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="http://www.R-project.org/">http://www.R-project.org/</a>.
 </div>
-<div id="ref-RN1646" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN1646" class="csl-entry" role="listitem">
 Rohlf, F. James. 1999. <span>“<span class="nocase">Shape Statistics: Procrustes Superimpositions and Tangent Spaces</span>.”</span> <em>Journal of Classification</em> 16 (2): 197–223. <a href="https://doi.org/10.1007/s003579900054">https://doi.org/10.1007/s003579900054</a>.
 </div>
-<div id="ref-RN7550" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN7550" class="csl-entry" role="listitem">
 Rohlf, F. James, and Leslie F. Marcus. 1993. <span>“A Revolution in Morphometrics.”</span> Journal Article. <em>Trends in Ecology &amp; Evolution</em> 8 (4): 129–32. <a href="https://doi.org/10.1016/0169-5347(93)90024-J">https://doi.org/10.1016/0169-5347(93)90024-J</a>.
 </div>
-<div id="ref-RN478" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN478" class="csl-entry" role="listitem">
 Rohlf, F. James, and Dennis Slice. 1990. <span>“<span class="nocase">Extensions of the Procrustes Method for the Optimal Superimposition of Landmarks</span>.”</span> <em>Systematic Zoology</em> 39 (1): 40–59. <a href="https://doi.org/10.2307/2992207">https://doi.org/10.2307/2992207</a>.
 </div>
-<div id="ref-RN11201" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN11201" class="csl-entry" role="listitem">
 Rubner, Yossi, and Carlo Tomasi. 2001. <em>Perceptual Metrics for Image Database Navigation</em>. Book. London: Springer Science &amp; Business Media.
 </div>
-<div id="ref-RN11801" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN11801" class="csl-entry" role="listitem">
 Selden Jr., Robert Z. 2018a. <span>“A Preliminary Study of Smithport Plain Bottle Morphology in the Southern Caddo Area.”</span> <em>Bulletin of the Texas Archeological Society</em> 89: 63–89.
 </div>
-<div id="ref-RN11782" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN11782" class="csl-entry" role="listitem">
 ———. 2018b. <span>“<span class="nocase">Ceramic Morphological Organisation in the Southern Caddo Area: Quiddity of Shape for Hickory Engraved Bottles</span>.”</span> <em>Journal of Archaeological Science: Reports</em> 21: 884–96. <a href="https://doi.org/10.1016/j.jasrep.2018.08.045">https://doi.org/10.1016/j.jasrep.2018.08.045</a>.
 </div>
-<div id="ref-RN11716" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN11716" class="csl-entry" role="listitem">
 ———. 2019. <span>“<span class="nocase">Ceramic Morphological Organisation in the Southern Caddo Area: The Clarence H. Webb Collections</span>.”</span> <em>Journal of Cultural Heritage</em> 35: 41–55. https://doi.org/<a href="https://doi.org/10.1016/j.culher.2018.07.002">https://doi.org/10.1016/j.culher.2018.07.002</a>.
 </div>
-<div id="ref-RN8312" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN8312" class="csl-entry" role="listitem">
 ———. 2021. <span>“Louisiana Limitrophe: An Iterative Morphological Exegesis of Caddo Bottle and Biface Production.”</span> Book Section. In <em>Ancestral Caddo Ceramic Traditions</em>, edited by Duncan P. McKinnon, Jeffrey S. Girard, and Timothy K. Perttula, 258–76. Baton Rouge: LSU Press.
 </div>
-<div id="ref-RN11264" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN11264" class="csl-entry" role="listitem">
 ———. 2023. <span>“Morphologically Similar, but Regionally Distinct: Perdiz Arrow Points from Caddo Burial Contexts in the American Southeast.”</span> Journal Article. <em>Lithic Technology</em> (in press). <a href="https://doi.org/10.1080/01977261.2022.2095492">https://doi.org/10.1080/01977261.2022.2095492</a>.
 </div>
-<div id="ref-RN11172" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN11172" class="csl-entry" role="listitem">
 Selden Jr., Robert Z., and John E. Dockall. 2023. <span>“Perdiz Arrow Points from Caddo Burial Contexts Aid in Defining Discrete Behavioral Regions.”</span> Journal Article. <em>Southeastern Archaeology</em> (in press). <a href="https://doi.org/10.1080/0734578X.2023.2182260">https://doi.org/10.1080/0734578X.2023.2182260</a>.
 </div>
-<div id="ref-RN9364" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN9364" class="csl-entry" role="listitem">
 Selden Jr., Robert Z., John E. Dockall, C. Britt Bousman, and Timothy K. Perttula. 2021. <span>“<span class="nocase">Shape as a function of time + raw material + burial context? An exploratory analysis of Perdiz arrow points from the ancestral Caddo area of the American Southeast</span>.”</span> Journal Article. <em>Journal of Archaeological Science: Reports</em> 37: 102916. <a href="https://doi.org/10.1016/j.jasrep.2021.102916">https://doi.org/10.1016/j.jasrep.2021.102916</a>.
 </div>
-<div id="ref-RN21001" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN21001" class="csl-entry" role="listitem">
 Selden Jr., Robert Z., John E. Dockall, and Morgane Dubied. 2020. <span>“A Quantitative Assessment of Intraspecific Morphological Variation in Gahagan Bifaces from the Southern Caddo Area and Central Texas.”</span> <em>Southeastern Archaeology</em> 39 (2): 125–45. <a href="https://doi.org/10.1080/0734578x.2020.1744416">https://doi.org/10.1080/0734578x.2020.1744416</a>.
 </div>
-<div id="ref-RN11783" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN11783" class="csl-entry" role="listitem">
 Selden Jr., Robert Z., John E. Dockall, and Harry J. Shafer. 2018. <span>“<span class="nocase">Lithic Morphological Organisation: Gahagan Bifaces from the Southern Caddo Area</span>.”</span> <em>Digital Applications in Archaeology and Cultural Heritage</em> 10: e00080. <a href="https://doi.org/10.1016/j.daach.2018.e00080">https://doi.org/10.1016/j.daach.2018.e00080</a>.
 </div>
-<div id="ref-RN479" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN479" class="csl-entry" role="listitem">
 Sherratt, Emma, David J. Gower, Christian Peter Klingenberg, and Mark Wilkinson. 2014. <span>“<span class="nocase">Evolution of Cranial Shape in Caecilians (Amphibia: Gymnophiona)</span>.”</span> <em>Evolutionary Biology</em> 41 (4): 528–45. https://doi.org/<a href="https://doi.org/10.1007/s11692-014-9287-2">https://doi.org/10.1007/s11692-014-9287-2</a>.
 </div>
-<div id="ref-RN11563" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN11563" class="csl-entry" role="listitem">
 Slice, Dennis E. 2001. <span>“<span class="nocase">Landmark Coordinates Aligned by Procrustes Analysis Do Not Lie in Kendall’s Shape Space</span>.”</span> <em>Systematic Biology</em> 50 (1): 141–49. <a href="https://doi.org/10.1080/10635150119110">https://doi.org/10.1080/10635150119110</a>.
 </div>
-<div id="ref-RN11200" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN11200" class="csl-entry" role="listitem">
 Weller, Hannah I., and Mark W. Westneat. 2019. <span>“Quantitative Color Profiling of Digital Images with Earth Mover’s Distance Using the r Package Colordistance.”</span> Journal Article. <em>PeerJ</em> 7: e6398. <a href="https://doi.org/10.7717/peerj.6398">https://doi.org/10.7717/peerj.6398</a>.
 </div>
-<div id="ref-RN11347" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RN11347" class="csl-entry" role="listitem">
 Worton, B. J. 1989. <span>“Kernel Methods for Estimating the Utilization Distribution in Home-Range Studies.”</span> Journal Article. <em>Ecology</em> 70 (1): 164–68. <a href="https://doi.org/10.2307/1938423">https://doi.org/10.2307/1938423</a>.
 </div>
-</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><div>CC BY-NC-ND [https://creativecommons.org/licenses/by-nc-nd/4.0/](https://creativecommons.org/licenses/by-nc-nd/4.0/)</div></div></section></div></main> <!-- /main -->
+</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>CC BY-NC-ND [https://creativecommons.org/licenses/by-nc-nd/4.0/](https://creativecommons.org/licenses/by-nc-nd/4.0/)</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -686,9 +661,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -753,6 +742,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
